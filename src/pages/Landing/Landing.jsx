@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../../pages/Landing/Hero';
 import Arz from '../../pages/Landing/Arz';
 import Crypto from './Crypto';
+import MarketTrend from './MarketTrend';
 
 export default function Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Landing() {
       <Hero />
       <Arz />
       <Crypto />
+      <MarketTrend />
     </div>
   );
 }
