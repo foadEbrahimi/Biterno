@@ -1,12 +1,13 @@
 import React from 'react';
-import Navbar from '../../components/Landing/Navbar';
-import Hero from '../../components/Landing/Hero';
+
+import Hero from '../../pages/Landing/Hero';
+import Arz from '../../pages/Landing/Arz';
 
 export default function Landing() {
   return (
-    <div>
-      <Navbar />
+    <div className='relative'>
       <Hero />
+      <Arz />
     </div>
   );
 }
