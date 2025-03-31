@@ -1,9 +1,14 @@
 import React from 'react';
 
 import Layout from '../../layout/landing/Layout';
+import Card from '../../components/Landing/howItWork/Card';
 
 import connectLine from '../../assets/imgs/connect-line.svg';
-import Card from '../../components/Landing/howItWork/Card';
+import step1 from '../../assets/imgs/step-1.png';
+import step2 from '../../assets/imgs/step-2.png';
+import step3 from '../../assets/imgs/step-3.png';
+import step4 from '../../assets/imgs/step-4.png';
+
 export default function HowWork() {
   return (
     <div className="mt-10 pb-20">
@@ -19,12 +24,17 @@ export default function HowWork() {
                 که در React Native ساخته شده است.
               </p>
             </div>
-            <div className="mt-10 flex items-center justify-between md:max-w-[60%] mx-auto">
-              <img src={connectLine} alt="connectLine svg" />
-              <img src={connectLine} alt="connectLine svg" />
-              <img src={connectLine} alt="connectLine svg" />
+            <div className="mt-10 items-center hidden md:flex gap-5 justify-between xl:max-w-[80%] mx-auto">
+              <img src={step1} className="w-10 lg:w-20" alt="" />
+              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img src={step2} className="w-10 lg:w-20" alt="" />
+              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img src={step3} className="w-10 lg:w-20" alt="" />
+              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img src={step4} className="w-10 lg:w-20" alt="" />
             </div>
             <div className="mt-10 grid md:grid-cols-4 gap-5">
+              {/* TODO: add slider */}
               <Card />
               <Card />
               <Card />
