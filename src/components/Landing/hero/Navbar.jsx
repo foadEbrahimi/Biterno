@@ -1,13 +1,13 @@
 import React from 'react';
 
-import logo from '../../assets/imgs/logo.svg';
-import line from '../../assets/imgs/line2.svg';
-import line1 from '../../assets/imgs/line.svg';
-import Layout from '../../layout/landing/layout';
+import Layout from '../../../layout/landing/layout';
+import line1 from '../../../assets/imgs/line.svg';
+import line from '../../../assets/imgs/line2.svg';
+import logo from '../../../assets/imgs/logo.svg';
 
 export default function Navbar() {
   return (
-    <div className="border-b py-3">
+    <div className="border-b z-10 bg-white py-3">
       <Layout>
         <div className="flex items-center justify-between">
           <div className="flex items-center ~gap-3/7 justify-between">
