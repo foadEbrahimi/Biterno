@@ -50,7 +50,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="border-2 md:hidden rounded-full p-2 text-black w-full font-bold">
+          <button className="border-2 lg:hidden rounded-full p-2 text-black w-full font-bold">
             مشاهده بیشتر
           </button>
         </div>
