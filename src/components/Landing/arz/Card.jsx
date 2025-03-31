@@ -1,7 +1,8 @@
 import React from 'react';
 
 import arz from '../../../assets/imgs/coin symbol.svg';
-import chart from '../../../assets/imgs/chart1.svg';
+import chart from '../../../assets/imgs/chart.svg';
+
 export default function Card() {
   return (
     <div
