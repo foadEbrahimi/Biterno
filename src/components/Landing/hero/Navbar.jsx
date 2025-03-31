@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../../../layout/landing/layout';
+import Layout from '../../../layout/landing/Layout';
 import line1 from '../../../assets/imgs/line.svg';
 import line from '../../../assets/imgs/line2.svg';
 import logo from '../../../assets/imgs/logo.svg';
