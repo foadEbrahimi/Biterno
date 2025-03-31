@@ -1,5 +1,10 @@
 import React from 'react';
+import Landing from './pages/Landing/Landing';
 
 export default function App() {
-  return <div className='text-red-700'>app</div>;
+  return (
+    <div className="">
+      <Landing />
+    </div>
+  );
 }
