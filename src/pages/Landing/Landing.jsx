@@ -7,6 +7,7 @@ import MarketTrend from './MarketTrend';
 import Contact from './Contact';
 import Subs from './Subs';
 import HowWork from './HowWork';
+import Footer from './Footer';
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
       <Contact />
       <Subs />
       <HowWork />
+      <Footer />
     </div>
   );
 }
