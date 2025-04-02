@@ -6,7 +6,7 @@ import chart from '../../../assets/imgs/chart.svg';
 export default function Card() {
   return (
     <div
-      className="hover:shadow-lg cursor-pointer flex items-center justify-between gap-5 transition-all duration-300 hover:bg-white p-5 rounded-2xl"
+      className="hover:shadow-lg py-12 cursor-pointer flex items-center justify-between gap-5 transition-all duration-300 hover:bg-white p-5 rounded-2xl"
       dir="ltr"
     >
       <div className="flex flex-col flex-1  gap-1">
