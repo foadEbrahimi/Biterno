@@ -4,6 +4,10 @@ import Layout from '../../layout/landing/Layout';
 import Card from '../../components/Landing/crypto/Card';
 
 import arrow from '../../assets/imgs/arrow-long.svg';
+import blog1 from '../../assets/imgs/blog-1.jpg';
+import blog2 from '../../assets/imgs/blog-2.jpg';
+import blog3 from '../../assets/imgs/blog-3.jpg'
+import blog4 from '../../assets/imgs/blog-4.jpg';
 
 export default function Crypto() {
   return (
@@ -27,19 +31,19 @@ export default function Crypto() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 space-y-5">
+        <div className="mt-5 space-y-5">
           <div className="grid lg:hidden md:grid-cols-2 gap-5">
             <Card height="h-[20rem]" />
             <Card height="h-[20rem]" />
           </div>
           <div className="hidden lg:flex items-start gap-20">
-            <div className="flex-1">
-              <Card height="h-[33rem]" />
+            <div className="flex-1 lg:max-w-[40rem]">
+              <Card height="h-[33rem]" img={blog1}/>
             </div>
             <div className="space-y-5">
-              <Card vertical={true} height="h-40" />
-              <Card vertical={true} height="h-40" />
-              <Card vertical={true} height="h-40" />
+              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog2}/>
+              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog4}/>
+              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog3}/>
             </div>
           </div>
           <div className="flex items-center lg:hidden md:justify-start justify-center gap-3">
