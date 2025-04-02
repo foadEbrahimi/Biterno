@@ -4,6 +4,7 @@ import Layout from '../../layout/landing/Layout';
 
 import arrow from '../../assets/imgs/arrow-long.svg';
 import logo from '../../assets/imgs/logo.svg';
+import img from '../../assets/imgs/education-pic-4@2x.png';
 
 export default function Subs() {
   return (
@@ -23,22 +24,27 @@ export default function Subs() {
         </div>
         <div className="h-[30rem] relative mx-10 mt-10">
           <button className="border-2 absolute top-[50%] translate-y-[-50%] -left-16 w-10 h-10 flex items-center justify-center rounded-full">
-            <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
+            <img src={arrow} alt="arrow svg" className="w-4 scale-x-[-1]" />
           </button>
           <button className="border-2 w-10 absolute top-[50%] translate-y-[-50%] -right-16 h-10 flex items-center justify-center rounded-full">
-            <img src={arrow} alt="" className="w-4" />
+            <img src={arrow} alt="arrow svg" className="w-4" />
           </button>
-          <div className="p-4 flex-col gap-2 border rounded-2xl h-full w-full flex justify-center">
-            <span className="font-semibold mt-24 text-[#777E90]">اخبار دیزاین</span>
-            <span className="text-3xl font-bold">
-              بخشی از جامعه جهانی ما باشید
-            </span>
-            <span className="text-[#777E90] font-semibold max-w-[15rem]">
-              Stack مشکلات کسب و کار را از ساده تا پیچیده حل می کند.
-            </span>
-            <button className="rounded-full mt-20 border-2 py-1 px-3 text-black w-fit font-semibold">
-              اکنون عضو شوید
-            </button>
+          <div className="p-4 flex-col gap-2 border rounded-2xl h-full w-full flex lg:flex-row justify-center">
+            <div className="flex-col gap-2 rounded-2xl h-full w-full flex justify-center">
+              <span className="font-semibold mt-24 text-[#777E90]">
+                اخبار دیزاین
+              </span>
+              <span className="text-4xl font-bold">
+                بخشی از جامعه جهانی ما باشید
+              </span>
+              <span className="text-[#777E90] font-semibold max-w-[15rem]">
+                Stack مشکلات کسب و کار را از ساده تا پیچیده حل می کند.
+              </span>
+              <button className="rounded-full mt-20 border-2 py-1 px-3 text-black w-fit font-semibold">
+                اکنون عضو شوید
+              </button>
+            </div>
+            <img src={img} alt="" className="flex-[2]" />
           </div>
         </div>
       </Layout>
