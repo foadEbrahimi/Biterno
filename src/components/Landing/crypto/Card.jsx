@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Card({ height, vertical }) {
+export default function Card({ height, vertical, img, max = false }) {
   return (
     <div
       className={`space-y-3 ${
@@ -9,10 +9,10 @@ export default function Card({ height, vertical }) {
           : 'flex flex-col'
       }`}
     >
-      <div className={`bg-red-200 rounded-lg ${height} w-full`}></div>
-      <div className='space-y-2'>
+      <img src={img} alt="img" className={`rounded-lg ${height} w-full`} />
+      <div className={`space-y-2 ${max && 'max-w-[15rem]'}`}>
         <span
-          className={`text-[#23262F] ${vertical ? '' : 'text-lg'} font-bold`}
+          className={`text-[#23262F] ${vertical ? '' : 'text-2xl'} font-bold`}
         >
           توکن های اهرمی اکنون در دسترس هستند
         </span>
