@@ -24,13 +24,25 @@ export default function HowWork() {
                 که در React Native ساخته شده است.
               </p>
             </div>
-            <div className="mt-10 items-center hidden md:flex gap-5 justify-between xl:max-w-[80%] mx-auto">
+            <div className="mt-10 items-center hidden md:flex justify-center gap-10 mx-auto">
               <img src={step1} className="w-10 lg:w-20" alt="" />
-              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img
+                src={connectLine}
+                className="w-20 lg:w-fit xl:w-28 2xl:w-fit"
+                alt="connectLine svg"
+              />
               <img src={step2} className="w-10 lg:w-20" alt="" />
-              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img
+                src={connectLine}
+                className="w-20 lg:w-fit xl:w-28 2xl:w-fit"
+                alt="connectLine svg"
+              />
               <img src={step3} className="w-10 lg:w-20" alt="" />
-              <img src={connectLine} className="w-20 lg:w-fit" alt="connectLine svg" />
+              <img
+                src={connectLine}
+                className="w-20 lg:w-fit xl:w-28 2xl:w-fit"
+                alt="connectLine svg"
+              />
               <img src={step4} className="w-10 lg:w-20" alt="" />
             </div>
             <div className="mt-10 grid md:grid-cols-4 gap-5">
