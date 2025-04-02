@@ -8,7 +8,7 @@ import logo from '../../../assets/imgs/logo.svg';
 export default function Navbar() {
   return (
     <div className="border-b z-10 bg-white py-3">
-      <Layout>
+      <div className='~px-5/20'>
         <div className="flex items-center justify-between">
           <div className="flex items-center ~gap-3/7 justify-between">
             <div className="flex items-center gap-1">
@@ -46,7 +46,7 @@ export default function Navbar() {
             <img src={line1} alt="" />
           </div>
         </div>
-      </Layout>
+      </div>
     </div>
   );
 }

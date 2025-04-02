@@ -1,16 +1,16 @@
 import React from 'react';
 
-import Layout from '../../../layout/landing/layout';
+import Layout from '../../../layout/landing/Layout';
 import cards from '../../../assets/imgs/cards.png';
 import curve from '../../../assets/imgs/curve.svg';
 import curve2 from '../../../assets/imgs/curve2.png';
 
 export default function Content() {
   return (
-    <Layout>
+    <div className='~px-5/40'>
       <div className="flex z-10 flex-col mt-10 md:flex-row items-center justify-between">
         <div className="flex flex-col items-center md:items-start gap-5 md:flex md:flex-1">
-          <h1 className="text-[#23262F]  ~text-4xl/6xl text-center md:text-right leading-[3.5rem] xl:leading-[5rem] font-bold">
+          <h1 className="text-[#23262F] ~text-4xl/6xl text-center md:text-right leading-[3.5rem] xl:leading-[5rem] font-bold">
             خرید و فروش <br /> رمزنگاری در چند دقیقه
           </h1>
           <p className="text-[#777E90] font-semibold text-center md:text-right lg:max-w-[25rem]">
@@ -35,6 +35,6 @@ export default function Content() {
           <img src={cards} alt="" className="max-h-[39rem]" />
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
