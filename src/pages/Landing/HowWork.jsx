@@ -11,7 +11,7 @@ import step4 from '../../assets/imgs/step-4.png';
 
 export default function HowWork() {
   return (
-    <div className="mt-10 pb-20">
+    <div className="mt-20 pb-20">
       <div>
         <Layout>
           <div>

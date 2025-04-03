@@ -22,19 +22,19 @@ export default function Subs() {
             آژانس خلاقی که رهبری و الهام بخش است
           </p>
         </div>
-        <div className="h-[30rem] relative mx-10 mt-10">
-          <button className="border-2 absolute top-[50%] translate-y-[-50%] -left-16 w-10 h-10 flex items-center justify-center rounded-full">
+        <div className="h-[30rem] relative md:mx-10 mt-10">
+          <button className="border-2 w-10 absolute -bottom-8 left-[42%] md:bottom-[50%] translate-y-[50%] md:-left-10 translate-x-[-50%] h-10 flex items-center justify-center rounded-full">
             <img src={arrow} alt="arrow svg" className="w-4 scale-x-[-1]" />
           </button>
-          <button className="border-2 w-10 absolute top-[50%] translate-y-[-50%] -right-16 h-10 flex items-center justify-center rounded-full">
+          <button className="border-2 w-10 absolute -bottom-8 right-[42%] md:bottom-[50%] translate-y-[50%] md:-right-10 translate-x-[50%] h-10 flex items-center justify-center rounded-full">
             <img src={arrow} alt="arrow svg" className="w-4" />
           </button>
-          <div className="p-4 flex-col gap-2 border rounded-2xl h-full w-full flex lg:flex-row justify-center">
+          <div className="p-4 flex-col gap-2 border rounded-2xl h-full w-full flex items-center md:flex-row justify-center">
             <div className="flex-col gap-2 rounded-2xl h-full w-full flex justify-center">
               <span className="font-semibold mt-24 text-[#777E90]">
                 اخبار دیزاین
               </span>
-              <span className="text-4xl font-bold">
+              <span className="~text-2xl/4xl font-bold">
                 بخشی از جامعه جهانی ما باشید
               </span>
               <span className="text-[#777E90] font-semibold max-w-[15rem]">
@@ -44,7 +44,11 @@ export default function Subs() {
                 اکنون عضو شوید
               </button>
             </div>
-            <img src={img} alt="" className="flex-[2]" />
+            <img
+              src={img}
+              alt=""
+              className="hidden md:flex md:w-[20rem] md:h-[20rem] xl:w-fit xl:h-fit"
+            />
           </div>
         </div>
       </Layout>
