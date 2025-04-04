@@ -6,7 +6,12 @@ export default {
   theme: {
     screens,
     fontSize,
-    extend: {},
+    extend: {
+      fontFamily: {
+        arial: ["Arial"],
+        vazir: ["vazir"],
+      },
+    },
   },
   plugins: [fluid, require("tailwindcss-animate")],
 };
