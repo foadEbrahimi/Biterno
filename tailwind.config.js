@@ -4,6 +4,8 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", extract],
   theme: {
+    screens,
+    fontSize,
     extend: {},
   },
   plugins: [fluid, require("tailwindcss-animate")],
