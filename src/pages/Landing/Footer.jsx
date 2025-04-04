@@ -1,76 +1,76 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../../layout/landing/Layout';
+import Layout from "../../layout/landing/Layout";
 
-import logo from '../../assets/imgs/logo.svg';
-import arrowLong from '../../assets/imgs/arrow-long-white.svg';
-import facebook from '../../assets/imgs/facebook.svg';
-import twitter from '../../assets/imgs/twitter.svg';
-import instagram from '../../assets/imgs/instagram.svg';
-import dribble from '../../assets/imgs/dribble.svg';
-import be from '../../assets/imgs/be.svg';
+import logo from "../../assets/imgs/logo.svg";
+import arrowLong from "../../assets/imgs/arrow-long-white.svg";
+import facebook from "../../assets/imgs/facebook.svg";
+import twitter from "../../assets/imgs/twitter.svg";
+import instagram from "../../assets/imgs/instagram.svg";
+import dribble from "../../assets/imgs/dribble.svg";
+import be from "../../assets/imgs/be.svg";
 
 export default function Footer() {
   return (
     <div>
       <Layout>
-        <div className="flex flex-col md:flex-row md:items-start w-full">
+        <div className="flex w-full flex-col md:flex-row md:items-start">
           <div className="md:mt-10 md:hidden">
             <div className="flex items-center gap-1">
               <img src={logo} alt="logo svg" />
               <span className="text-2xl">بیتکلود</span>
             </div>
           </div>
-          <div className="mt-5 pt-5 items-start md:border-t-0 w-full flex gap-10 pr-5 border-t-2">
+          <div className="mt-5 flex w-full items-start gap-10 border-t-2 pr-5 pt-5 md:border-t-0">
             <img src={logo} alt="" className="hidden md:flex" />
             <div className="space-y-5">
-              <span className="text-2xl font-bold ml-8">درباره بیتکلود</span>
-              <ul className="flex [&>*]:cursor-pointer flex-col gap-3 [&>*]:text-[#90949B]">
-                <li className="hover:text-blue-600 transition-all duration-300">
+              <span className="ml-8 text-2xl font-bold">درباره بیتکلود</span>
+              <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
+                <li className="transition-all duration-300 hover:text-blue-600">
                   پروژه ها
                 </li>
-                <li className="hover:text-blue-600 transition-all duration-300">
+                <li className="transition-all duration-300 hover:text-blue-600">
                   ما چه کاری انجام میدیم؟
                 </li>
-                <li className="hover:text-blue-600 transition-all duration-300">
+                <li className="transition-all duration-300 hover:text-blue-600">
                   پرسس
                 </li>
-                <li className="hover:text-blue-600 transition-all duration-300">
+                <li className="transition-all duration-300 hover:text-blue-600">
                   شغل ها
                 </li>
               </ul>
             </div>
           </div>
-          <div className="space-y-5 mt-5 pt-5 md:items-center md:border-t-0 w-full flex flex-col md:border-r pr-5 border-t-2">
-            <span className="text-2xl font-bold ml-16">ارتباط باما</span>
-            <ul className="flex [&>*]:cursor-pointer flex-col gap-3 [&>*]:text-[#90949B]">
-              <li className="hover:text-blue-600 transition-all duration-300">
+          <div className="mt-5 flex w-full flex-col space-y-5 border-t-2 pr-5 pt-5 md:items-center md:border-r md:border-t-0">
+            <span className="ml-16 text-2xl font-bold">ارتباط باما</span>
+            <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
+              <li className="transition-all duration-300 hover:text-blue-600">
                 43252 Borer Mountains
               </li>
-              <li className="hover:text-blue-600 transition-all duration-300">
+              <li className="transition-all duration-300 hover:text-blue-600">
                 Zackerychester
               </li>
-              <li className="hover:text-blue-600 transition-all duration-300">
+              <li className="transition-all duration-300 hover:text-blue-600">
                 Bahamas
               </li>
-              <li className="hover:text-blue-600 transition-all duration-300">
+              <li className="transition-all duration-300 hover:text-blue-600">
                 732-528-4945
               </li>
             </ul>
           </div>
-          <div className="space-y-5 mt-5 pt-5 md:border-t-0 w-full md:max-w-[25rem] md:border-r pr-5 border-t-2 flex flex-col">
+          <div className="mt-5 flex w-full flex-col space-y-5 border-t-2 pr-5 pt-5 md:max-w-[25rem] md:border-r md:border-t-0">
             <span className="text-2xl font-bold">خبرنامه</span>
-            <span className="text-[#23262F] max-w-[20rem]">
+            <span className="max-w-[20rem] text-[#23262F]">
               برای دریافت دوره و منبع طراحی رایگان بیشتر در خبرنامه ما مشترک
               شوید.
             </span>
-            <div className="border-2 rounded-full grid grid-cols-[auto_2.5rem] py-1 px-3">
+            <div className="grid grid-cols-[auto_2.5rem] rounded-full border-2 px-3 py-1">
               <input
-                className="outline-none border-none bg-transparent w-full"
+                className="w-full border-none bg-transparent outline-none"
                 type="email"
                 placeholder="ایمیل خود را وارد کنید"
               />
-              <div className="rounded-full cursor-pointer w-10 h-10 bg-blue-600 flex items-center justify-center">
+              <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-blue-600">
                 <img
                   src={arrowLong}
                   className="w-5 scale-x-[-1]"
@@ -81,11 +81,11 @@ export default function Footer() {
           </div>
         </div>
       </Layout>
-      <div className="space-y-5 ~px-5/20 mt-5 py-5 border-t-2 flex flex-col md:flex-row md:items-center md:justify-between">
-        <span className="text-[#777E90] text-sm">
+      <div className="mt-5 flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
+        <span className="text-sm text-[#777E90]">
           تمامی حقوق برای بیتکلود محفوظ است. 2025 ©
         </span>
-        <div className="flex [&>*]:cursor-pointer items-center gap-5">
+        <div className="flex items-center gap-5 [&>*]:cursor-pointer">
           <img className="w-6" src={facebook} alt="" />
           <img className="w-6" src={instagram} alt="" />
           <img className="w-6" src={twitter} alt="" />
