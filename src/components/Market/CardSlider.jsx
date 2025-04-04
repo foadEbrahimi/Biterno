@@ -14,14 +14,14 @@ export default function CardSlider() {
             </span>
             <span
               dir="ltr"
-              className="flex items-center justify-center rounded-full bg-[#58BD7D] px-2 font-sans text-white"
+              className="flex items-center justify-center rounded-full bg-[#58BD7D] px-2 text-white"
             >
               {" "}
               +0.79%
             </span>
           </div>
-          <span className="font-sans text-3xl font-bold">36,641.20</span>
-          <span className="font-sans text-lg font-light">36,641.20</span>
+          <span className="mt-1 text-3xl font-bold">36,641.20</span>
+          <span className="text-lg font-light">36,641.20</span>
         </div>
       </div>
       <img src={chart} className="hidden xl:flex" alt="chart svg" />
