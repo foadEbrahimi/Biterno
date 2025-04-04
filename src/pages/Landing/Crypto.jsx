@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../../layout/landing/Layout';
-import Card from '../../components/Landing/crypto/Card';
+import Layout from "../../layout/landing/Layout";
+import Card from "../../components/Landing/crypto/Card";
 
-import arrow from '../../assets/imgs/arrow-long.svg';
-import blog1 from '../../assets/imgs/blog-1.jpg';
-import blog2 from '../../assets/imgs/blog-2.jpg';
-import blog3 from '../../assets/imgs/blog-3.jpg'
-import blog4 from '../../assets/imgs/blog-4.jpg';
+import arrow from "../../assets/imgs/arrow-long.svg";
+import blog1 from "../../assets/imgs/blog-1.jpg";
+import blog2 from "../../assets/imgs/blog-2.jpg";
+import blog3 from "../../assets/imgs/blog-3.jpg";
+import blog4 from "../../assets/imgs/blog-4.jpg";
 
 export default function Crypto() {
   return (
@@ -16,13 +16,13 @@ export default function Crypto() {
         <div>
           <div className="flex items-center justify-between">
             <span className="~text-3xl/4xl font-bold">یادگیری کریپتو</span>
-            <button className="py-1 font-semibold px-3 text-sm   lg:text-base text-black rounded-full border-2">
+            <button className="rounded-full border-2 px-3 py-1 text-sm font-semibold text-black lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
           <div className="mt-3">
-            <ul className="flex font-semibold text-[#777E90] [&>*]:hover:bg-[#353945] [&>*]:py-0.5 [&>*]:rounded-full [&>*]:hover:text-white [&>*]:px-3 text-md items-center gap-5">
-              <li className="bg-[#353945] py-0.5  rounded-full text-white px-3">
+            <ul className="text-md flex items-center gap-5 font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
+              <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
                 همه
               </li>
               <li>بیتکوین</li>
@@ -32,29 +32,44 @@ export default function Crypto() {
           </div>
         </div>
         <div className="mt-5 space-y-5">
-          <div className="grid lg:hidden md:grid-cols-2 gap-5">
+          <div className="grid gap-5 md:grid-cols-2 lg:hidden">
             <Card height="h-[20rem]" />
             <Card height="h-[20rem]" />
           </div>
-          <div className="hidden lg:flex items-start gap-20">
+          <div className="hidden items-start gap-20 lg:flex">
             <div className="flex-1 lg:max-w-[40rem]">
-              <Card height="h-[33rem]" img={blog1}/>
+              <Card height="h-[33rem]" img={blog1} />
             </div>
             <div className="space-y-5">
-              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog2}/>
-              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog4}/>
-              <Card max vertical={true} height="h-[12rem] w-[14rem]" img={blog3}/>
+              <Card
+                max
+                vertical={true}
+                height="h-[12rem] w-[14rem]"
+                img={blog2}
+              />
+              <Card
+                max
+                vertical={true}
+                height="h-[12rem] w-[14rem]"
+                img={blog4}
+              />
+              <Card
+                max
+                vertical={true}
+                height="h-[12rem] w-[14rem]"
+                img={blog3}
+              />
             </div>
           </div>
-          <div className="flex items-center lg:hidden md:justify-start justify-center gap-3">
-            <button className="hover:border-2 w-10 h-10 flex items-center justify-center rounded-full">
+          <div className="flex items-center justify-center gap-3 md:justify-start lg:hidden">
+            <button className="flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4" />
             </button>
-            <button className="hover:border-2 w-10 h-10 flex items-center justify-center rounded-full">
+            <button className="flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="border-2 lg:hidden rounded-full p-2 text-black w-full font-bold">
+          <button className="w-full rounded-full border-2 p-2 font-bold text-black lg:hidden">
             مشاهده بیشتر
           </button>
         </div>
