@@ -12,7 +12,7 @@ import be from "../../assets/imgs/be.svg";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="mt-10">
       <Layout>
         <div className="flex w-full flex-col md:flex-row md:items-start">
           <div className="md:mt-10 md:hidden">
