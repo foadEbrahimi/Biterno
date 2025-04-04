@@ -1,11 +1,10 @@
-import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', extract],
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", extract],
   theme: {
-    screens,
-    fontSize,
     extend: {},
   },
-  plugins: [fluid],
+  plugins: [fluid, require("tailwindcss-animate")],
 };

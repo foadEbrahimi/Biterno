@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'vazir';
-  src: url('./assets/font/Vazir-Thin-FD-WOL.woff2');
+  font-family: "vazir";
+  src: url("./assets/font/Vazir-Thin-FD-WOL.woff2");
 }
 html {
-  font-family: 'vazir';
+  font-family: "vazir";
 }
