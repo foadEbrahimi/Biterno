@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../../components/Landing/arz/Card';
-import Layout from '../../layout/landing/layout';
+import Layout from '../../layout/landing/Layout';
 
 export default function Arz() {
   return (
