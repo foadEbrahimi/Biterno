@@ -5,6 +5,7 @@ import Content from "../../components/Market/Content";
 import Cryptocurrencies from "../../components/Market/Cryptocurrencies";
 import SmallCard from "../../components/Market/SmallCard";
 import Table from "../../components/Market/Table";
+import Learn from "../../components/Market/Learn";
 
 export default function Market() {
   return (
@@ -29,6 +30,9 @@ export default function Market() {
           <SmallCard />
         </div>
         <Table />
+      </Layout>
+      <Layout>
+        <Learn />
       </Layout>
     </div>
   );
