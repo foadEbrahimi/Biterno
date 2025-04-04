@@ -6,7 +6,7 @@ import star from "../../assets/imgs/star.svg";
 
 export default function TableRow() {
   return (
-    <tr className="font-arial border-gray-200 bg-white">
+    <tr className="border-gray-200 bg-white">
       <th
         scope="row"
         className="whitespace-nowrap py-4 font-medium text-gray-900"
