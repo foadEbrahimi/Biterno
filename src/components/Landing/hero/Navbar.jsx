@@ -1,49 +1,48 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../../../layout/landing/Layout';
-import line1 from '../../../assets/imgs/line.svg';
-import line from '../../../assets/imgs/line2.svg';
-import logo from '../../../assets/imgs/logo.svg';
+import list from "../../../assets/imgs/list.svg";
+import chevronBottom from "../../../assets/imgs/chevronBottom.svg";
+import logo from "../../../assets/imgs/logo.svg";
 
 export default function Navbar() {
   return (
-    <div className="border-b z-10 bg-white py-3">
-      <div className='~px-5/20'>
+    <div className="z-10 border-b bg-white py-3">
+      <div className="~px-5/20">
         <div className="flex items-center justify-between">
-          <div className="flex items-center ~gap-3/7 justify-between">
+          <div className="flex items-center justify-between ~gap-3/7">
             <div className="flex items-center gap-1">
-              <img src={logo} alt="logo svg" />
+              <img src={logo} alt="bitCloud logo" />
               <span className="text-2xl">بیتکلود</span>
             </div>
-            <div className="bg-[#E6E8EC] w-[1px] h-10 hidden md:flex"></div>
+            <div className="hidden h-10 w-0.5 bg-[#E6E8EC] md:flex"></div>
             <div>
-              <ul className="text-[#777E90] hidden md:flex font-bold [&>*]:cursor-pointer items-center ~gap-5/14">
+              <ul className="hidden items-center font-bold text-[#777E90] ~gap-5/14 md:flex [&>*]:cursor-pointer">
                 <li>تبدیل</li>
                 <li className="flex items-center gap-1">
                   خرید کریپتو
-                  <img src={line} alt="line svg" className="w-5" />
+                  <img src={chevronBottom} alt="line svg" className="w-5" />
                 </li>
                 <li>بازار</li>
                 <li>کشف کنید</li>
               </ul>
             </div>
           </div>
-          <div className="items-center hidden md:flex gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <div className="flex items-center gap-2">
-              <button className="py-2 rounded-full border-2 font-bold px-4">
+              <button className="rounded-full border-2 px-4 py-2 font-bold">
                 ورود
               </button>
-              <button className="p-2 rounded-full bg-[#3772FF] text-white font-bold px-4">
+              <button className="rounded-full bg-[#3772FF] p-2 px-4 font-bold text-white">
                 ثبت نام
               </button>
             </div>
-            <button className="uppercase font-bold flex items-center gap-1">
+            <button className="flex items-center gap-1 font-bold uppercase">
               انگلیسی/دلار
-              <img src={line} alt="line svg" className="w-5" />
+              <img src={chevronBottom} alt="line svg" className="w-5" />
             </button>
           </div>
           <div className="md:hidden">
-            <img src={line1} alt="" />
+            <img src={list} alt="" />
           </div>
         </div>
       </div>
