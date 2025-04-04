@@ -1,6 +1,7 @@
 import React from "react";
 
 import cards from "../../../assets/imgs/cards.png";
+import { Link } from "react-router";
 
 export default function Content() {
   return (
@@ -15,9 +16,11 @@ export default function Content() {
             های کریپتو معامله کنید.
           </p>
           <div className="flex items-center gap-5 md:hidden">
-            <button className="rounded-full border-2 px-4 py-2 font-bold">
-              ورود
-            </button>
+            <Link to="/market">
+              <button className="rounded-full border-2 px-4 py-2 font-bold">
+                ورود
+              </button>
+            </Link>
             <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white">
               ثبت نام
             </button>
