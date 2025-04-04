@@ -6,7 +6,7 @@ import TableRow from "./TableRow";
 
 export default function Table() {
   return (
-    <div className="mt-40">
+    <div className="mt-40 hidden md:block">
       <div className="relative mt-5 overflow-x-auto">
         <table className="w-full text-left text-sm text-gray-500 lg:text-lg rtl:text-right">
           <thead className="border-b uppercase text-[#777E90]">
