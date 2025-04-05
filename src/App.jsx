@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 
 import Landing from "./pages/Landing/Landing";
 import Navbar from "./components/Landing/hero/Navbar";
@@ -10,16 +10,14 @@ import Discover from "./pages/discover/Discover";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="market" element={<Market />} />
-          <Route path="discover" element={<Discover />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="market" element={<Market />} />
+        <Route path="discover" element={<Discover />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
