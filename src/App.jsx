@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router";
+import { Outlet, Route, Routes } from "react-router";
 
 import Landing from "./pages/Landing/Landing";
 import Navbar from "./components/Landing/hero/Navbar";
@@ -7,17 +7,34 @@ import Footer from "./pages/Landing/Footer";
 
 import Market from "./pages/market/Market";
 import Discover from "./pages/discover/Discover";
+import Layout from "./layout/auth/Layout";
+import Login from "./pages/auth/login/Login";
 
 export default function App() {
   return (
     <>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="market" element={<Market />} />
-        <Route path="discover" element={<Discover />} />
+        {/* landing */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Outlet />
+              <Footer />
+            </>
+          }
+        >
+          <Route index element={<Landing />} />
+          <Route path="market" element={<Market />} />
+          <Route path="discover" element={<Discover />} />
+        </Route>
+        {/* auth */}
+        <Route path="/auth" element={<Layout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Login />} />
+        </Route>
       </Routes>
-      <Footer />
     </>
   );
 }
