@@ -11,7 +11,7 @@ import {
 import Card from "../../components/Discover/Card";
 export default function Search() {
   return (
-    <div>
+    <div className="mt-32">
       <div className="flex items-center justify-between">
         <span className="font-bold text-[#353945] ~text-lg/3xl">
           هر چیزی را در مورد کریپتو جستجو کنید
