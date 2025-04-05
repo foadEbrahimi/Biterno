@@ -59,7 +59,9 @@ export default function Search() {
           </span>
         </div>
       </div>
-      <div className="grid gap-5 ~mt-10/20 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-5 mt-10 md:grid-cols-2 xl:grid-cols-3">
+        <Card />
+        <Card />
         <Card />
         <Card />
         <Card />

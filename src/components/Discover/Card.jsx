@@ -5,7 +5,7 @@ export default function Card() {
   return (
     <div className="flex flex-col gap-3">
       <div className="relative">
-        <img src={img} alt="" className="w-full max-h-[20rem] rounded-2xl" />
+        <img src={img} alt="" className="max-h-[20rem] w-full rounded-2xl" />
         <span className="absolute left-2 top-2 rounded-lg bg-[#9757D7] px-3 py-1 text-white">
           به زودی
         </span>
