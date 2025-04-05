@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Content() {
   return (
-    <div className="mt-20 flex flex-col ~gap-2/5 lg:!mt-[15rem] xl:!mt-[16.5rem] 2xl:!mt-[15rem]">
+    <div className="mt-20 lg:mb-20 flex flex-col ~gap-2/5 lg:mt-0">
       <h1 className="font-bold ~text-4xl/6xl">
         قیمت <br /> ارزهای دیجیتال <br /> امروزی
       </h1>
