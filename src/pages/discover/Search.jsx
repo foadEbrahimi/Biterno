@@ -8,6 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../components/ui/shadcn/select";
+import Card from "../../components/Discover/Card";
 export default function Search() {
   return (
     <div>
@@ -37,11 +38,9 @@ export default function Search() {
               <SelectValue placeholder="آموزش" />
             </SelectTrigger>
             <SelectContent className="border-2 bg-white">
-              <SelectItem value="DeFi">DeFi</SelectItem>
-              <SelectItem value="Innovation">Innovation</SelectItem>
-              <SelectItem value="POS">POS</SelectItem>
-              <SelectItem value="NFT">NFT</SelectItem>
-              <SelectItem value="POW">POW</SelectItem>
+              <SelectItem value="DeFi">مورد استفاده</SelectItem>
+              <SelectItem value="Innovation">تجارت</SelectItem>
+              <SelectItem value="POS">کیف پول</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -59,6 +58,12 @@ export default function Search() {
             کیف پول
           </span>
         </div>
+      </div>
+      <div className="grid gap-5 ~mt-10/20 md:grid-cols-2 xl:grid-cols-3">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );
