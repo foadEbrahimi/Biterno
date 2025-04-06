@@ -9,19 +9,23 @@ import logo from "../../../assets/imgs/logo.svg";
 
 export default function Signup() {
   const passwordRef = useRef(null);
-  const eyeIconRef = useRef(null);
+  const repeatpasswordRef = useRef(null);
+  const passwordEyeIconRef = useRef(null);
+  const repeatPasswordEyeIconRef = useRef(null);
 
-  const togglePasswordVisibility = () => {
-    const input = passwordRef.current;
+  const togglePasswordVisibility = (e, inputRef, eyeIconRef) => {
+    e.preventDefault();
+    const input = inputRef.current;
     const eyeIcon = eyeIconRef.current;
 
     if (input.type === "password") {
       input.type = "text";
-      eyeIcon.src = eyeFilled; // تغییر به آیکون چشم بسته
+      eyeIcon.src = eyeFilled;
     } else {
       input.type = "password";
-      eyeIcon.src = eye; // تغییر به آیکون چشم باز
+      eyeIcon.src = eye;
     }
+    input.focus();
   };
 
   return (
@@ -89,9 +93,13 @@ export default function Signup() {
                   placeholder="رمز عبور"
                   className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
                 />
-                <div onClick={togglePasswordVisibility}>
+                <div
+                  onClick={(e) =>
+                    togglePasswordVisibility(e, passwordRef, passwordEyeIconRef)
+                  }
+                >
                   <img
-                    ref={eyeIconRef}
+                    ref={passwordEyeIconRef}
                     src={eye}
                     className="cursor-pointer"
                     alt="Toggle Password Visibility"
@@ -108,15 +116,23 @@ export default function Signup() {
               </label>
               <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
                 <Input
-                  ref={passwordRef}
+                  ref={repeatpasswordRef}
                   id="reapetpassword"
                   type="password"
                   placeholder="رمز عبور"
                   className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
                 />
-                <div onClick={togglePasswordVisibility}>
+                <div
+                  onClick={(e) =>
+                    togglePasswordVisibility(
+                      e,
+                      repeatpasswordRef,
+                      repeatPasswordEyeIconRef,
+                    )
+                  }
+                >
                   <img
-                    ref={eyeIconRef}
+                    ref={repeatPasswordEyeIconRef}
                     src={eye}
                     className="cursor-pointer"
                     alt="Toggle Password Visibility"
@@ -125,12 +141,9 @@ export default function Signup() {
               </div>
             </div>
             <div className="mt-5 flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="acceptPolicy"
-                defaultChecked
-                className="h-6 w-6 rounded border-[#E6E8EC] text-[#3772FF] focus:ring-[#3772FF]"
-              />
+              <li className="list-none">
+                <input id="c1" type="checkbox" defaultChecked />
+              </li>
               <label
                 htmlFor="acceptPolicy"
                 className="text-sm font-semibold text-[#777E90]"
