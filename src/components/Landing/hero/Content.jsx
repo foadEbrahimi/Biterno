@@ -1,13 +1,18 @@
 import React from "react";
-
-import cards from "../../../assets/imgs/cards.png";
 import { Link } from "react-router";
+
+import cards from "../../../assets/imgs/cards@2x.png";
 
 export default function Content() {
   return (
-    <div className="~px-5/40">
-      <div className="z-10 mt-10 flex flex-col items-center justify-between md:flex-row">
-        <div className="flex flex-col items-center gap-5 md:flex md:flex-1 md:items-start">
+    <div
+      className="relative mt-10 ~px-5/40"
+      style={{
+        height: "calc(100dvh - 56px)",
+      }}
+    >
+      <div className="z-10 flex h-full flex-col items-center gap-10 md:flex-row md:justify-between">
+        <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
           <h1 className="text-center font-bold leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
             خرید و فروش <br /> رمزنگاری در چند دقیقه
           </h1>
@@ -25,12 +30,25 @@ export default function Content() {
               ثبت نام
             </button>
           </div>
-          <button className="hidden rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white md:flex">
+          <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white md:flex">
             همین الان شروع کنید
           </button>
         </div>
-        <div className="flex flex-1 items-center justify-center">
-          <img src={cards} alt="card hero img" className="max-h-[39rem]" />
+        {/* <div className="flex lg:items-center lg:justify-center">
+          <img
+            src={cards}
+            draggable={false}
+            alt="card hero img"
+            className="lg:absolute lg:-top-20 lg:left-0 lg:-z-10 lg:w-[55%]"
+          />
+        </div> */}
+        <div className="hidden md:flex md:items-center md:justify-center">
+          <img
+            src={cards}
+            draggable={false}
+            alt="card hero img"
+            className="lg:absolute lg:-top-10 lg:left-0 lg:-z-10 lg:w-[55%] 2xl:-top-32"
+          />
         </div>
       </div>
     </div>
