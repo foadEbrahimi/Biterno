@@ -72,18 +72,33 @@ export default function Login() {
         {/* form */}
         <div className="mt-4">
           <form>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="font-semibold text-[#B1B5C3]">
-                ایمیل
-              </label>
-              <Input
-                inputMode="email"
-                id="email"
-                type="email"
-                placeholder="آدرس ایمیل"
-                className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
-              />
-            </div>
+            {part === "phone" ? (
+              <div className="flex flex-col gap-2">
+                <label htmlFor="phone" className="font-semibold text-[#B1B5C3]">
+                  شماره تماس
+                </label>
+                <Input
+                  inputMode="phone"
+                  id="phone"
+                  type="phone"
+                  placeholder="شماره تماس"
+                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                />
+              </div>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <label htmlFor="email" className="font-semibold text-[#B1B5C3]">
+                  ایمیل
+                </label>
+                <Input
+                  inputMode="email"
+                  id="email"
+                  type="email"
+                  placeholder="آدرس ایمیل"
+                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                />
+              </div>
+            )}
             <div className="mt-5 flex flex-col gap-2">
               <label
                 htmlFor="password"
