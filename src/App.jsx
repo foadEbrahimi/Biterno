@@ -9,6 +9,7 @@ import Market from "./pages/market/Market";
 import Discover from "./pages/discover/Discover";
 import Layout from "./layout/auth/Layout";
 import Login from "./pages/auth/login/Login";
+import Signup from "./pages/auth/signup/Signup";
 
 export default function App() {
   return (
@@ -32,7 +33,7 @@ export default function App() {
         {/* auth */}
         <Route path="/auth" element={<Layout />}>
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<Login />} />
+          <Route path="register" element={<Signup />} />
         </Route>
       </Routes>
     </>
