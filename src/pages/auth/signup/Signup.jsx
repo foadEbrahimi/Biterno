@@ -6,6 +6,7 @@ import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import google from "../../../assets/imgs/auth/google.svg";
 import logo from "../../../assets/imgs/logo.svg";
+import { Link } from "react-router";
 
 export default function Signup() {
   const passwordRef = useRef(null);
@@ -37,9 +38,12 @@ export default function Signup() {
         </div>
         <p className="text-sm">
           از قبل حساب کاربری دارید؟{" "}
-          <span className="cursor-pointer font-bold text-[#3772FF]">
+          <Link
+            to="/auth/login"
+            className="cursor-pointer font-bold text-[#3772FF]"
+          >
             وارد شوید{" "}
-          </span>
+          </Link>
         </p>
       </div>
       <div className="mx-auto mt-20 flex flex-col gap-3 sm:max-w-[25rem]">
