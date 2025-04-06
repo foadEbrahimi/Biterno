@@ -110,10 +110,10 @@ export default function Login() {
               </div>
             </div>
             <div className="mt-4 flex items-center justify-between text-xs">
-              <button className="font-bold text-[#777E90]">
+              <button className="font-bold text-[#777E90] transition-all duration-300 hover:text-[#23262F]">
                 اسکن برای ورود
               </button>
-              <button className="font-bold text-[#3772FF]">
+              <button className="font-bold text-[#3772FF] transition-all duration-300 hover:text-[#044eff]">
                 فراموشی رمز ؟
               </button>
             </div>
