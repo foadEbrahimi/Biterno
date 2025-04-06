@@ -5,6 +5,7 @@ import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import lock from "../../../assets/imgs/auth/lock.svg";
 import logo from "../../../assets/imgs/logo.svg";
+import { Link } from "react-router";
 
 export default function Login() {
   const [part, setPart] = useState("email");
@@ -33,9 +34,12 @@ export default function Login() {
         </div>
         <p className="text-sm">
           حساب کاربری ندارید؟{" "}
-          <span className="cursor-pointer font-bold text-[#3772FF]">
+          <Link
+            to="/auth/register"
+            className="cursor-pointer font-bold text-[#3772FF]"
+          >
             همین حالا ثبت نام کنید
-          </span>
+          </Link>
         </p>
       </div>
       <div className="mx-auto mt-20 flex flex-col gap-3 sm:max-w-[25rem]">
@@ -48,7 +52,7 @@ export default function Login() {
         <div className="mx-auto flex w-fit items-center gap-1 rounded-full bg-[#F4F5F6] px-3 py-1.5">
           <span className="font-sans">
             <span className="text-[#58BD7D]">https://</span>
-            <span>accounts.bitcloud.com/login</span>
+            <span>bitcloud.com/login</span>
           </span>
           <img src={lock} alt="" />
         </div>
