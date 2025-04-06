@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 import cards from "../../../assets/imgs/cards@2x.png";
-
+import arrow from "../../../assets/imgs/arrow-long.svg";
 export default function Content() {
   return (
     <div
@@ -30,8 +30,18 @@ export default function Content() {
               ثبت نام
             </button>
           </div>
-          <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white md:flex">
+          <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
             همین الان شروع کنید
+          </button>
+          <button className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:flex">
+            <div id="scroll_line" className="flex translate-y-[-23px] flex-col">
+              <img
+                src={arrow}
+                className="mb-[24px] rotate-90"
+                alt="arrow svg"
+              />
+              <img src={arrow} className="rotate-90" alt="arrow svg" />
+            </div>
           </button>
         </div>
         {/* <div className="flex lg:items-center lg:justify-center">
