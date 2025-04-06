@@ -13,6 +13,7 @@ export default function Layout() {
       >
         <img
           src={bgImg}
+          draggable={false}
           alt="bg img "
           className="absolute left-0 top-0 h-full scale-x-[-1]"
         />
