@@ -156,3 +156,17 @@ html {
     }
   }
 }
+
+/* animation */
+#scroll_line {
+  animation: arrowDown ease-out 1.4s infinite;
+}
+
+@keyframes arrowDown {
+  80% {
+    transform: translateY(23px);
+  }
+  100% {
+    transform: translateY(23px);
+  }
+}
