@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
-import logo from "../../../assets/imgs/logo.svg";
+import apple from "../../../assets/imgs/auth/apple.svg";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import google from "../../../assets/imgs/auth/google.svg";
-import apple from "../../../assets/imgs/auth/apple.svg";
+import logo from "../../../assets/imgs/logo.svg";
 
 export default function Signup() {
   const passwordRef = useRef(null);
@@ -99,19 +99,65 @@ export default function Signup() {
                 </div>
               </div>
             </div>
-            <div className="mt-4 flex items-center justify-between text-xs">
-              <button className="font-bold text-[#777E90] transition-all duration-300 hover:text-[#23262F]">
-                اسکن برای ورود
-              </button>
-              <button className="font-bold text-[#3772FF] transition-all duration-300 hover:text-[#044eff]">
-                فراموشی رمز ؟
-              </button>
+            <div className="mt-5 flex flex-col gap-2">
+              <label
+                htmlFor="reapetpassword"
+                className="font-semibold text-[#B1B5C3]"
+              >
+                تایید رمز عبور{" "}
+              </label>
+              <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
+                <Input
+                  ref={passwordRef}
+                  id="reapetpassword"
+                  type="password"
+                  placeholder="رمز عبور"
+                  className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
+                />
+                <div onClick={togglePasswordVisibility}>
+                  <img
+                    ref={eyeIconRef}
+                    src={eye}
+                    className="cursor-pointer"
+                    alt="Toggle Password Visibility"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-5 flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="acceptPolicy"
+                defaultChecked
+                className="h-6 w-6 rounded border-[#E6E8EC] text-[#3772FF] focus:ring-[#3772FF]"
+              />
+              <label
+                htmlFor="acceptPolicy"
+                className="text-sm font-semibold text-[#777E90]"
+              >
+                با ثبت‌نام، موافقت می‌کنم که ۱۸ سال یا بیشتر سن داشته باشم، با
+                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
+                  {" "}
+                  توافق‌نامه‌های کاربر
+                </span>
+                ،{" "}
+                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
+                  خط‌مشی رازداری،
+                </span>{" "}
+                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
+                  خط‌مشی کوکی
+                </span>
+                ،{" "}
+                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
+                  رضایت امضای الکترونیکی
+                </span>{" "}
+              </label>
             </div>
             <button
               type="submit"
-              className="mt-9 w-full rounded-full bg-[#3772FF] py-3 text-xl font-bold text-white transition-all duration-300 hover:bg-[#0045ea]"
+              className="mt-9 w-full rounded-full bg-[#3772FF] py-3 text-lg font-bold text-white transition-all duration-300 hover:bg-[#0045ea]"
             >
-              ورود
+              ثبت نام
             </button>
           </form>
         </div>
