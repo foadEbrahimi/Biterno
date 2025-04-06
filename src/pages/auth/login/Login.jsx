@@ -57,13 +57,13 @@ export default function Login() {
           <div className="flex items-center justify-center gap-3">
             <span
               onClick={() => setPart("email")}
-              className={`cursor-pointer ${part === "email" ? "bg-[#353945] text-white" : "text-[#777E90]"} rounded-full px-4 py-1 font-semibold`}
+              className={`cursor-pointer ${part === "email" ? "bg-[#353945] text-white" : "text-[#777E90] hover:text-[#353945]"} rounded-full px-4 py-1 font-semibold transition-all`}
             >
               ایمیل
             </span>
             <span
               onClick={() => setPart("phone")}
-              className={`cursor-pointer ${part === "phone" ? "bg-[#353945] text-white" : "text-[#777E90]"} rounded-full px-4 py-1 font-semibold`}
+              className={`cursor-pointer ${part === "phone" ? "bg-[#353945] text-white" : "text-[#777E90] hover:text-[#353945]"} rounded-full px-4 py-1 font-semibold transition-all`}
             >
               شماره تماس
             </span>
