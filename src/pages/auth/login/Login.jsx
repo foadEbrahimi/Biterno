@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
 import eye from "../../../assets/imgs/auth/eye.svg";
@@ -7,6 +7,7 @@ import lock from "../../../assets/imgs/auth/lock.svg";
 import logo from "../../../assets/imgs/logo.svg";
 
 export default function Login() {
+  const [part, setPart] = useState("email");
   const passwordRef = useRef(null);
   const eyeIconRef = useRef(null);
 
@@ -54,10 +55,16 @@ export default function Login() {
         <hr className="my-5" />
         <div>
           <div className="flex items-center justify-center gap-3">
-            <span className="cursor-pointer rounded-full bg-[#353945] px-4 py-1 font-semibold text-white">
+            <span
+              onClick={() => setPart("email")}
+              className={`cursor-pointer ${part === "email" ? "bg-[#353945] text-white" : "text-[#777E90]"} rounded-full px-4 py-1 font-semibold`}
+            >
               ایمیل
             </span>
-            <span className="cursor-pointer font-semibold text-[#777E90]">
+            <span
+              onClick={() => setPart("phone")}
+              className={`cursor-pointer ${part === "phone" ? "bg-[#353945] text-white" : "text-[#777E90]"} rounded-full px-4 py-1 font-semibold`}
+            >
               شماره تماس
             </span>
           </div>
@@ -70,6 +77,7 @@ export default function Login() {
                 ایمیل
               </label>
               <Input
+                inputMode="email"
                 id="email"
                 type="email"
                 placeholder="آدرس ایمیل"
