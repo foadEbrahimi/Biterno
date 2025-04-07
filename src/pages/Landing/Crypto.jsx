@@ -11,7 +11,7 @@ import blog4 from "../../assets/imgs/blog-4.jpg";
 
 export default function Crypto() {
   return (
-    <div className="mt-10">
+    <div className="mt-10 py-10" id="cryptoSection">
       <Layout>
         <div>
           <div className="flex items-center justify-between">
