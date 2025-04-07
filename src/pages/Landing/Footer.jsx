@@ -12,7 +12,7 @@ import be from "../../assets/imgs/be.svg";
 
 export default function Footer() {
   return (
-    <div className="mt-10">
+    <div className="mt-10 border-t">
       <Layout>
         <div className="flex w-full flex-col md:flex-row md:items-start">
           <div className="md:mt-10 md:hidden">
@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-2xl">بیتکلود</span>
             </div>
           </div>
-          <div className="mt-5 flex w-full items-start gap-10 border-t-2 pr-5 pt-5 md:border-t-0">
+          <div className="flex w-full items-start gap-10 border-t-2 py-10 pr-5 md:border-t-0">
             <img src={logo} alt="" className="hidden md:flex" />
             <div className="space-y-5">
               <span className="ml-8 text-2xl font-bold">درباره بیتکلود</span>
@@ -41,7 +41,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="mt-5 flex w-full flex-col space-y-5 border-t-2 pr-5 pt-5 md:items-center md:border-r md:border-t-0">
+          <div className="flex w-full flex-col space-y-5 border-t-2 py-10 pr-5 md:items-center md:border-r md:border-t-0">
             <span className="ml-16 text-2xl font-bold">ارتباط باما</span>
             <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
               <li className="transition-all duration-300 hover:text-blue-600">
@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="mt-5 flex w-full flex-col space-y-5 border-t-2 pr-5 pt-5 md:max-w-[25rem] md:border-r md:border-t-0">
+          <div className="flex w-full flex-col space-y-5 border-t-2 pb-[53px] pr-5 pt-10 md:max-w-[25rem] md:border-r md:border-t-0">
             <span className="text-2xl font-bold">خبرنامه</span>
             <span className="max-w-[20rem] text-[#23262F]">
               برای دریافت دوره و منبع طراحی رایگان بیشتر در خبرنامه ما مشترک
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
       </Layout>
-      <div className="mt-5 flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
         <span className="text-sm text-[#777E90]">
           تمامی حقوق برای بیتکلود محفوظ است. 2025 ©
         </span>
