@@ -15,12 +15,12 @@ export default function Crypto() {
       <Layout>
         <div>
           <div className="flex items-center justify-between">
-            <span className="~text-3xl/4xl font-bold">یادگیری کریپتو</span>
-            <button className="rounded-full border-2 px-3 py-1 text-sm font-semibold text-black lg:text-base">
+            <span className="font-bold ~text-3xl/4xl">یادگیری کریپتو</span>
+            <button className="hidden rounded-full border-2 px-3 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:flex lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
-          <div className="mt-3">
+          <div className="mt-10">
             <ul className="text-md flex items-center gap-5 font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
               <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
                 همه
@@ -37,8 +37,8 @@ export default function Crypto() {
             <Card height="h-[20rem]" />
           </div>
           <div className="hidden items-start gap-20 lg:flex">
-            <div className="flex-1 lg:max-w-[40rem]">
-              <Card height="h-[33rem]" img={blog1} />
+            <div className="flex-1 lg:max-w-[50rem]">
+              <Card height="h-[31rem]" img={blog1} />
             </div>
             <div className="space-y-5">
               <Card
@@ -69,7 +69,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="w-full rounded-full border-2 p-2 font-bold text-black lg:hidden">
+          <button className="w-full rounded-full border-2 p-2 font-bold text-black md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>
