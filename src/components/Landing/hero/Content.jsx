@@ -4,6 +4,13 @@ import { Link } from "react-router";
 import cards from "../../../assets/imgs/cards@2x.png";
 import arrow from "../../../assets/imgs/arrow-long.svg";
 export default function Content() {
+  const scrollToSection = () => {
+    const section = document.getElementById("cryptoSection");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       className="relative mt-10 ~px-5/40"
@@ -33,7 +40,10 @@ export default function Content() {
           <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
             همین الان شروع کنید
           </button>
-          <button className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:flex lg:mt-10">
+          <button
+            onClick={scrollToSection}
+            className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:mt-10 lg:flex"
+          >
             <div id="scroll_line" className="flex translate-y-[-23px] flex-col">
               <img
                 src={arrow}
