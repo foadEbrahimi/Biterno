@@ -1,61 +1,88 @@
-import React from 'react';
-import TableRow from '../../components/Landing/marketTrend/TableRow';
-import Layout from '../../layout/landing/Layout';
+import React from "react";
+import TableRow from "../../components/Landing/marketTrend/TableRow";
+import Layout from "../../layout/landing/Layout";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/shadcn/select";
 
 export default function MarketTrend() {
   return (
-    <div id="scroll" className="mb-10 mt-16">
+    <div className="my-40 flex items-center">
       <Layout>
         <div className="flex items-center justify-between">
-          <span className="font-bold text-4xl">روند بازار</span>
-          <button className="py-1 font-semibold px-3 text-sm   lg:text-base text-black rounded-full border-2">
+          <span className="text-4xl font-bold">روند بازار</span>
+          <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black sm:flex lg:text-base">
             مشاهده بیشتر
           </button>
         </div>
-        <div className="mt-3">
-          <ul className="flex overflow-x-scroll sm:overflow-x-visible font-semibold text-[#777E90] [&>*]:hover:bg-[#353945] [&>*]:py-0.5 [&>*]:rounded-full [&>*]:hover:text-white [&>*]:min-w-fit [&>*]:px-3 text-md items-center gap-5">
-            <li className="bg-[#353945] py-0.5  rounded-full text-white px-3">
+        <div className="mt-7">
+          <ul className="text-md hidden font-semibold text-[#777E90] sm:flex sm:items-center sm:gap-5 [&>*]:min-w-fit [&>*]:rounded-full [&>*]:px-4 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
+            <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
               همه
             </li>
-            <li>دیفای</li>
-            <li>نوآوری</li>
-            <li className="font-sans">POS</li>
-            <li className="font-sans">NFT</li>
-            <li className="font-sans">POW</li>
-            <li>ذخیره سازی</li>
           </ul>
+          <div className="sm:hidden">
+            <Select dir="rtl">
+              <SelectTrigger>
+                <SelectValue placeholder="همه" />
+              </SelectTrigger>
+              <SelectContent className="bg-white">
+                <SelectItem value="all">همه</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
-        <div className="relative mt-5 overflow-x-auto">
-          <table className="w-full text-sm lg:text-lg text-left rtl:text-right text-gray-500">
-            <thead className="border-b text-gray-700 uppercase">
-              <tr>
-                <th scope="col" className="px-1  py-3">
+        <div className="relative mt-10 overflow-x-auto lg:mt-20">
+          <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
+            <thead className="border-b uppercase text-gray-700">
+              <tr className="xl:text-[15px]">
+                <th
+                  scope="col"
+                  className="hidden w-[3rem] px-1 py-3 sm:table-cell"
+                >
                   #
                 </th>
-                <th scope="col" className="px-1  py-3">
+                <th scope="col" className="w-[10rem] px-1 py-3">
                   نام
                 </th>
-                <th scope="col" className="px-1  py-3">
+                <th scope="col" className="w-[8rem] px-1 py-3">
                   قیمت
                 </th>
-                <th scope="col" className="px-1  py-3">
+                <th scope="col" className="w-[8rem] px-1 py-3">
                   تغییر 24 ساعته
                 </th>
-                <th scope="col" className="px-1 hidden sm:table-cell py-3">
+                <th
+                  scope="col"
+                  className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]"
+                >
                   نمودار
                 </th>
-                <th scope="col" className="px-1 hidden sm:table-cell py-3">
+                <th
+                  scope="col"
+                  className="hidden w-[8rem] px-1 py-3 sm:table-cell"
+                >
                   ترید
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="overflow-visible">
+              <TableRow />
+              <TableRow />
+              <TableRow />
               <TableRow />
               <TableRow />
             </tbody>
           </table>
         </div>
+        <button className="w-full rounded-full border-2 p-3 font-semibold text-black sm:hidden lg:text-base">
+          مشاهده بیشتر
+        </button>
       </Layout>
     </div>
   );
