@@ -1,18 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import img from '../../../assets/imgs/step-1@2x.png'
+import img from "../../../assets/imgs/step-1@2x.png";
 export default function Card() {
   return (
-    <div className="rounded-2xl border bg-white pb-5 max-w-[25rem] p-3">
-      <img src={img} className="flex mx-auto" alt="" />
-      <div className="text-center space-y-2 mt-10 pb-12">
-        <span className="font-bold text-xl">ارزش اصلی 01</span>
-        <p className="text-[#777E90] font-semibold">
+    <div className="xl:max-w-[25rem] rounded-2xl bg-white p-3 pb-12 hover:shadow-xl">
+      <img src={img} className="mx-auto flex max-w-[40%] pt-10" alt="" />
+      <div className="mt-10 space-y-2 pb-12 text-center">
+        <span className="text-xl font-bold">ارزش اصلی 01</span>
+        <p className="!pt-3 font-semibold text-[#777E90]">
           ما ایده ها را از ساده تا پیچیده درک می کنیم، استفاده از همه چیز آسان
           می شود و به بالقوه ترین مشتریان دسترسی پیدا می کند.
         </p>
       </div>
-      <button className='font-semibold border-2 rounded-full py-1 px-4 text-lg flex mx-auto'>خرید کریپتو</button>
+      <button className="mx-auto flex rounded-full border-2 px-4 py-1.5 font-semibold transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+        خرید کریپتو
+      </button>
     </div>
   );
 }
