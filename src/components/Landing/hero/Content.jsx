@@ -33,7 +33,7 @@ export default function Content() {
           <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
             همین الان شروع کنید
           </button>
-          <button className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:flex">
+          <button className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:flex lg:mt-10">
             <div id="scroll_line" className="flex translate-y-[-23px] flex-col">
               <img
                 src={arrow}
@@ -44,14 +44,6 @@ export default function Content() {
             </div>
           </button>
         </div>
-        {/* <div className="flex lg:items-center lg:justify-center">
-          <img
-            src={cards}
-            draggable={false}
-            alt="card hero img"
-            className="lg:absolute lg:-top-20 lg:left-0 lg:-z-10 lg:w-[55%]"
-          />
-        </div> */}
         <div className="hidden md:flex md:items-center md:justify-center">
           <img
             src={cards}
