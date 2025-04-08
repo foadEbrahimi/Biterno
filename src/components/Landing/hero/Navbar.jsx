@@ -14,10 +14,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../../../components/ui/shadcn/dropdown-menu";
+import { useLocalState } from "../../../context/LocalStateProvider";
 
 export default function Navbar() {
   const [showLanguage, setShowLanguage] = useState(false);
-
+  const { showNav, toggleNav } = useLocalState();
   return (
     <div className="z-20 border-b bg-white py-3">
       <div className="~px-5/20">
@@ -139,9 +140,11 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <div className="md:hidden">
-            <img src={list} alt="" />
-          </div>
+          <button
+            id="navToggle"
+            onClick={() => toggleNav()}
+            className={`cursor-pointer ${showNav ? "activeNavToggle" : ""} md:hidden`}
+          ></button>
         </div>
       </div>
     </div>
