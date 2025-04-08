@@ -13,7 +13,7 @@ export default function Content() {
 
   return (
     <div
-      className="relative mt-10 ~px-5/40"
+      className="relative pt-10 ~px-5/40"
       style={{
         height: "calc(100dvh - 56px)",
       }}
