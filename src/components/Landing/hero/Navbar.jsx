@@ -143,7 +143,7 @@ export default function Navbar() {
           <button
             id="navToggle"
             onClick={() => toggleNav()}
-            className={`cursor-pointer ${showNav ? "activeNavToggle" : ""} md:hidden`}
+            className={`cursor-pointer ${showNav ? "activeNavToggle" : ""} md:!hidden`}
           ></button>
         </div>
       </div>
