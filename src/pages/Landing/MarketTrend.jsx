@@ -80,7 +80,7 @@ export default function MarketTrend() {
             </tbody>
           </table>
         </div>
-        <button className="w-full rounded-full border-2 p-3 font-semibold text-black sm:hidden lg:text-base">
+        <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] sm:hidden lg:text-base">
           مشاهده بیشتر
         </button>
       </Layout>
