@@ -9,6 +9,13 @@ import blog2 from "../../assets/imgs/blog-2.jpg";
 import blog3 from "../../assets/imgs/blog-3.jpg";
 import blog4 from "../../assets/imgs/blog-4.jpg";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+
 export default function Crypto() {
   return (
     <div className="mt-10 py-10" id="cryptoSection">
@@ -16,7 +23,7 @@ export default function Crypto() {
         <div>
           <div className="flex items-center justify-between">
             <span className="font-bold ~text-3xl/4xl">یادگیری کریپتو</span>
-            <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:flex lg:text-base">
+            <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:flex lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
@@ -29,8 +36,33 @@ export default function Crypto() {
           </div>
         </div>
         <div className="mt-5 space-y-5">
-          <div className="grid gap-5 md:grid-cols-2 lg:hidden">
-            <Card height="h-[20rem]" img={blog1} />
+          <div className="lg:hidden">
+            <Swiper
+              dir="ltr"
+              slidesPerView={1}
+              spaceBetween={10}
+              modules={[Navigation]}
+              navigation={{
+                nextEl: ".nextSlide",
+                prevEl: ".prevSlide",
+              }}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                },
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Card height="h-[20rem]" img={blog1} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Card height="h-[20rem]" img={blog1} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Card height="h-[20rem]" img={blog1} />
+              </SwiperSlide>
+            </Swiper>
           </div>
           <div className="hidden items-start gap-20 lg:flex">
             <div className="flex-1 lg:max-w-[50rem]">
@@ -58,10 +90,10 @@ export default function Crypto() {
             </div>
           </div>
           <div className="!mt-10 flex items-center justify-center gap-3 md:justify-start lg:hidden">
-            <button className="flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+            <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4" />
             </button>
-            <button className="flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+            <button className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
