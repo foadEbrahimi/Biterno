@@ -4,7 +4,7 @@ import img from "../../../assets/imgs/news-pic-2.png";
 
 export default function Card() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl p-4 lg:flex-row lg:border lg:px-10">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl p-4 lg:flex-row lg:bg-white lg:px-10">
       <div className="order-2 mt-5 flex w-full flex-col items-center justify-center gap-2 rounded-2xl lg:order-1 lg:items-start lg:gap-5">
         <span className="font-semibold text-[#777E90]">اخبار دیزاین</span>
         <span className="text-center font-bold !leading-[2.5rem] ~text-3xl/4xl lg:text-right">
