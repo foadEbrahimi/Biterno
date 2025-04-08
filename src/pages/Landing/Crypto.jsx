@@ -1,7 +1,7 @@
 import React from "react";
 
-import Layout from "../../layout/landing/Layout";
 import Card from "../../components/Landing/crypto/Card";
+import Layout from "../../layout/landing/Layout";
 
 import arrow from "../../assets/imgs/arrow-long.svg";
 import blog1 from "../../assets/imgs/blog-1.jpg";
@@ -20,21 +20,17 @@ export default function Crypto() {
               مشاهده بیشتر
             </button>
           </div>
-          <div className="mt-10">
+          <div className="mt-6">
             <ul className="text-md flex items-center gap-5 font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
               <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
                 همه
               </li>
-              <li>بیتکوین</li>
-              <li>بلاکچین</li>
-              <li>آموزش</li>
             </ul>
           </div>
         </div>
         <div className="mt-5 space-y-5">
           <div className="grid gap-5 md:grid-cols-2 lg:hidden">
-            <Card height="h-[20rem]" />
-            <Card height="h-[20rem]" />
+            <Card height="h-[20rem]" img={blog1} />
           </div>
           <div className="hidden items-start gap-20 lg:flex">
             <div className="flex-1 lg:max-w-[50rem]">
@@ -61,7 +57,7 @@ export default function Crypto() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center gap-3 md:justify-start lg:hidden">
+          <div className="!mt-10 flex items-center justify-center gap-3 md:justify-start lg:hidden">
             <button className="flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4" />
             </button>
@@ -69,7 +65,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="w-full rounded-full border-2 p-2 font-bold text-black md:hidden lg:hidden">
+          <button className="!mt-10 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>
