@@ -1,10 +1,16 @@
 import React from "react";
 
+import Card from "../../components/Landing/subs/Card";
 import Layout from "../../layout/landing/Layout";
 
 import arrow from "../../assets/imgs/arrow-long.svg";
 import logo from "../../assets/imgs/logo.svg";
-import Card from "../../components/Landing/subs/Card";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Subs() {
   return (
@@ -22,14 +28,34 @@ export default function Subs() {
             آژانس خلاقی که رهبری و الهام بخش است
           </p>
         </div>
-        <div className="relative !mx-auto max-w-[80%] ~mt-10/16 md:mx-10 xl:h-[30rem]">
-          <button className="absolute -bottom-8 left-[42%] flex h-10 w-10 translate-x-[-50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-left-10 md:bottom-[50%]">
+        <div className="relative !mx-auto md:max-w-[80%] ~mt-10/16 md:mx-10 xl:h-[30rem]">
+          <button className="nextSlide absolute -bottom-8 left-[38%] flex h-10 w-10 translate-x-[-50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-left-10 md:bottom-[50%]">
             <img src={arrow} alt="arrow svg" className="w-4 scale-x-[-1]" />
           </button>
-          <button className="absolute -bottom-8 right-[42%] flex h-10 w-10 translate-x-[50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-right-10 md:bottom-[50%]">
+          <button className="prevSlide absolute -bottom-8 right-[38%] flex h-10 w-10 translate-x-[50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-right-10 md:bottom-[50%]">
             <img src={arrow} alt="arrow svg" className="w-4" />
           </button>
-          <Card />
+          <Swiper
+            // dir="ltr"
+            slidesPerView={1}
+            spaceBetween={10}
+            modules={[Navigation]}
+            navigation={{
+              nextEl: ".nextSlide",
+              prevEl: ".prevSlide",
+            }}
+            className="mySwiper w-full"
+          >
+            <SwiperSlide className="!w-full !bg-transparent">
+              <Card />
+            </SwiperSlide>
+            <SwiperSlide className="!w-full !bg-transparent">
+              <Card />
+            </SwiperSlide>
+            <SwiperSlide className="!w-full !bg-transparent">
+              <Card />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </Layout>
     </div>
