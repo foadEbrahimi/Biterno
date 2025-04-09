@@ -13,7 +13,8 @@ export default function Hero() {
     <div className="relative">
       <Content />
       <div
-        className={`absolute transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-full w-full flex-col bg-white pb-5 pt-5 md:hidden`}
+      id="navSide"
+        className={`absolute transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link to="/auth/login">
