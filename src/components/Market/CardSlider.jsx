@@ -16,7 +16,7 @@ export default function CardSlider() {
         delay: 1500,
         disableOnInteraction: false,
       }}
-      slidesPerView={1.3}
+      slidesPerView={1.2}
       loop
       spaceBetween={10}
       modules={[Navigation, Autoplay]}
@@ -35,7 +35,10 @@ export default function CardSlider() {
       className="mySwiper"
     >
       <SwiperSlide>
-        <div className="flex w-fit items-start gap-5" dir="ltr">
+        <div
+          className="group/hover flex w-fit cursor-pointer items-start gap-5"
+          dir="ltr"
+        >
           <div className="flex items-start gap-3">
             <img src={bitcoin} alt="bitcoin svg" />
             <div className="flex flex-col">
@@ -51,7 +54,9 @@ export default function CardSlider() {
                   +0.79%
                 </span>
               </div>
-              <span className="mt-1 text-3xl font-bold">36,641.20</span>
+              <span className="mt-1 text-3xl font-bold transition-all duration-200 group-hover/hover:text-[#3772FF]">
+                36,641.20
+              </span>
               <span className="text-lg font-light">36,641.20</span>
             </div>
           </div>
@@ -59,7 +64,10 @@ export default function CardSlider() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex w-fit items-start gap-5" dir="ltr">
+        <div
+          className="group/hover flex w-fit cursor-pointer items-start gap-5"
+          dir="ltr"
+        >
           <div className="flex items-start gap-3">
             <img src={bitcoin} alt="bitcoin svg" />
             <div className="flex flex-col">
@@ -75,7 +83,9 @@ export default function CardSlider() {
                   +0.79%
                 </span>
               </div>
-              <span className="mt-1 text-3xl font-bold">36,641.20</span>
+              <span className="mt-1 text-3xl font-bold transition-all duration-200 group-hover/hover:text-[#3772FF]">
+                36,641.20
+              </span>
               <span className="text-lg font-light">36,641.20</span>
             </div>
           </div>
@@ -83,7 +93,10 @@ export default function CardSlider() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex w-fit items-start gap-5" dir="ltr">
+        <div
+          className="group/hover flex w-fit cursor-pointer items-start gap-5"
+          dir="ltr"
+        >
           <div className="flex items-start gap-3">
             <img src={bitcoin} alt="bitcoin svg" />
             <div className="flex flex-col">
@@ -99,7 +112,9 @@ export default function CardSlider() {
                   +0.79%
                 </span>
               </div>
-              <span className="mt-1 text-3xl font-bold">36,641.20</span>
+              <span className="mt-1 text-3xl font-bold transition-all duration-200 group-hover/hover:text-[#3772FF]">
+                36,641.20
+              </span>
               <span className="text-lg font-light">36,641.20</span>
             </div>
           </div>
