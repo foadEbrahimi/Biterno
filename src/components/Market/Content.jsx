@@ -1,15 +1,22 @@
 import React from "react";
 
+import market from "../../assets/imgs/market-pic.png";
 export default function Content() {
   return (
-    <div className="mt-20 lg:mb-20 flex flex-col ~gap-2/5 lg:mt-0">
-      <h1 className="font-bold ~text-4xl/6xl">
-        قیمت <br /> ارزهای دیجیتال <br /> امروزی
-      </h1>
-      <span className="text-[#353945] ~text-sm/2xl">
-        ارزش بازار جهانی کریپتو{" "}
-        <span className="font-extrabold text-black">1.86 تریلیون دلار</span> است
-      </span>
+    <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center lg:mb-24 lg:mt-0 xl:mb-32">
+      <div className="flex flex-col ~gap-5/9 sm:flex-1">
+        <h1 className="font-bold !leading-[3rem] ~text-4xl/6xl xl:!leading-[4rem]">
+          قیمت <br /> ارزهای دیجیتال <br /> امروزی
+        </h1>
+        <span className="text-[#353945] ~text-sm/2xl">
+          ارزش بازار جهانی کریپتو{" "}
+          <span className="font-extrabold text-black">1.86 تریلیون دلار</span>{" "}
+          است
+        </span>
+      </div>
+      <div className="w-full sm:flex-[1.5]">
+        <img src={market} alt="market img" />
+      </div>
     </div>
   );
 }
