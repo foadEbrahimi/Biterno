@@ -24,7 +24,7 @@ export default function Market() {
         </Layout>
       </div>
       <Layout>
-        <div className="~mt-24/40 md:hidden">
+        <div className="~mt-32/40 lg:hidden">
           <SmallCard />
           <SmallCard />
           <SmallCard />
