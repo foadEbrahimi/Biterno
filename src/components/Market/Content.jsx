@@ -5,7 +5,7 @@ export default function Content() {
   return (
     <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center lg:mb-24 lg:mt-0 xl:mb-32">
       <div className="flex flex-col ~gap-5/9 sm:flex-1">
-        <h1 className="font-bold !leading-[3rem] ~text-4xl/6xl xl:!leading-[4rem]">
+        <h1 className="font-bold !leading-[3rem] ~text-4xl/6xl xl:!leading-[4.5rem]">
           قیمت <br /> ارزهای دیجیتال <br /> امروزی
         </h1>
         <span className="text-[#353945] ~text-sm/2xl">
