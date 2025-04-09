@@ -224,3 +224,12 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+#navSide {
+  height: calc(100dvh - 56px);
+}
+@media screen and (min-width: 1024px) {
+  #heroSection {
+    height: calc(100dvh - 56px);
+  }
+}
