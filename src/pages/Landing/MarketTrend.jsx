@@ -16,7 +16,7 @@ export default function MarketTrend() {
       <Layout>
         <div className="flex items-center justify-between">
           <span className="text-4xl font-bold">روند بازار</span>
-          <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black sm:flex lg:text-base">
+          <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] sm:flex lg:text-base">
             مشاهده بیشتر
           </button>
         </div>
