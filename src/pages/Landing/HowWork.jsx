@@ -12,7 +12,7 @@ import step4 from "../../assets/imgs/step-4.png";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function HowWork() {
@@ -53,9 +53,13 @@ export default function HowWork() {
             </div>
             <div className="mt-10">
               <Swiper
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: true,
+                }}
                 slidesPerView={"auto"}
                 spaceBetween={10}
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{
                   nextEl: ".nextSlide",
                   prevEl: ".prevSlide",

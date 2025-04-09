@@ -9,10 +9,9 @@ import blog2 from "../../assets/imgs/blog-2.jpg";
 import blog3 from "../../assets/imgs/blog-3.jpg";
 import blog4 from "../../assets/imgs/blog-4.jpg";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-
 // Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -39,9 +38,13 @@ export default function Crypto() {
           <div className="lg:hidden">
             <Swiper
               dir="ltr"
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
               slidesPerView={1}
               spaceBetween={10}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               navigation={{
                 nextEl: ".nextSlide",
                 prevEl: ".prevSlide",

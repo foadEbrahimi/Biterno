@@ -7,7 +7,7 @@ import arrow from "../../assets/imgs/arrow-long.svg";
 
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -34,10 +34,14 @@ export default function Contact() {
             dir="ltr"
             slidesPerView={"auto"}
             spaceBetween={10}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             navigation={{
               nextEl: ".nextSlide",
               prevEl: ".prevSlide",
+            }}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               768: {

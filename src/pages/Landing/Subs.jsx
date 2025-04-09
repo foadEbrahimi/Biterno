@@ -9,7 +9,7 @@ import logo from "../../assets/imgs/logo.svg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Subs() {
@@ -28,7 +28,7 @@ export default function Subs() {
             آژانس خلاقی که رهبری و الهام بخش است
           </p>
         </div>
-        <div className="relative !mx-auto md:max-w-[80%] ~mt-10/16 md:mx-10 xl:h-[30rem]">
+        <div className="relative !mx-auto ~mt-10/16 md:mx-10 md:max-w-[80%] xl:h-[30rem]">
           <button className="nextSlide absolute -bottom-8 left-[38%] flex h-10 w-10 translate-x-[-50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-left-10 md:bottom-[50%]">
             <img src={arrow} alt="arrow svg" className="w-4 scale-x-[-1]" />
           </button>
@@ -39,7 +39,11 @@ export default function Subs() {
             // dir="ltr"
             slidesPerView={1}
             spaceBetween={10}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
             navigation={{
               nextEl: ".nextSlide",
               prevEl: ".prevSlide",
