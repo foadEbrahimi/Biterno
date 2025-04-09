@@ -7,7 +7,7 @@ export default function LearnCard() {
       <div className="overflow-hidden rounded-xl">
         <img
           src={img}
-          className="h-[14rem] w-full transition-all duration-700 group-hover:scale-110"
+          className=" w-full transition-all duration-700 group-hover:scale-110"
           alt="learn img"
         />
       </div>
