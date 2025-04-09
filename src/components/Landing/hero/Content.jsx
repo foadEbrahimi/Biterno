@@ -78,7 +78,7 @@ export default function Content() {
           </div>
         </SwiperSlide>
       </Swiper> */}
-      <div className="z-10 flex h-full flex-col items-center gap-10 md:flex-row md:justify-between">
+      <div className="z-10 mt-10 flex h-full flex-col items-center gap-10 md:flex-row md:justify-between">
         <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
           <h1 className="text-center font-bold leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
             خرید و فروش <br /> رمزنگاری در چند دقیقه
