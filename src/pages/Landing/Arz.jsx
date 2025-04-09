@@ -33,7 +33,7 @@ export default function Arz() {
           },
         }}
         autoplay={{
-          delay: 2500,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{
