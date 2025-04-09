@@ -30,8 +30,6 @@ export default function Market() {
           <SmallCard />
         </div>
         <Table />
-      </Layout>
-      <Layout>
         <Learn />
       </Layout>
     </div>
