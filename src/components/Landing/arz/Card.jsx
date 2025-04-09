@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import arz from '../../../assets/imgs/coin symbol.svg';
-import chart from '../../../assets/imgs/chart.svg';
+import arz from "../../../assets/imgs/coin symbol.svg";
+import chart from "../../../assets/imgs/chart.svg";
 
 export default function Card() {
   return (
     <div
-      className="hover:shadow-lg py-12 cursor-pointer flex items-center justify-between gap-5 transition-all duration-300 hover:bg-white p-5 rounded-2xl"
+      className="flex w-full cursor-pointer items-center justify-between gap-5 rounded-2xl border p-5 py-6 transition-all duration-300 hover:bg-white"
       dir="ltr"
     >
-      <div className="flex flex-col flex-1  gap-1">
+      <div className="flex flex-1 flex-col gap-1">
         <img src={arz} alt="" className="w-fit" />
         <div>
-          <div className="flex flex-col font-sans gap-2">
-            <div className="flex  items-center gap-2">
-              <span className="text-[#777E90] font-semibold">BTC/USDT</span>
-              <span className="px-2 py-0.5 text-white text-sm font-semibold bg-[#FF6838] rounded-full">
+          <div className="flex flex-col items-start gap-2">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-[#777E90] font-sans">BTC/USDT</span>
+              <span className="rounded-full bg-[#FF6838] px-2 py-0.5 text-sm font-semibold text-white">
                 -0.79%
               </span>
             </div>
@@ -26,7 +26,7 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex items-center justify-center">
+      <div className="hidden flex-1 items-center justify-center md:flex">
         <img src={chart} alt="" />
       </div>
     </div>
