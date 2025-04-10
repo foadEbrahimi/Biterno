@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="flex w-full flex-col items-start gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col ~gap-6/10 lg:pt-10 xl:pt-20">
             <h1 className="~text-4xl/6xl">سوالات متداول</h1>
-            <ul className="flex items-center gap-2 [&>*]:rounded-full [&>*]:px-4 [&>*]:py-1.5">
+            <ul className="flex items-center gap-2 text-sm [&>*]:rounded-full [&>*]:px-4 [&>*]:py-1.5">
               <li
                 onClick={() => setState("general")}
                 className={`cursor-pointer ${state === "general" ? "bg-[#353945] font-semibold text-white" : "text-[#777E90] hover:text-[#353945]"}`}
