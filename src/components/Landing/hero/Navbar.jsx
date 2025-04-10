@@ -174,12 +174,12 @@ export default function Navbar() {
         className={`absolute mt-14 transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
-          <Link to="/auth/login">
+          <Link onClick={() => toggleNav()} to="/auth/login">
             <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               تبدیل
             </li>
           </Link>
-          <Link to="/auth/login">
+          <Link onClick={() => toggleNav()} to="/auth/login">
             <li className="flex items-center gap-1 border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               خرید کریپتو
               <img
@@ -189,12 +189,12 @@ export default function Navbar() {
               />
             </li>
           </Link>
-          <Link to="/market">
+          <Link onClick={() => toggleNav()} to="/market">
             <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               بازار
             </li>
           </Link>
-          <Link to="/contact">
+          <Link onClick={() => toggleNav()} to="/contact">
             <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               ارتباط با ما
             </li>
