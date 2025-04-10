@@ -97,9 +97,11 @@ export default function Content() {
               ثبت نام
             </button>
           </div>
-          <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
-            همین الان شروع کنید
-          </button>
+          <Link to="/auth/login">
+            <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
+              همین الان شروع کنید
+            </button>
+          </Link>
           <button
             onClick={scrollToSection}
             className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:mt-10 lg:flex"
