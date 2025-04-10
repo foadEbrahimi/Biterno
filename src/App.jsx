@@ -10,6 +10,7 @@ import Discover from "./pages/discover/Discover";
 import Layout from "./layout/auth/Layout";
 import Login from "./pages/auth/login/Login";
 import Signup from "./pages/auth/signup/Signup";
+import Contact from "./pages/contact/Contact";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route index element={<Landing />} />
           <Route path="market" element={<Market />} />
           <Route path="discover" element={<Discover />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
         {/* auth */}
         <Route path="/auth" element={<Layout />}>
