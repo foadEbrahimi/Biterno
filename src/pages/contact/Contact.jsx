@@ -101,13 +101,13 @@ export default function Contact() {
             }}
             breakpoints={{
               768: {
-                slidesPerView: 2,
+                slidesPerView: 2, // For md screens
               },
-              1024: {
-                slidesPerView: 3,
+              1280: {
+                slidesPerView: 3, // For lg screens
               },
-              1520: {
-                slidesPerView: 3,
+              1536: {
+                slidesPerView: 4, // For 2xl screens
               },
             }}
             className="mySwiper"
@@ -201,10 +201,10 @@ export default function Contact() {
               </div>
             </SwiperSlide>
             <div className="flex items-center justify-center gap-3">
-              <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+              <button className="nextSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
                 <img src={arrow} alt="" className="w-4" />
               </button>
-              <button className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+              <button className="prevSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
                 <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
               </button>
             </div>
