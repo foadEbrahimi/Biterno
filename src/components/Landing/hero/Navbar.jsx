@@ -20,7 +20,7 @@ export default function Navbar() {
   const [showLanguage, setShowLanguage] = useState(false);
   const { showNav, toggleNav } = useLocalState();
   return (
-    <div className="z-20 border-b bg-white py-3">
+    <div className="!z-20 border-b bg-white py-3">
       <div className="~px-5/20">
         <div className="flex items-center">
           <div className="flex items-center justify-between ~gap-3/7">
@@ -144,8 +144,8 @@ export default function Navbar() {
               <path d="M19.0711 17.6569C19.4616 18.0474 19.4616 18.6806 19.0711 19.0711C18.6806 19.4616 18.0474 19.4616 17.6569 19.0711C17.2664 18.6806 17.2664 18.0474 17.6569 17.6569C18.0474 17.2664 18.6806 17.2664 19.0711 17.6569Z" />
               <path d="M6.34319 6.34309C6.73371 5.95257 6.73371 5.3194 6.34319 4.92888C5.95266 4.53836 5.3195 4.53836 4.92897 4.92888C4.53845 5.3194 4.53845 5.95257 4.92897 6.34309C5.3195 6.73362 5.95266 6.73362 6.34319 6.34309Z" />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
               />
             </svg>
