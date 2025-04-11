@@ -21,6 +21,10 @@ export default function Content() {
 
   return (
     <div id="heroSection" className="~px-5/40">
+      {/* <div
+        id="heroBg"
+        className="absolute left-0 top-0 -z-10 h-full w-full"
+      ></div> */}
       {/* <Swiper
         modules={[Navigation, Pagination]}
         pagination={true}
@@ -78,12 +82,12 @@ export default function Content() {
           </div>
         </SwiperSlide>
       </Swiper> */}
-      <div className="z-10 mt-10 flex h-full flex-col items-center gap-10 md:flex-row md:justify-between">
+      <div className="z-10 flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
         <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
-          <h1 className="text-center font-bold leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
+          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
             خرید و فروش <br /> رمزنگاری در چند دقیقه
           </h1>
-          <p className="text-center font-semibold text-[#777E90] md:text-right lg:max-w-[25rem]">
+          <p className="text-center text-sm font-semibold leading-7 text-[#777E90] md:text-right lg:max-w-[25rem]">
             بیت کوین، اتریوم، USDT و توپالت کوین ها را در صرافی افسانه ای دارایی
             های کریپتو معامله کنید.
           </p>
