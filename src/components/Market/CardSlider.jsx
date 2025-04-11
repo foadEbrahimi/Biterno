@@ -1,7 +1,7 @@
 import React from "react";
 
 import chart from "../../assets/imgs/chart.svg";
-import bitcoin from "../../assets/imgs/coin symbol (2).svg";
+import bitcoin from "../../assets/imgs/crypto icons/bitcoin.svg";
 
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
