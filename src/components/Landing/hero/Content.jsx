@@ -92,14 +92,16 @@ export default function Content() {
             های کریپتو معامله کنید.
           </p>
           <div className="flex items-center gap-5 md:hidden">
-            <Link to="/market">
+            <Link to="/auth/login">
               <button className="rounded-full border-2 px-4 py-2 font-bold">
                 ورود
               </button>
             </Link>
-            <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white">
-              ثبت نام
-            </button>
+            <Link to="/auth/register">
+              <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white">
+                ثبت نام
+              </button>
+            </Link>
           </div>
           <Link to="/auth/login">
             <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
