@@ -1,16 +1,16 @@
 import React from "react";
 import { Outlet, Route, Routes } from "react-router";
 
-import Landing from "./pages/Landing/Landing";
-import Navbar from "./components/Landing/hero/Navbar";
-import Footer from "./pages/Landing/Footer";
+import Footer from "@/components/layout/landing/Footer";
+import Landing from "@features/Landing/Landing";
+import Navbar from "@/components/layout/landing/Navbar";
 
-import Market from "./pages/market/Market";
-import Discover from "./pages/discover/Discover";
-import Layout from "./layout/auth/Layout";
-import Login from "./pages/auth/login/Login";
-import Signup from "./pages/auth/signup/Signup";
-import Contact from "./pages/contact/Contact";
+import Login from "@features/auth/login/Login";
+import Signup from "@features/auth/signup/Signup";
+import Contact from "@features/contact/Contact";
+import Discover from "@features/discover/Discover";
+import Market from "@features/market/Market";
+import Layout from "./components/layout/auth/Layout";
 
 export default function App() {
   return (
