@@ -21,7 +21,6 @@ export default function Cryptocurrencies() {
         // Fetch data from Nobitex API
         const nobitexRes = await fetch("https://api.nobitex.ir/market/stats");
         const nobitexData = await nobitexRes.json();
-        console.log(nobitexData);
 
         // Define the top 5 cryptocurrencies
         const cryptos = [
@@ -58,7 +57,6 @@ export default function Cryptocurrencies() {
           };
         });
         setCryptos(combinedData);
-        console.log(combinedData);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
       } finally {

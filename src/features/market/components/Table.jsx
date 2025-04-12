@@ -86,8 +86,6 @@ export default function Table() {
 
         // ترکیب داده‌ها
         const combinedData = combineData(cryptos, coingeckoData);
-        console.log(combinedData);
-
         setTopCryptos(combinedData);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
