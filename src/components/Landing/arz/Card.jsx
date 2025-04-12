@@ -3,7 +3,7 @@ import React from "react";
 import chart from "../../../assets/imgs/chart.svg";
 import chart2 from "../../../assets/imgs/chart2.svg";
 
-import { formatToToman } from "../../../lib/helper";
+import { formatToTomanWithCommas } from "../../../lib/helper";
 
 export default function Card({ name, image, price, change24h }) {
   return (
@@ -26,7 +26,7 @@ export default function Card({ name, image, price, change24h }) {
               </span>
             </div>
             <span className="text-2xl font-semibold text-[#23262F]">
-              {formatToToman(price.slice(0, -1))}
+              {formatToTomanWithCommas(price.slice(0, -1))}
             </span>
           </div>
         </div>
