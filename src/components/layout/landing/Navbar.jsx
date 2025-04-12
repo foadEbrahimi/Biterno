@@ -132,7 +132,7 @@ export default function Navbar() {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              className="hidden cursor-pointer bg-[#777E90] transition-all duration-200 hover:bg-[#23262F] md:flex"
+              className="hidden cursor-pointer fill-[#777E90] transition-all duration-200 hover:fill-[#23262F] md:flex"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M12 2C11.4477 2 11 2.44772 11 3C11 3.55228 11.4477 4 12 4C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2Z" />
