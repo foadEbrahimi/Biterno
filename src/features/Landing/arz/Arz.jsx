@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+
+import CardArz, { ArzCardSkeleton } from "./components/Card";
+
 import "swiper/css";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "./components/Card";
 
 export default function Arz() {
   const [topCryptos, setTopCryptos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function getCrypto() {
@@ -55,6 +58,8 @@ export default function Arz() {
         setTopCryptos(combinedData);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
+      } finally {
+        setIsLoading(false);
       }
     }
     getCrypto();
@@ -95,11 +100,19 @@ export default function Arz() {
         modules={[EffectCoverflow, Autoplay]}
         className="mySwiper"
       >
-        {topCryptos.map((crypto, index) => (
-          <SwiperSlide key={index}>
-            <Card {...crypto} />
-          </SwiperSlide>
-        ))}
+        {isLoading
+          ? Array(4)
+              .fill(0)
+              .map((_, index) => (
+                <SwiperSlide>
+                  <ArzCardSkeleton key={index} />
+                </SwiperSlide>
+              ))
+          : topCryptos.slice(0, 4).map((crypto) => (
+              <SwiperSlide>
+                <CardArz key={crypto.id} {...crypto} />
+              </SwiperSlide>
+            ))}
       </Swiper>
     </div>
   );

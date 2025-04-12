@@ -4,8 +4,29 @@ import chart from "@assets/imgs/chart.svg";
 import chart2 from "@assets/imgs/chart2.svg";
 
 import { formatToTomanWithCommas } from "../../../../utils/helper";
+import { Skeleton } from "@/components/ui/Skeleton";
 
-export default function Card({ name, image, price, change24h }) {
+export function ArzCardSkeleton() {
+  return (
+    <div className="flex flex-col gap-3 rounded-3xl border p-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-10 w-10 rounded-full" />
+          <Skeleton className="h-6 w-16" />
+        </div>
+        <Skeleton className="h-6 w-20" />
+      </div>
+      <div className="mt-2">
+        <Skeleton className="h-7 w-32" />
+      </div>
+      <div className="mt-2">
+        <Skeleton className="h-10 w-full rounded-xl" />
+      </div>
+    </div>
+  );
+}
+
+export default function CardArz({ name, image, price, change24h }) {
   return (
     <div
       className="flex w-full cursor-pointer items-center justify-between gap-5 rounded-2xl border p-5 py-6 transition-all duration-300 hover:bg-white"
@@ -26,7 +47,7 @@ export default function Card({ name, image, price, change24h }) {
               </span>
             </div>
             <span className="text-2xl font-semibold text-[#23262F]">
-              {formatToTomanWithCommas(price.slice(0, -1))}
+              {formatToTomanWithCommas(price?.slice(0, -1))}
             </span>
           </div>
         </div>
