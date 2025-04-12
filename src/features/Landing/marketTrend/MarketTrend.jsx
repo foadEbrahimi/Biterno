@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TableRow, { TableRowSkeleton } from "./TableRow";
+import TableRow, { TableRowSkeleton } from "./components/TableRow";
 
 import Layout from "@/components/layout/landing/Layout";
 
