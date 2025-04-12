@@ -93,7 +93,7 @@ export default function Content() {
           </p>
           <div className="flex items-center gap-5 md:hidden">
             <Link to="/auth/login">
-              <button className="rounded-full border-2 px-4 py-2 font-bold">
+              <button className="rounded-full border-2 px-5 py-2 font-bold">
                 ورود
               </button>
             </Link>
