@@ -24,55 +24,55 @@ export default function MarketTrend() {
   const [topCryptos, setTopCryptos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // دریافت داده‌های نوبیتکس
-  const fetchNobitexData = async () => {
-    const response = await fetch(API_ENDPOINTS.NOBITEX);
-    const data = await response.json();
-    return data;
-  };
+    // دریافت داده‌های نوبیتکس
+    const fetchNobitexData = async () => {
+      const response = await fetch(API_ENDPOINTS.NOBITEX);
+      const data = await response.json();
+      return data;
+    };
 
-  // دریافت داده‌های کوین‌گکو
-  const fetchCoinGeckoData = async (ids) => {
-    const response = await fetch(
-      `${API_ENDPOINTS.COINGECKO}?vs_currency=usd&ids=${ids}`,
-      {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-          "x-cg-demo-api-key": API_ENDPOINTS.COINGECKO_API_KEY,
+    // دریافت داده‌های کوین‌گکو
+    const fetchCoinGeckoData = async (ids) => {
+      const response = await fetch(
+        `${API_ENDPOINTS.COINGECKO}?vs_currency=usd&ids=${ids}`,
+        {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            "x-cg-demo-api-key": API_ENDPOINTS.COINGECKO_API_KEY,
+          },
         },
-      },
-    );
-    return await response.json();
-  };
+      );
+      return await response.json();
+    };
 
-  // پردازش داده‌های نوبیتکس
-  const processNobitexData = (stats) => {
-    return Object.entries(stats)
-      .filter(([key]) => key.endsWith("rls"))
-      .slice(0, 10)
-      .map(([flag, stats]) => {
-        const coinName = flag.split("-")[0].toLowerCase();
+    // پردازش داده‌های نوبیتکس
+    const processNobitexData = (stats) => {
+      return Object.entries(stats)
+        .filter(([key]) => key.endsWith("rls"))
+        .slice(0, 10)
+        .map(([flag, stats]) => {
+          const coinName = flag.split("-")[0].toLowerCase();
+          return {
+            name: coinName.toUpperCase(),
+            flag,
+            id: COIN_MAPPING[coinName] || coinName,
+            price: stats.latest || 0,
+            change24h: stats.dayChange || 0,
+          };
+        });
+    };
+
+    // ترکیب داده‌های نوبیتکس و کوین‌گکو
+    const combineData = (cryptos, coingeckoData) => {
+      return cryptos.map((crypto) => {
+        const coingeckoInfo = coingeckoData.find((c) => c.id === crypto.id) || {};
         return {
-          name: coinName.toUpperCase(),
-          flag,
-          id: COIN_MAPPING[coinName] || coinName,
-          price: stats.latest || 0,
-          change24h: stats.dayChange || 0,
+          ...crypto,
+          image: coingeckoInfo.image || "",
         };
       });
-  };
-
-  // ترکیب داده‌های نوبیتکس و کوین‌گکو
-  const combineData = (cryptos, coingeckoData) => {
-    return cryptos.map((crypto) => {
-      const coingeckoInfo = coingeckoData.find((c) => c.id === crypto.id) || {};
-      return {
-        ...crypto,
-        image: coingeckoInfo.image || "",
-      };
-    });
-  };
+    };
 
   useEffect(() => {
     const fetchData = async () => {
