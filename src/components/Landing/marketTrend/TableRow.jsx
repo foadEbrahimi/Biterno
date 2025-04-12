@@ -56,7 +56,8 @@ export default function TableRow({ index, crypto }) {
       </td>
       <td className="w-[8rem] px-1 py-3">
         <span
-          className={`font-medium ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
+          dir="ltr"
+          className={`font-vazirBold ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
         >
           {change24h}%
         </span>
