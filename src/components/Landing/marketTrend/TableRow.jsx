@@ -1,37 +1,72 @@
 import React from "react";
+import { Skeleton } from "../../ui/Skeleton";
 
 import chart from "../../../assets/imgs/chart.svg";
 import chart2 from "../../../assets/imgs/chart2.svg";
-import eth from "../../../assets/imgs/crypto icons/eth.svg";
-import bitcoin from "../../../assets/imgs/crypto icons/bitcoin.svg";
+import { formatToTomanWithCommas } from "../../../lib/helper";
 
-export default function TableRow() {
+export function TableRowSkeleton() {
   return (
-    <tr className="cursor-pointer rounded-2xl border-gray-200 bg-white px-5 transition-all duration-200 hover:bg-[#F4F5F6]">
-      <th
-        scope="row"
-        className="hidden whitespace-nowrap px-2 py-4 font-bold text-gray-900 sm:table-cell lg:text-lg"
-      >
-        1
-      </th>
-      <th
-        scope="row"
-        className="flex items-center gap-3 whitespace-nowrap py-5 font-medium text-gray-900"
-      >
-        <img src={eth} className="w-7 lg:w-fit" alt="coin svg" />
-        <span className="font-semibold">ریپل</span>
-        <span className="font-sans text-sm text-[#B1B5C3]">XRP</span>
-      </th>
-      <td className="py-4 text-[16px] font-bold text-black">36,201.34</td>
-      <td className="py-4 text-[16px] font-bold text-[#FF6838]" dir="ltr">
-        -0.74%
+    <tr className="border-b">
+      <td className="hidden w-[3rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-4 w-4" />
       </td>
-      <td className="hidden md:table-cell">
-        <img src={chart} alt="chart svg" />
+      <td className="w-[10rem] px-1 py-3">
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-8 w-8 rounded-full" />
+          <Skeleton className="h-4 w-20" />
+        </div>
       </td>
-      <td className="hidden py-4 sm:table-cell">
-        <button className="rounded-full border-2 px-5 py-1.5 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
-          ترید
+      <td className="w-[8rem] px-1 py-3">
+        <Skeleton className="h-4 w-24" />
+      </td>
+      <td className="w-[8rem] px-1 py-3">
+        <Skeleton className="h-4 w-16" />
+      </td>
+      <td className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">
+        <Skeleton className="h-10 w-32" />
+      </td>
+      <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-8 w-20" />
+      </td>
+    </tr>
+  );
+}
+
+export default function TableRow({ index, crypto }) {
+  if (!crypto) return null;
+
+  const { name, image, price, change24h } = crypto;
+
+  return (
+    <tr className="border-b">
+      <td className="hidden w-[3rem] px-1 py-3 sm:table-cell">
+        <span className="text-sm font-bold text-black">{index + 1}</span>
+      </td>
+      <td className="w-[10rem] px-1 py-3">
+        <div className="flex items-center gap-2">
+          <img src={image} alt={name} className="h-8 w-8 rounded-full" />
+          <span className="font-bold text-black">{name}</span>
+        </div>
+      </td>
+      <td className="w-[8rem] px-1 py-3">
+        <span className="text-[16px] text-black">
+          {formatToTomanWithCommas(price.slice(0, -1))}
+        </span>
+      </td>
+      <td className="w-[8rem] px-1 py-3">
+        <span
+          className={`font-medium ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
+        >
+          {change24h}%
+        </span>
+      </td>
+      <td className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">
+        <img src={change24h > 0 ? chart : chart2} alt="chart svg" />
+      </td>
+      <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
+        <button className="rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+          معامله
         </button>
       </td>
     </tr>
