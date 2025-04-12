@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "../../assets/imgs/coin symbol.svg";
+import img from "@assets/imgs/coin symbol.svg";
 
 export default function SmallCard() {
   return (

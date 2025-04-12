@@ -1,6 +1,7 @@
 import React from "react";
 
-import img from "../../assets/imgs/01.png";
+import img from "@assets/imgs/01.png";
+
 export default function Card() {
   return (
     <div className="flex flex-col gap-3">

@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../../components/layout/landing/Layout";
 
-import Hero from "../../components/Discover/Hero";
+import Hero from "./components/Hero";
 import Latest from "./Latest";
 import Search from "./Search";
 

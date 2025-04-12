@@ -1,14 +1,15 @@
 import React from "react";
 
-import CardSlider from "../../components/Market/CardSlider";
-import Menu from "../../components/Market/Menu";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../components/ui/shadcn/select";
+} from "@/components/ui/shadcn/select";
+
+import CardSlider from "./CardSlider";
+import Menu from "./Menu";
 
 export default function Cryptocurrencies() {
   return (

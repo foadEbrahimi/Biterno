@@ -1,6 +1,7 @@
 import React from "react";
 
-import market from "../../assets/imgs/market-pic.png";
+import market from "@assets/imgs/market-pic.png";
+
 export default function Content() {
   return (
     <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center lg:mb-24 lg:mt-0 xl:mb-32">

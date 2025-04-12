@@ -1,8 +1,7 @@
 import React from "react";
 
-import chart from "../../assets/imgs/chart.svg";
-import eth from "../../assets/imgs/crypto icons/eth.svg";
-import star from "../../assets/imgs/star.svg";
+import chart from "@assets/imgs/chart.svg";
+import eth from "@assets/imgs/crypto icons/eth.svg";
 
 export default function TableRow() {
   return (

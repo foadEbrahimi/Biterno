@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../components/ui/shadcn/select";
-import Card from "../../components/Discover/Card";
+import Card from "./components/Card";
 export default function Search() {
   return (
     <div className="mt-32">
@@ -59,7 +59,7 @@ export default function Search() {
           </span>
         </div>
       </div>
-      <div className="grid gap-5 mt-10 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         <Card />
         <Card />
         <Card />

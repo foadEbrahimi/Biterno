@@ -1,7 +1,8 @@
 import React from "react";
 
-import chartLine from "../../assets/imgs/chartLine.svg";
-import marketplace from "../../assets/imgs/marketplace.svg";
+import chartLine from "@assets/imgs/chartLine.svg";
+import marketplace from "@assets/imgs/marketplace.svg";
+
 import TableRow from "./TableRow";
 
 export default function Table() {

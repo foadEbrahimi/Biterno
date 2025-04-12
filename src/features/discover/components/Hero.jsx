@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "../../assets/imgs/contanerPlaceholder.png";
+import img from "@assets/imgs/contanerPlaceholder.png";
 
 export default function Hero() {
   return (

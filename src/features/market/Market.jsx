@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../../components/layout/landing/Layout";
 
-import Content from "../../components/Market/Content";
-import Cryptocurrencies from "../../components/Market/Cryptocurrencies";
-import Learn from "../../components/Market/Learn";
-import SmallCard from "../../components/Market/SmallCard";
-import Table from "../../components/Market/Table";
+import Content from "./components/Content";
+import Cryptocurrencies from "./components/Cryptocurrencies";
+import Learn from "./components/Learn";
+import SmallCard from "./components/SmallCard";
+import Table from "./components/Table";
 
 export default function Market() {
   return (

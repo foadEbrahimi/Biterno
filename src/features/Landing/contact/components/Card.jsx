@@ -1,6 +1,7 @@
 import React from "react";
 
-import img from "../../../assets/imgs/step-1@2x.png";
+import img from "@assets/imgs/step-1@2x.png";
+
 export default function Card() {
   return (
     <div className="rounded-2xl bg-white p-3 pb-12 hover:shadow-xl xl:max-w-[25rem]">
@@ -12,7 +13,7 @@ export default function Card() {
           می شود و به بالقوه ترین مشتریان دسترسی پیدا می کند.
         </p>
       </div>
-      <button className="font-vazirDemiBold mx-auto flex rounded-full border-2 px-5 text-[16px] py-2 transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+      <button className="font-vazirDemiBold mx-auto flex rounded-full border-2 px-5 py-2 text-[16px] transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
         خرید کریپتو
       </button>
     </div>

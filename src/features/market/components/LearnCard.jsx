@@ -1,5 +1,6 @@
 import React from "react";
-import img from "../../assets/imgs/lessons-pic-1.jpg";
+
+import img from "@assets/imgs/lessons-pic-1.jpg";
 
 export default function LearnCard() {
   return (
@@ -7,7 +8,7 @@ export default function LearnCard() {
       <div className="overflow-hidden rounded-xl">
         <img
           src={img}
-          className=" w-full transition-all duration-700 group-hover:scale-110"
+          className="w-full transition-all duration-700 group-hover:scale-110"
           alt="learn img"
         />
       </div>

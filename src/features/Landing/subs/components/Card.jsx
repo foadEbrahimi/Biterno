@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "../../../assets/imgs/news-pic-2.png";
+import img from "@assets/imgs/news-pic-2.png";
 
 export default function Card() {
   return (

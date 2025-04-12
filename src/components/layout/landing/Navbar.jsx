@@ -133,7 +133,7 @@ export default function Navbar() {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              className="hidden cursor-pointer fill-[#777E90] transition-all duration-200 hover:fill-[#23262F] md:flex"
+              className="hidden cursor-pointer bg-[#777E90] transition-all duration-200 hover:bg-[#23262F] md:flex"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M12 2C11.4477 2 11 2.44772 11 3C11 3.55228 11.4477 4 12 4C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2Z" />
@@ -150,11 +150,6 @@ export default function Navbar() {
                 d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
               />
             </svg>
-            <img
-              src={list}
-              className="hidden cursor-pointer fill-[#777E90] transition-all duration-200 hover:fill-[#23262F] md:flex"
-              alt="list svg"
-            />
             <div className="hidden md:flex md:items-center md:gap-2">
               <Link to="/auth/login">
                 <button className="rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-[#23262F] hover:bg-[#23262F] hover:text-white">
