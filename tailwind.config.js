@@ -9,7 +9,10 @@ export default {
     extend: {
       fontFamily: {
         arial: ["Arial"],
-        vazir: ["vazir"],
+        vazirBold: ["vazir-bold"],
+        vazirRegular: ["vazir-regular"],
+        vazirDemiBold: ["vazir-demiBold"],
+        vazirMedium: ["vazir-medium"],
       },
       keyframes: {
         "accordion-down": {
