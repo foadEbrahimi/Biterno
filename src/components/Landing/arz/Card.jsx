@@ -26,8 +26,7 @@ export default function Card({ name, image, price, change24h }) {
               </span>
             </div>
             <span className="text-2xl font-semibold text-[#23262F]">
-              {/* {formatToToman(stats.latest.slice(0, -1))} */}
-              {price}
+              {formatToToman(price.slice(0, -1))}
             </span>
           </div>
         </div>
