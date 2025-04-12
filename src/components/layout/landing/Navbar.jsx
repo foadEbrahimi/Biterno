@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router";
 import chevronBottom from "@assets/imgs/chevronBottom.svg";
 import englandFlag from "@assets/imgs/england-flag.webp";
 import iranFlag from "@assets/imgs/iran-flag.png";
-import list from "@assets/imgs/list.svg";
 import logo from "@assets/imgs/logo.svg";
 
 import {
