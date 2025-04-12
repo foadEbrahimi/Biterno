@@ -164,8 +164,7 @@ export default function MarketTrend() {
             </thead>
             <tbody className="overflow-visible">
               {isLoading
-                ? // نمایش 5 ردیف اسکلتون در حالت لودینگ
-                  Array(5)
+                ? Array(5)
                     .fill(0)
                     .map((_, index) => <TableRowSkeleton key={index} />)
                 : topCryptos.map((crypto, index) => (
