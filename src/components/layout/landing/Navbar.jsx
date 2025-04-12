@@ -171,7 +171,7 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`absolute mt-14 transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
+        className={`fixed mt-14 transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/auth/login">
