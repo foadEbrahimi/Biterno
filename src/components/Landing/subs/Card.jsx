@@ -10,10 +10,10 @@ export default function Card() {
         <span className="text-center font-bold !leading-[2.5rem] ~text-3xl/4xl lg:text-right">
           بخشی از جامعه جهانی ما باشید
         </span>
-        <span className="max-w-[15rem] text-center font-semibold text-[#777E90] lg:min-w-fit lg:text-right">
+        <span className="font-vazirDemiBold max-w-[15rem] text-center text-[#777E90] lg:min-w-fit lg:text-right">
           Stack مشکلات کسب و کار را از ساده تا پیچیده حل می کند.
         </span>
-        <button className="mt-10 w-fit rounded-full border-2 px-4 py-2.5 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+        <button className="font-vazirDemiBold mt-10 w-fit rounded-full border-2 px-4 py-2.5 text-[16px] text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
           اکنون عضو شوید
         </button>
       </div>
