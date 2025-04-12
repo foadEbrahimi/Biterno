@@ -15,11 +15,11 @@ export default function Arz() {
         const nobitexData = await nobitexRes.json();
         // Define the top 5 cryptocurrencies
         const cryptos = [
-          { name: "BTC", flag: "btc-usdt", id: "bitcoin" },
-          { name: "ETH", flag: "eth-usdt", id: "ethereum" },
-          { name: "USDT", flag: "usdt-irt", id: "tether" },
-          { name: "BNB", flag: "bnb-usdt", id: "binancecoin" },
-          { name: "ADA", flag: "ada-usdt", id: "cardano" },
+          { name: "BTC", flag: "btc-rls", id: "bitcoin" },
+          { name: "ETH", flag: "eth-rls", id: "ethereum" },
+          { name: "USDT", flag: "usdt-rls", id: "tether" },
+          { name: "BNB", flag: "bnb-rls", id: "binancecoin" },
+          { name: "ADA", flag: "ada-rls", id: "cardano" },
         ];
 
         // Fetch additional data from CoinGecko API
@@ -68,7 +68,7 @@ export default function Arz() {
         centeredSlides={true}
         slidesPerView={"1.3"}
         breakpoints={{
-          768: {
+          700: {
             slidesPerView: 2.3,
           },
           1024: {
