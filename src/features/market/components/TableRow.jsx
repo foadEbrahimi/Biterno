@@ -1,9 +1,49 @@
 import React from "react";
 
 import chart from "@assets/imgs/chart.svg";
-import eth from "@assets/imgs/crypto icons/eth.svg";
+import chart2 from "@assets/imgs/chart2.svg";
 
-export default function TableRow() {
+import { Skeleton } from "@/components/ui/Skeleton";
+import { formatToTomanWithCommas } from "@/utils/helper";
+
+export function TableRowSkeleton() {
+  return (
+    <tr className="border-b">
+      <td className="hidden w-[3rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-4 w-4" />
+      </td>
+      <td className="w-[10rem] px-1 py-3">
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-8 w-8 rounded-full" />
+          <Skeleton className="h-4 w-20" />
+        </div>
+      </td>
+      <td className="w-[8rem] px-1 py-3">
+        <Skeleton className="h-4 w-24" />
+      </td>
+      <td className="w-[8rem] px-1 py-3">
+        <Skeleton className="h-4 w-16" />
+      </td>
+      <td className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">
+        <Skeleton className="h-10 w-32" />
+      </td>
+      <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-8 w-20" />
+      </td>
+      <td className="hidden w-[12rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-8 w-20" />
+      </td>
+      <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
+        <Skeleton className="h-8 w-20" />
+      </td>
+    </tr>
+  );
+}
+
+export default function TableRow({ index, crypto }) {
+  if (!crypto) return null;
+  const { name, image, price, change24h, change7d, marketCap, volume } = crypto;
+
   return (
     <tr className="group/row border-gray-200 bg-white transition-all duration-200 hover:bg-[#F4F5F6]">
       <th
@@ -27,27 +67,41 @@ export default function TableRow() {
               fill="#777E91"
             />
           </svg>
-          <span>1</span>
+          <span>{index + 1}</span>
         </div>
       </th>
       <th
         scope="row"
         className="flex items-center gap-3 whitespace-nowrap py-5 font-medium text-gray-900"
       >
-        <img src={eth} className="w-8" alt="coin svg" />
-        <span className="font-vazir font-semibold">ریپل</span>
-        <span className="font-sans text-sm text-[#B1B5C3]">XRP</span>
+        <img src={image} className="w-8" alt="coin svg" />
+        <span className="font-vazir font-semibold">{name}</span>
+        <span className="font-sans text-sm text-[#B1B5C3]">{name}</span>
       </th>
-      <td className="py-4 font-bold text-[#23262F]">36,201.34</td>
-      <td className="py-4 font-bold text-[#FF6838]">0.74 -</td>
-      <td className="py-4 font-bold text-[#58BD7D]">6.04 +</td>
-      <td className="py-4 font-bold text-[#23262F]">328,564,656,654</td>
+      <td className="py-4 font-bold text-[#23262F]">
+        {formatToTomanWithCommas(price.slice(0, -1))}
+      </td>
+      <td
+        className={`py-4 font-bold ${change24h > 0 ? "text-green-600" : "text-red-600"}`}
+        dir="ltr"
+      >
+        {change24h}
+      </td>
+      <td
+        className={`py-4 font-bold ${change7d > 0 ? "text-green-600" : "text-red-600"}`}
+        dir="ltr"
+      >
+        {change7d.toFixed(2)}
+      </td>
+      <td className="py-4 font-bold text-[#23262F]">
+        {formatToTomanWithCommas(marketCap).slice(0, -1)}
+      </td>
       <td className="hidden py-4 font-bold text-[#23262F] xl:table-cell">
-        328,564,656,654
+        {formatToTomanWithCommas(volume).slice(0, -1)}
       </td>
       <td className="hidden lg:table-cell">
         <img
-          src={chart}
+          src={change24h > 0 ? chart : chart2}
           alt="chart svg"
           className="hidden group-hover/row:hidden xl:block"
         />
