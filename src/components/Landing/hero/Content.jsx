@@ -84,7 +84,7 @@ export default function Content() {
       </Swiper> */}
       <div className="z-10 flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
         <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
-          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
+          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right lg:!leading-[4.4rem] xl:!leading-[5rem]">
             خرید و فروش <br /> رمزنگاری در چند دقیقه
           </h1>
           <p className="text-center text-sm font-semibold leading-7 text-[#777E90] md:text-right lg:max-w-[25rem]">
