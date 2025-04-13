@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function HowWork() {
   return (
-    <div className="mt-20 flex items-center pb-20 lg:h-[100dvh]">
+    <div className="mt-20 flex items-center bg-[#F4F5F6] pb-20 lg:h-[100dvh]">
       <div>
         {/* <Layout> */}
         <div className="~px-5/32">
@@ -26,7 +26,7 @@ export default function HowWork() {
             <span className="text-center font-bold ~text-4xl/5xl">
               چگونه کار می کند
             </span>
-            <p className="font-vazirDemiBold mt-4 max-w-[30rem] text-center !leading-[2rem] text-[#353945]">
+            <p className="mt-4 max-w-[30rem] text-center font-vazirDemiBold !leading-[2rem] text-[#353945]">
               Stacks یک کتابخانه آماده تولید از بلوک های محتوای stackable است که
               در React Native ساخته شده است.
             </p>
@@ -76,7 +76,7 @@ export default function HowWork() {
               className="mySwiper"
             >
               {howItWork.map((item, index) => (
-                <SwiperSlide className="!w-fit">
+                <SwiperSlide className="!w-fit !bg-transparent">
                   <Card {...item} index={index + 1} key={index + 1} />
                 </SwiperSlide>
               ))}

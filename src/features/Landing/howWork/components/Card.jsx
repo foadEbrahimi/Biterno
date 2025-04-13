@@ -15,11 +15,11 @@ export default function Card({ image, step, title, desc, index }) {
           alt="connectLine svg"
         />
       </div>
-      <div>
+      <div className="">
         <span className="font-vazirDemiBold text-sm text-[#777E90]">
           مرحله {step}
         </span>
-        <h2 className="my-3 mt-5 font-vazirBold text-lg text-xl">{title}</h2>
+        <h2 className="my-3 mt-5 font-vazirBold text-xl">{title}</h2>
         <p className="text-[16px] text-[#353945]">{desc}</p>
       </div>
     </div>
