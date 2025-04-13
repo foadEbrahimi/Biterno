@@ -39,11 +39,21 @@ export default function Subs() {
             // dir="ltr"
             slidesPerView={1}
             spaceBetween={10}
+            loop={true}
+            loopedslides={3}
+            speed={800}
             autoplay={{
               delay: 1500,
               disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}
+            on={{
+              transitionEnd: function () {
+                if (this.isEnd) {
+                  this.slideTo(0);
+                }
+              },
+            }}
             navigation={{
               nextEl: ".nextSlide",
               prevEl: ".prevSlide",
