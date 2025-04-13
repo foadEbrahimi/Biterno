@@ -63,7 +63,6 @@ export default function Table() {
         image: coingeckoInfo.image || "",
         marketCap: coingeckoInfo.market_cap || 0,
         volume: coingeckoInfo.total_volume || 0,
-        change24h: coingeckoInfo.price_change_percentage_24h || 0,
         change7d: coingeckoInfo.price_change_percentage_7d_in_currency || 0,
       };
     });
