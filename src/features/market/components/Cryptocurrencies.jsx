@@ -24,9 +24,9 @@ export default function Cryptocurrencies() {
 
         // Define the top 5 cryptocurrencies
         const cryptos = [
-          { name: "BCH", flag: "bch-rls", id: "bitcoin-cash" },
-          { name: "SHIB", flag: "shib-rls", id: "shiba-inu" },
-          { name: "TRX", flag: "trx-rls", id: "tron" },
+          { name: "BTC", flag: "btc-rls", id: "bitcoin" },
+          { name: "ETH", flag: "eth-rls", id: "ethereum" },
+          { name: "USDT", flag: "usdt-rls", id: "tether" },
         ];
 
         // Fetch additional data from CoinGecko API
