@@ -131,8 +131,8 @@ export default function Navbar() {
                 d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
               />
             </svg>
-            <div className="mr-2 hidden md:flex md:items-center md:gap-2">
-              <button className="group flex items-center gap-2 rounded-xl bg-blue-200 p-2.5 px-4 transition-all duration-500 hover:bg-blue-600">
+            <div className="mr-2 hidden md:flex md:items-center md:gap-3">
+              <button className="group flex items-center gap-2 rounded-lg bg-blue-200 p-2.5 px-4 font-vazirBold text-blue-700 transition-all duration-500 hover:bg-blue-600 hover:text-white">
                 <svg
                   style={{
                     width: "1.5rem",
@@ -142,15 +142,12 @@ export default function Navbar() {
                   }}
                   viewBox="0 0 1024 1024"
                   version="1.1"
-                  className="w-6 fill-blue-600 group-hover:fill-white"
+                  className="w-6 fill-blue-700 transition-colors duration-500 group-hover:fill-white"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M843.282963 870.115556c-8.438519-140.515556-104.296296-257.422222-233.908148-297.14963C687.881481 536.272593 742.4 456.533333 742.4 364.088889c0-127.241481-103.158519-230.4-230.4-230.4S281.6 236.847407 281.6 364.088889c0 92.444444 54.518519 172.183704 133.12 208.877037-129.611852 39.727407-225.46963 156.634074-233.908148 297.14963-0.663704 10.903704 7.964444 20.195556 18.962963 20.195556l0 0c9.955556 0 18.299259-7.774815 18.962963-17.73037C227.745185 718.506667 355.65037 596.385185 512 596.385185s284.254815 122.121481 293.357037 276.195556c0.568889 9.955556 8.912593 17.73037 18.962963 17.73037C835.318519 890.311111 843.946667 881.019259 843.282963 870.115556zM319.525926 364.088889c0-106.287407 86.186667-192.474074 192.474074-192.474074s192.474074 86.186667 192.474074 192.474074c0 106.287407-86.186667 192.474074-192.474074 192.474074S319.525926 470.376296 319.525926 364.088889z" />
                 </svg>
-
-                <span className="font-vazirBold text-blue-700 group-hover:text-white">
-                  حساب کاربری
-                </span>
+                <span className="transition-all duration-500">حساب کاربری</span>
               </button>
             </div>
           </div>
