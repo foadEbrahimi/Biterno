@@ -42,6 +42,16 @@ export default function Crypto() {
                 delay: 1500,
                 disableOnInteraction: false,
               }}
+              on={{
+                transitionEnd: function () {
+                  if (this.isEnd) {
+                    this.slideTo(0);
+                  }
+                },
+              }}
+              loop={true}
+              loopedslides={3}
+              speed={800}
               slidesPerView={1}
               spaceBetween={10}
               modules={[Navigation, Autoplay]}
