@@ -1,91 +1,90 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
-import cards from "@assets/imgs/cards@2x.png";
+import cards from "@assets/imgs/hero/investing.svg";
 
-import arrow from "@assets/imgs/arrow-long.svg";
+import CardArz, {
+  ArzCardSkeleton,
+} from "@features/Landing/arz/components/Card";
 
-// Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// import arrow from "@assets/imgs/arrow-long.svg";
+
 export default function Content() {
-  const scrollToSection = () => {
-    const section = document.getElementById("cryptoSection");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  // const scrollToSection = () => {
+  //   const section = document.getElementById("cryptoSection");
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+  const [topCryptos, setTopCryptos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function getCrypto() {
+      try {
+        // Fetch data from Nobitex API
+        const nobitexRes = await fetch("https://api.nobitex.ir/market/stats");
+        const nobitexData = await nobitexRes.json();
+        // Define the top 5 cryptocurrencies
+        const cryptos = [
+          { name: "BTC", flag: "btc-rls", id: "bitcoin" },
+          { name: "ETH", flag: "eth-rls", id: "ethereum" },
+          { name: "USDT", flag: "usdt-rls", id: "tether" },
+          { name: "BNB", flag: "bnb-rls", id: "binancecoin" },
+          { name: "ADA", flag: "ada-rls", id: "cardano" },
+        ];
+
+        // Fetch additional data from CoinGecko API
+        const ids = cryptos.map((crypto) => crypto.id).join(",");
+        const coingeckoRes = await fetch(
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`,
+          {
+            method: "GET",
+            headers: {
+              accept: "application/json",
+              "x-cg-demo-api-key": "CG-SCsCc7mgtupipxaW77AuUR2W",
+            },
+          },
+        );
+        const coingeckoData = await coingeckoRes.json();
+        // Combine data from both APIs
+        const combinedData = cryptos.map((crypto) => {
+          const nobitexStats = nobitexData.stats[crypto.flag] || {};
+          const coingeckoStats =
+            coingeckoData.find((c) => c.id === crypto.id) || {};
+
+          return {
+            name: crypto.name,
+            flag: crypto.flag,
+            image: coingeckoStats.image, // Image from CoinGecko
+            price: nobitexStats.latest || 0, // Price from Nobitex
+            change24h: nobitexStats.dayChange || 0, // 24h change from Nobitex
+            // marketCap: coingeckoStats.market_cap || 0, // Market Cap from CoinGecko
+            // change7d:
+            //   coingeckoStats.price_change_percentage_7d_in_currency || 0, // 7d change from CoinGecko
+          };
+        });
+        setTopCryptos(combinedData);
+      } catch (error) {
+        console.error("Error fetching crypto data:", error);
+      } finally {
+        setIsLoading(false);
+      }
     }
-  };
+    getCrypto();
+  }, []);
 
   return (
-    <div id="heroSection" className="~px-5/40">
-      {/* <div
-        id="heroBg"
-        className="absolute left-0 top-0 -z-10 h-full w-full"
-      ></div> */}
-      {/* <Swiper
-        modules={[Navigation, Pagination]}
-        pagination={true}
-        slidesPerView={"auto"}
-        className="mySwiper"
-      >
-        <SwiperSlide className="!relative !h-full !w-fit py-10">
-          <div className="z-10 flex h-full flex-col items-center gap-10 md:flex-row md:justify-between">
-            <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
-              <h1 className="text-center font-bold leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right xl:leading-[5rem]">
-                خرید و فروش <br /> رمزنگاری در چند دقیقه
-              </h1>
-              <p className="text-center font-semibold text-[#777E90] md:text-right lg:max-w-[25rem]">
-                بیت کوین، اتریوم، USDT و توپالت کوین ها را در صرافی افسانه ای
-                دارایی های کریپتو معامله کنید.
-              </p>
-              <div className="flex items-center gap-5 md:hidden">
-                <Link to="/market">
-                  <button className="rounded-full border-2 px-4 py-2 font-bold">
-                    ورود
-                  </button>
-                </Link>
-                <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white">
-                  ثبت نام
-                </button>
-              </div>
-              <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
-                همین الان شروع کنید
-              </button>
-              <button
-                onClick={scrollToSection}
-                className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:mt-10 lg:flex"
-              >
-                <div
-                  id="scroll_line"
-                  className="flex translate-y-[-23px] flex-col"
-                >
-                  <img
-                    src={arrow}
-                    className="mb-[24px] rotate-90"
-                    alt="arrow svg"
-                  />
-                  <img src={arrow} className="rotate-90" alt="arrow svg" />
-                </div>
-              </button>
-            </div>
-            <div className="hidden md:flex md:items-center md:justify-center">
-              <img
-                src={cards}
-                draggable={false}
-                alt="card hero img"
-                className="lg:absolute lg:-top-10 lg:left-0 lg:-z-10 lg:w-[55%] 2xl:-top-32"
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
+    <div id="heroSection" className="pt-20 ~px-5/40 md:!pl-0">
       <div className="z-10 flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
-        <div className="flex flex-col items-center gap-5 md:flex md:w-[100rem] md:items-start">
-          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/6xl md:text-right lg:!leading-[4.4rem] xl:!leading-[5rem] 2xl:!leading-[5.5rem]">
-            خرید و فروش <br /> رمزنگاری در چند دقیقه
+        <div className="flex flex-1 flex-col items-center gap-5 md:flex md:items-start">
+          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
+            خرید و فروش <br /> <span className="text-blue-600"> رمزنگاری</span>{" "}
+            در چند دقیقه
           </h1>
           <p className="text-center text-sm font-semibold leading-7 text-[#777E90] md:text-right lg:max-w-[25rem]">
             بیت کوین، اتریوم، USDT و توپالت کوین ها را در صرافی افسانه ای دارایی
@@ -104,11 +103,56 @@ export default function Content() {
             </Link>
           </div>
           <Link to="/auth/login">
-            <button className="hidden rounded-full bg-[#3772FF] px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#0045ea] md:flex">
+            <button className="hidden gap-2 rounded-xl bg-blue-200 px-5 py-3 font-vazirBold text-sm text-blue-700 transition-all duration-500 hover:bg-blue-600 hover:text-white md:flex">
               همین الان شروع کنید
+              <svg
+                ariaHidden="true"
+                dataPrefix="fal"
+                dataIcon="arrow-left"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                className="w-3 rotate-45"
+              >
+                <path
+                  fill="currentColor"
+                  d="M231.536 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113L238.607 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"
+                  class=""
+                ></path>
+              </svg>
             </button>
           </Link>
-          <button
+          <div className="">
+            <div className="h-[20rem] gap-2 py-5 lg:w-[27rem]">
+              <Swiper
+                direction="vertical"
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={"1.3"}
+                // autoplay={{
+                //   delay: 1000,
+                //   disableOnInteraction: false,
+                // }}
+                modules={[EffectCoverflow, Autoplay]}
+                className="mySwiper"
+              >
+                {isLoading
+                  ? Array(4)
+                      .fill(0)
+                      .map((_, index) => (
+                        <SwiperSlide className="!w-fit">
+                          <ArzCardSkeleton key={index} />
+                        </SwiperSlide>
+                      ))
+                  : topCryptos.slice(0, 4).map((crypto) => (
+                      <SwiperSlide className="!bg-transparent">
+                        <CardArz key={crypto.id} {...crypto} />
+                      </SwiperSlide>
+                    ))}
+              </Swiper>
+            </div>
+          </div>
+          {/* <button
             onClick={scrollToSection}
             className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:mt-10 lg:flex"
           >
@@ -120,14 +164,14 @@ export default function Content() {
               />
               <img src={arrow} className="rotate-90" alt="arrow svg" />
             </div>
-          </button>
+          </button> */}
         </div>
-        <div className="hidden md:flex md:items-center md:justify-center">
+        <div className="hidden h-full w-full flex-[1.5] md:flex md:items-center md:justify-center">
           <img
             src={cards}
             draggable={false}
             alt="card hero img"
-            className="lg:absolute lg:-top-10 lg:left-0 lg:-z-10 lg:w-[55%] 2xl:-top-32"
+            className="w-full scale-x-[-1]"
           />
         </div>
       </div>
