@@ -27,14 +27,14 @@ export default function Crypto() {
             </button>
           </div>
           <div className="mt-6">
-            <ul className="text-md flex items-center gap-5 font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
+            <ul className="text-md hidden font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
               <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
                 همه
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-5 space-y-5">
+        <div className="mt-12 space-y-5">
           <div className="lg:hidden">
             <Swiper
               dir="ltr"
