@@ -211,7 +211,7 @@ html {
 #navSide {
   height: calc(100dvh - 56px);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   #heroSection {
     height: calc(100dvh - 56px);
   }
