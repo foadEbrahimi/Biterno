@@ -46,7 +46,8 @@ export default function SmallCards() {
             image: coingeckoStats.image,
             price: nobitexStats.latest || 0,
             change24h: nobitexStats.dayChange || 0,
-            change7d: nobitexStats.weekChange || 0,
+            change7d:
+              coingeckoStats.price_change_percentage_7d_in_currency || 0,
             marketCap: coingeckoStats.market_cap || 0,
           };
         });

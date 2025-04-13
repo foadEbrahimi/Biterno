@@ -56,6 +56,8 @@ export default function Cryptocurrencies() {
             change24h: nobitexStats.dayChange || 0,
           };
         });
+        console.log(combinedData);
+
         setCryptos(combinedData);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
