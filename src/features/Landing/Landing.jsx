@@ -14,11 +14,11 @@ export default function Landing() {
     <div className="relative">
       <Hero />
       <Arz />
-      <Crypto />
-      <MarketTrend />
       <Contact />
+      <MarketTrend />
+      <Crypto />
       <Trade />
-      <Subs />
+      {/* <Subs /> */}
       <HowWork />
     </div>
   );
