@@ -29,7 +29,6 @@ export default function Contact() {
           </p>
         </div>
         <div className="mt-16">
-          {/* TODO: add slider */}
           <Swiper
             dir="ltr"
             slidesPerView={"auto"}
