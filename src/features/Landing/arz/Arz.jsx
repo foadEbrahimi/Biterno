@@ -72,23 +72,25 @@ export default function Arz() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"1.3"}
-        breakpoints={{
-          700: {
-            slidesPerView: 2.3,
-          },
-          1024: {
-            slidesPerView: 3.3,
-          },
-          1285: {
-            slidesPerView: 3.7,
-          },
-          1520: {
-            slidesPerView: 4.5,
-          },
-        }}
+        loop={true}
+        loopedslides={3}
+        speed={800}
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,
+        }}
+        on={{
+          transitionEnd: function () {
+            if (this.isEnd) {
+              this.slideTo(0);
+            }
+          },
+        }}
+        breakpoints={{
+          700: { slidesPerView: 2.3 },
+          1024: { slidesPerView: 3.3 },
+          1285: { slidesPerView: 3.7 },
+          1520: { slidesPerView: 4.5 },
         }}
         coverflowEffect={{
           rotate: 50,
