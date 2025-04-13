@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router";
 
 import chevronBottom from "@assets/imgs/chevronBottom.svg";
@@ -17,95 +17,77 @@ import {
 import { useLocalState } from "@/store/context/LocalStateProvider";
 
 export default function Navbar() {
-  const [showLanguage, setShowLanguage] = useState(false);
   const { showNav, toggleNav } = useLocalState();
   return (
-    <div className="!z-20 border-b bg-white py-3">
-      <div className="~px-5/20">
-        <div className="flex items-center">
+    <div className="!z-20 rounded-b-2xl bg-white py-3 shadow ~px-5/20 lg:mx-10">
+      <div className="">
+        <div className="flex items-center md:justify-between">
           <div className="flex items-center justify-between ~gap-3/7">
             <Link to="/">
-              <div className="flex cursor-pointer items-center gap-1">
+              <div className="flex cursor-pointer items-center gap-3">
                 <img src={logo} alt="bitCloud logo" />
-                <span className="text-2xl">بیتکلود</span>
+                <span className="font-vazirBold text-2xl text-blue-500">
+                  بیت‌کلود
+                </span>
               </div>
             </Link>
-            <div className="hidden h-10 w-0.5 bg-[#E6E8EC] md:flex"></div>
-            <div>
-              <ul className="hidden items-center font-bold text-[#777E90] ~gap-5/14 md:flex [&>*]:cursor-pointer">
-                <NavLink
-                  to="/auth/login"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"
-                  }
-                >
-                  <li>تبدیل</li>
-                </NavLink>
-                <NavLink
-                  to="/auth/login"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"
-                  }
-                >
-                  <li className="flex items-center gap-1 transition-all duration-300 hover:text-[#23262F]">
-                    خرید کریپتو
-                    <img src={chevronBottom} alt="line svg" className="w-5" />
-                  </li>
-                </NavLink>
-                <NavLink
-                  to="/market"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"
-                  }
-                >
-                  <li>بازار</li>
-                </NavLink>
-                {/* <NavLink
-                  end
-                  to="/discover"
-                  className={({ isActive }) => isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"}
-                >
-                  <li>کشف کنید</li>
-                </NavLink> */}
-                <NavLink
-                  end
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"
-                  }
-                >
-                  <li>ارتباط باما</li>
-                </NavLink>
-              </ul>
-            </div>
           </div>
-          <div className="ml-4 mr-auto flex items-center gap-3">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                onClick={() => setShowLanguage((prev) => !prev)}
-                asChild
+          <div>
+            <ul className="hidden items-center gap-5 divide-x-2 divide-x-reverse font-bold text-[#777E90] md:flex [&>*]:cursor-pointer">
+              <NavLink
+                to="/auth/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23262F]"
+                    : "transition-all duration-300 hover:text-[#23262F]"
+                }
               >
+                <li>تبدیل</li>
+              </NavLink>
+              <NavLink
+                to="/auth/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23262F]"
+                    : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                }
+              >
+                <li className="flex items-center gap-1 transition-all duration-300 hover:text-[#23262F]">
+                  خرید کریپتو
+                  <img src={chevronBottom} alt="line svg" className="w-5" />
+                </li>
+              </NavLink>
+              <NavLink
+                to="/market"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23262F]"
+                    : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                }
+              >
+                <li>بازار</li>
+              </NavLink>
+              <NavLink
+                end
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23262F]"
+                    : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                }
+              >
+                <li>ارتباط باما</li>
+              </NavLink>
+            </ul>
+          </div>
+          <div className="mr-auto flex items-center md:mr-0">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="ml-1" asChild>
                 <button className="flex items-center gap-1 font-bold uppercase">
                   <img
-                    src={iranFlag}
-                    className="w-7 rounded-sm"
-                    alt="iran flag"
-                  />
-
-                  <img
-                    src={chevronBottom}
-                    alt="chevronBottom svg"
-                    className={`w-5 transition-all duration-300 ${showLanguage ? "rotate-180" : "rotate-0"}`}
+                    src={englandFlag}
+                    className="h-8 w-8 scale-75 rounded-full"
+                    alt="england flag"
                   />
                 </button>
               </DropdownMenuTrigger>
@@ -119,9 +101,9 @@ export default function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuCheckboxItem className="cursor-pointer space-x-2">
                   <img
-                    src={englandFlag}
-                    className="w-7 rounded-sm"
-                    alt="england flag"
+                    src={iranFlag}
+                    className="h-7 w-7 rounded-full object-fill"
+                    alt="iran flag"
                   />
                   <span className="text-[#23262F]">انگلیسی</span>
                 </DropdownMenuCheckboxItem>
@@ -149,17 +131,27 @@ export default function Navbar() {
                 d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
               />
             </svg>
-            <div className="hidden md:flex md:items-center md:gap-2">
-              <Link to="/auth/login">
-                <button className="rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-[#23262F] hover:bg-[#23262F] hover:text-white">
-                  ورود
-                </button>
-              </Link>
-              <Link to="/auth/register">
-                <button className="rounded-full bg-[#3772FF] px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-[#0045ea]">
-                  ثبت نام
-                </button>
-              </Link>
+            <div className="mr-2 hidden md:flex md:items-center md:gap-2">
+              <button className="group flex items-center gap-2 rounded-xl bg-blue-200 p-2.5 px-4 transition-all duration-500 hover:bg-blue-600">
+                <svg
+                  style={{
+                    width: "1.5rem",
+                    height: "1.5rem",
+                    verticalAlign: "middle",
+                    overflow: "hidden",
+                  }}
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  className="w-6 fill-blue-600 group-hover:fill-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M843.282963 870.115556c-8.438519-140.515556-104.296296-257.422222-233.908148-297.14963C687.881481 536.272593 742.4 456.533333 742.4 364.088889c0-127.241481-103.158519-230.4-230.4-230.4S281.6 236.847407 281.6 364.088889c0 92.444444 54.518519 172.183704 133.12 208.877037-129.611852 39.727407-225.46963 156.634074-233.908148 297.14963-0.663704 10.903704 7.964444 20.195556 18.962963 20.195556l0 0c9.955556 0 18.299259-7.774815 18.962963-17.73037C227.745185 718.506667 355.65037 596.385185 512 596.385185s284.254815 122.121481 293.357037 276.195556c0.568889 9.955556 8.912593 17.73037 18.962963 17.73037C835.318519 890.311111 843.946667 881.019259 843.282963 870.115556zM319.525926 364.088889c0-106.287407 86.186667-192.474074 192.474074-192.474074s192.474074 86.186667 192.474074 192.474074c0 106.287407-86.186667 192.474074-192.474074 192.474074S319.525926 470.376296 319.525926 364.088889z" />
+                </svg>
+
+                <span className="font-vazirBold text-blue-700 group-hover:text-white">
+                  حساب کاربری
+                </span>
+              </button>
             </div>
           </div>
           <button
