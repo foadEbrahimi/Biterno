@@ -4,8 +4,8 @@ import Layout from "../../components/layout/landing/Layout";
 import Content from "./components/Content";
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import Learn from "./components/Learn";
-import SmallCard from "./components/SmallCard";
 import Table from "./components/Table";
+import SmallCards from "./components/SmallCards";
 
 export default function Market() {
   return (
@@ -25,9 +25,7 @@ export default function Market() {
       </div>
       <Layout>
         <div className="~mt-32/40 lg:hidden">
-          <SmallCard />
-          <SmallCard />
-          <SmallCard />
+          <SmallCards />
         </div>
         <Table />
         <Learn />
