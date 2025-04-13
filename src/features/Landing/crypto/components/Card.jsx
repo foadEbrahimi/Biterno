@@ -20,7 +20,7 @@ export default function Card({ height, vertical, img, max = false }) {
         className={`flex flex-col items-end space-y-2 lg:items-start ${max && "max-w-[15rem]"}`}
       >
         <span
-          className={`text-[#23262F] ${vertical ? "" : "text-lg lg:text-2xl"} text-right font-bold transition-all duration-300 group-hover:text-[#3772FF]`}
+          className={`text-[#23262F] ${vertical ? "" : "text-lg lg:text-2xl"} group-hover:text-primary text-right font-bold transition-all duration-300`}
         >
           توکن های اهرمی اکنون در دسترس هستند
         </span>

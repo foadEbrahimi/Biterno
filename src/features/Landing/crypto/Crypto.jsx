@@ -22,7 +22,7 @@ export default function Crypto() {
         <div>
           <div className="flex items-center justify-between">
             <span className="font-bold ~text-3xl/4xl">یادگیری کریپتو</span>
-            <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:flex lg:text-base">
+            <button className="hover:border-primary hover:bg-primary hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:text-[#FCFCFD] md:flex lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
@@ -110,7 +110,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="!mt-10 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
+          <button className="hover:pri !mt-10 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>

@@ -7,6 +7,9 @@ export default {
     screens,
     fontSize,
     extend: {
+      colors: {
+        primary: "#009b87",
+      },
       fontFamily: {
         arial: ["Arial"],
         vazirBold: ["vazir-bold"],

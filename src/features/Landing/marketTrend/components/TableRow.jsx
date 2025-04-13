@@ -67,7 +67,7 @@ export default function TableRow({ index, crypto }) {
         <img src={change24h > 0 ? chart : chart2} alt="chart svg" />
       </td>
       <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
-        <button className="rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+        <button className="hover:border-primary hover:bg-primary rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:text-[#FCFCFD]">
           معامله
         </button>
       </td>
