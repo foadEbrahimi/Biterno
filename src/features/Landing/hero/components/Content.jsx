@@ -10,6 +10,7 @@ import CardArz, {
 import "swiper/css";
 import { Autoplay, EffectCards, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Arz from "../../arz/Arz";
 
 // import arrow from "@assets/imgs/arrow-long.svg";
 
@@ -122,22 +123,68 @@ export default function Content() {
               </svg>
             </button>
           </Link>
-          <div className="">
-            <div className="h-[18rem] gap-2 py-5 lg:w-[29rem]">
+          <div>
+            <div className="h-[18rem] w-[25rem] gap-2 py-5 sm:w-[39rem] md:w-fit lg:w-[29rem]">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
                 effect="cards"
                 centeredSlides={true}
-                slidesPerView={2}
-                initialSlide={1}
+                slidesPerView={1.5}
+                // initialSlide={1}
                 autoplay={{
                   delay: 2000,
                   disableOnInteraction: false,
                 }}
+                // loop={true}
+                // loopedSlides={3}
+                // speed={500}
+                // on={{
+                //   transitionEnd: function () {
+                //     if (this.isEnd) {
+                //       this.slideTo(0);
+                //     }
+                //   },
+                // }}
+                cardsEffect={{
+                  rotate: false,
+                  slideShadows: false,
+                  perSlideOffset: 70,
+                }}
+                modules={[EffectCards, Autoplay]}
+                className="arzSlider hidden md:block"
+              >
+                {isLoading
+                  ? Array(4)
+                      .fill(0)
+                      .map((_, index) => (
+                        <SwiperSlide className="mr-16 !w-full !bg-transparent">
+                          <ArzCardSkeleton key={index} />
+                        </SwiperSlide>
+                      ))
+                  : topCryptos.map((crypto) => (
+                      <SwiperSlide
+                        className="mr-16 !w-full !bg-transparent"
+                        style={{
+                          filter: "grayscale(100)",
+                        }}
+                      >
+                        <CardArz key={crypto.id} {...crypto} />
+                      </SwiperSlide>
+                    ))}
+              </Swiper>
+              <Swiper
+                effect={"coverflow"}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={"1.6"}
                 loop={true}
-                loopedSlides={3}
-                speed={500}
+                loopedslides={3}
+                speed={800}
+                // autoplay={{
+                //   delay: 1000,
+                //   disableOnInteraction: false,
+                // }}
                 on={{
                   transitionEnd: function () {
                     if (this.isEnd) {
@@ -145,29 +192,32 @@ export default function Content() {
                     }
                   },
                 }}
-                cardsEffect={{
-                  rotate: false,
-                  slideShadows: false,
-                  perSlideOffset: 70,
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2.5,
+                  },
                 }}
-                modules={[EffectCards, Autoplay]}
-                className="arzSlider"
+                spaceBetween={20}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 50,
+                  modifier: 1,
+                  slideShadows: false,
+                }}
+                modules={[EffectCoverflow, Autoplay]}
+                className="arzSlider md:hidden"
               >
                 {isLoading
                   ? Array(4)
                       .fill(0)
                       .map((_, index) => (
-                        <SwiperSlide className="mr-16 !bg-transparent">
+                        <SwiperSlide className="!bg-transparent">
                           <ArzCardSkeleton key={index} />
                         </SwiperSlide>
                       ))
-                  : topCryptos.map((crypto) => (
-                      <SwiperSlide
-                        className="mr-16 !bg-transparent"
-                        style={{
-                          filter: "grayscale(100)",
-                        }}
-                      >
+                  : topCryptos.slice(0, 4).map((crypto) => (
+                      <SwiperSlide className="!bg-transparent">
                         <CardArz key={crypto.id} {...crypto} />
                       </SwiperSlide>
                     ))}

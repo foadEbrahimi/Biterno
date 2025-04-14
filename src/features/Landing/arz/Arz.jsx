@@ -106,12 +106,12 @@ export default function Arz() {
           ? Array(4)
               .fill(0)
               .map((_, index) => (
-                <SwiperSlide>
+                <SwiperSlide className="!w-fit">
                   <ArzCardSkeleton key={index} />
                 </SwiperSlide>
               ))
           : topCryptos.slice(0, 4).map((crypto) => (
-              <SwiperSlide>
+              <SwiperSlide className="!w-fit">
                 <CardArz key={crypto.id} {...crypto} />
               </SwiperSlide>
             ))}
