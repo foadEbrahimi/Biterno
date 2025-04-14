@@ -130,7 +130,7 @@ export default function Content() {
                 grabCursor={true}
                 effect="cards"
                 centeredSlides={true}
-                slidesPerView={1.5}
+                slidesPerView={1.7}
                 initialSlide={1}
                 autoplay={{
                   delay: 1500,
@@ -149,7 +149,7 @@ export default function Content() {
                 cardsEffect={{
                   rotate: false,
                   slideShadows: false,
-                  perSlideOffset: 70,
+                  perSlideOffset: 80,
                 }}
                 modules={[EffectCards, Autoplay]}
                 className="arzSlider hidden md:block"
