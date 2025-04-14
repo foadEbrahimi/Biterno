@@ -135,10 +135,10 @@ export default function Content() {
                 centeredSlides={true}
                 slidesPerView={1.7}
                 initialSlide={1}
-                autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //   delay: 1500,
+                //   disableOnInteraction: false,
+                // }}
                 loop={true}
                 loopedSlides={3}
                 speed={500}
@@ -152,7 +152,7 @@ export default function Content() {
                 cardsEffect={{
                   rotate: false,
                   slideShadows: false,
-                  perSlideOffset: 80,
+                  perSlideOffset: 95,
                 }}
                 modules={[EffectCards, Autoplay]}
                 className="arzSlider hidden md:block"
@@ -167,7 +167,7 @@ export default function Content() {
                       ))
                   : topCryptos.map((crypto) => (
                       <SwiperSlide
-                        className="!w-full !bg-transparent ~mr-9/7"
+                        className="!w-full pb-6 !bg-transparent ~mr-9/7"
                         style={{
                           filter: "grayscale(100)",
                         }}
