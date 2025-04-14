@@ -230,6 +230,7 @@ html {
 
 .arzSlider .swiper-slide-active {
   filter: grayscale(0) !important;
+  padding-bottom: 10px;
 }
 
 .arzSlider .swiper-slide {
