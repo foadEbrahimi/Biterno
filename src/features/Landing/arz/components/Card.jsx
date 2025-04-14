@@ -24,10 +24,10 @@ export function ArzCardSkeleton() {
   );
 }
 
-export default function CardArz({ name, image, price }) {
+export default function CardArz({ name, image, price, change24h }) {
   return (
-    <div className="flex h-[8.5rem] !w-[90%] cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow transition-all duration-300">
-      <div className="flex flex-col items-start gap-2">
+    <div className="flex h-[8.5rem] !w-fit max-w-[23rem] cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow transition-all duration-300 xl:!min-w-[90%] xl:!max-w-[90%]">
+      <div className="flex flex-1 flex-col items-start gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
           <span className="font-vazirDemiBold text-sm uppercase text-gray-500">
@@ -35,7 +35,7 @@ export default function CardArz({ name, image, price }) {
           </span>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-2xl font-bold">
+          <span className="font-bold ~text-xl/2xl">
             {formatToTomanWithCommas(price)}
           </span>
           <svg
@@ -45,7 +45,7 @@ export default function CardArz({ name, image, price }) {
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            className="drop-shadow-green-600 w-4 text-green-600 drop-shadow-2xl"
+            className={`drop-shadow-green-600 ${change24h > 0 ? "drop-shadow-green-600 text-green-600" : "drop-shadow-red-600 text-red-600 scale-y-[-1]"} w-4 drop-shadow-2xl`}
           >
             <path
               fill="currentColor"
@@ -54,8 +54,8 @@ export default function CardArz({ name, image, price }) {
           </svg>
         </div>
       </div>
-      <div className="">
-        <img src={chart} className="" alt="" />
+      <div className="w-[7rem] flex-1">
+        <img src={change24h > 0 ? chart : chart2} alt="" />
       </div>
     </div>
   );
