@@ -62,7 +62,7 @@ export default function Navbar() {
                   to="/market"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#23262F]"
+                      ? "pr-4 text-[#23262F]"
                       : "pr-4 transition-all duration-300 hover:text-[#23262F]"
                   }
                 >
@@ -73,7 +73,7 @@ export default function Navbar() {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#23262F]"
+                      ? "pr-4 text-[#23262F]"
                       : "pr-4 transition-all duration-300 hover:text-[#23262F]"
                   }
                 >
