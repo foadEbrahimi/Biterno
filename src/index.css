@@ -228,6 +228,14 @@ html {
   align-items: center;
 }
 
+.arzSlider .swiper-slide-active {
+  filter: grayscale(0) !important;
+}
+
+.arzSlider .swiper-slide {
+  filter: grayscale(100);
+}
+
 /* animation */
 #scroll_line {
   animation: arrowDown ease-out 1.4s infinite;
