@@ -14,7 +14,7 @@ export default function Market() {
         style={{
           height: "calc(100dvh - 56px)",
         }}
-        className="relative bg-[#DECBE9] p-2 py-5 lg:flex lg:items-center"
+        className="relative bg-[#DECBE9] p-2 py-10 lg:flex lg:items-center"
       >
         <Layout>
           <div className="">

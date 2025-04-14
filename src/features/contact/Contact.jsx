@@ -16,7 +16,7 @@ export default function Contact() {
   const [state, setState] = useState("general");
 
   return (
-    <div className="my-10 2xl:my-0">
+    <div className="py-20 2xl:my-0">
       <Layout>
         <div className="flex w-full flex-col items-start gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col ~gap-6/10 lg:pt-10 xl:pt-20">
