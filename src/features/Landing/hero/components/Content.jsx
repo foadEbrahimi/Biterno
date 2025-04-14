@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 import cards from "@assets/imgs/hero/investing.svg";
+import arrow from "@assets/imgs/arrow-long.svg";
 
 import CardArz, {
   ArzCardSkeleton,
 } from "@features/Landing/arz/components/Card";
 
 import "swiper/css";
-import { Autoplay, EffectCards, EffectCoverflow } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCards,
+  EffectCoverflow,
+  Navigation,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Arz from "../../arz/Arz";
-
-// import arrow from "@assets/imgs/arrow-long.svg";
 
 export default function Content() {
   // const scrollToSection = () => {
@@ -205,8 +208,12 @@ export default function Content() {
                   modifier: 1,
                   slideShadows: false,
                 }}
-                modules={[EffectCoverflow, Autoplay]}
-                className="arzSlider md:hidden"
+                navigation={{
+                  nextEl: ".prevSlide",
+                  prevEl: ".nextSlide",
+                }}
+                modules={[EffectCoverflow, Autoplay, Navigation]}
+                className="arzSlider !h-fit pt-10 md:hidden"
               >
                 {isLoading
                   ? Array(4)
@@ -227,6 +234,14 @@ export default function Content() {
                       </SwiperSlide>
                     ))}
               </Swiper>
+              <div className="mt-5 flex items-center justify-center gap-3 lg:hidden">
+                <button className="nextSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
+                  <img src={arrow} alt="" className="w-4" />
+                </button>
+                <button className="prevSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
+                  <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
+                </button>
+              </div>
             </div>
           </div>
           {/* <button
