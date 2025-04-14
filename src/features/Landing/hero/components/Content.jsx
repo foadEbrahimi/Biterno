@@ -131,21 +131,21 @@ export default function Content() {
                 effect="cards"
                 centeredSlides={true}
                 slidesPerView={1.5}
-                // initialSlide={1}
+                initialSlide={1}
                 autoplay={{
-                  delay: 2000,
+                  delay: 1500,
                   disableOnInteraction: false,
                 }}
-                // loop={true}
-                // loopedSlides={3}
-                // speed={500}
-                // on={{
-                //   transitionEnd: function () {
-                //     if (this.isEnd) {
-                //       this.slideTo(0);
-                //     }
-                //   },
-                // }}
+                loop={true}
+                loopedSlides={3}
+                speed={500}
+                on={{
+                  transitionEnd: function () {
+                    if (this.isEnd) {
+                      this.slideTo(0);
+                    }
+                  },
+                }}
                 cardsEffect={{
                   rotate: false,
                   slideShadows: false,
