@@ -10,7 +10,7 @@ import Trade from "./trade/Trade";
 
 export default function Landing() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Hero />
       <Crypto />
       <MarketTrend />

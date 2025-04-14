@@ -2,20 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 import cards from "@assets/imgs/hero/investing.svg";
-import arrow from "@assets/imgs/arrow-long.svg";
 
 import CardArz, {
   ArzCardSkeleton,
 } from "@features/Landing/arz/components/Card";
 
-import "swiper/css";
-import {
-  Autoplay,
-  EffectCards,
-  EffectCoverflow,
-  Navigation,
-} from "swiper/modules";
+import { Autoplay, EffectCards, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Content() {
   // const scrollToSection = () => {
@@ -84,7 +78,7 @@ export default function Content() {
 
   return (
     <div id="heroSection" className="pt-20 ~px-5/40 md:!pl-0">
-      <div className="z-10 flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
+      <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
         <div className="flex flex-1 flex-col items-center gap-5 md:flex md:items-start">
           <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
             خرید و فروش <br /> <span className="text-blue-600"> رمزنگاری</span>{" "}
@@ -167,7 +161,7 @@ export default function Content() {
                       ))
                   : topCryptos.map((crypto) => (
                       <SwiperSlide
-                        className="!w-full pb-6 !bg-transparent ~mr-9/7"
+                        className="!w-full !bg-transparent pb-6 ~mr-9/7"
                         style={{
                           filter: "grayscale(100)",
                         }}
@@ -208,11 +202,7 @@ export default function Content() {
                   modifier: 1,
                   slideShadows: false,
                 }}
-                navigation={{
-                  nextEl: ".prevSlide",
-                  prevEl: ".nextSlide",
-                }}
-                modules={[EffectCoverflow, Autoplay, Navigation]}
+                modules={[EffectCoverflow, Autoplay]}
                 className="arzSlider !h-fit pt-10 md:hidden"
               >
                 {isLoading
@@ -234,14 +224,6 @@ export default function Content() {
                       </SwiperSlide>
                     ))}
               </Swiper>
-              <div className="absolute left-[50%] top-[38%] z-10 flex translate-x-[-50%] translate-y-[-50%] items-center justify-center gap-48 lg:hidden">
-                <button className="nextSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
-                  <img src={arrow} alt="" className="w-4" />
-                </button>
-                <button className="prevSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
-                  <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
-                </button>
-              </div>
             </div>
           </div>
           {/* <button
