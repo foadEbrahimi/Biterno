@@ -8,27 +8,25 @@ import { formatToTomanWithCommas } from "../../../../utils/helper";
 
 export function ArzCardSkeleton() {
   return (
-    <div className="flex flex-col gap-3 rounded-3xl border p-4">
-      <div className="flex items-center justify-between">
+    <div className="flex h-[8.5rem] w-full animate-pulse cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow">
+      <div className="flex flex-col items-start gap-2">
         <div className="flex items-center gap-2">
-          <Skeleton className="h-10 w-10 rounded-full" />
-          <Skeleton className="h-6 w-16" />
+          <Skeleton className="h-8 w-8 rounded-full" />
+          <Skeleton className="h-4 w-16 rounded-full" />
         </div>
-        <Skeleton className="h-6 w-20" />
+        <div className="flex items-center gap-3">
+          <Skeleton className="h-6 w-24 rounded" />
+          <Skeleton className="h-4 w-4 rounded-full" />
+        </div>
       </div>
-      <div className="mt-2">
-        <Skeleton className="h-7 w-32" />
-      </div>
-      <div className="mt-2">
-        <Skeleton className="h-10 w-full rounded-xl" />
-      </div>
+      <Skeleton className="h-16 w-32 rounded-full" />
     </div>
   );
 }
 
 export default function CardArz({ name, image, price }) {
   return (
-    <div className="flex h-[8.5rem] !w-full cursor-pointer items-center justify-between gap-5 rounded-full bg-white px-10 transition-all duration-300">
+    <div className="flex h-[8.5rem] !w-fit cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow transition-all duration-300">
       <div className="flex flex-col items-start gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
