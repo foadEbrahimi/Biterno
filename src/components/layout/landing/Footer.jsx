@@ -19,7 +19,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="mt-10 border-t py-5 md:py-0">
+    <div className="border-t py-5 md:py-0">
       <Layout>
         <div className="w-full md:flex md:items-start">
           <div className="md:mt-10 md:hidden">
