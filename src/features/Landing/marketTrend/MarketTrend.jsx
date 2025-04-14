@@ -103,7 +103,7 @@ export default function MarketTrend() {
   }, []);
 
   return (
-    <div className="my-40 flex items-center">
+    <div className="py-20 flex items-center bg-[#F4F5F6]">
       <Layout>
         <div className="flex items-center justify-between">
           <span className="text-4xl font-bold">روند بازار</span>

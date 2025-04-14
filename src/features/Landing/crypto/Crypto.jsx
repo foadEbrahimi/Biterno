@@ -17,12 +17,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Crypto() {
   return (
-    <div className="mt-10 py-10 bg-[#F4F5F6]" id="cryptoSection">
+    <div className="py-10" id="cryptoSection">
       <Layout>
         <div>
           <div className="flex items-center justify-between">
             <span className="font-bold ~text-3xl/4xl">یادگیری کریپتو</span>
-            <button className="hover:border-primary hover:bg-primary hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:text-[#FCFCFD] md:flex lg:text-base">
+            <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] md:flex lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
