@@ -127,7 +127,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="h-[18rem] w-[25rem] gap-2 py-5 sm:w-[39rem] md:w-fit lg:w-[29rem]">
+            <div className="relative h-[18rem] w-[25rem] gap-2 py-5 sm:w-[39rem] md:w-fit lg:w-[29rem]">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
@@ -234,7 +234,7 @@ export default function Content() {
                       </SwiperSlide>
                     ))}
               </Swiper>
-              <div className="mt-5 flex items-center justify-center gap-3 lg:hidden">
+              <div className="absolute left-[50%] top-[38%] z-10 flex translate-x-[-50%] translate-y-[-50%] items-center justify-center gap-48 lg:hidden">
                 <button className="nextSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
                   <img src={arrow} alt="" className="w-4" />
                 </button>
