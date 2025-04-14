@@ -158,13 +158,13 @@ export default function Content() {
                   ? Array(4)
                       .fill(0)
                       .map((_, index) => (
-                        <SwiperSlide className="mr-16 !w-full !bg-transparent">
+                        <SwiperSlide className="!w-full !bg-transparent ~mr-9/7">
                           <ArzCardSkeleton key={index} />
                         </SwiperSlide>
                       ))
                   : topCryptos.map((crypto) => (
                       <SwiperSlide
-                        className="mr-16 !w-full !bg-transparent"
+                        className="!w-full !bg-transparent ~mr-9/7"
                         style={{
                           filter: "grayscale(100)",
                         }}
@@ -177,7 +177,7 @@ export default function Content() {
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={"1.6"}
+                slidesPerView={"2.4"}
                 loop={true}
                 loopedslides={3}
                 speed={800}
@@ -217,7 +217,12 @@ export default function Content() {
                         </SwiperSlide>
                       ))
                   : topCryptos.slice(0, 4).map((crypto) => (
-                      <SwiperSlide className="!bg-transparent">
+                      <SwiperSlide
+                        style={{
+                          filter: "blur(2px)",
+                        }}
+                        className="!bg-transparent"
+                      >
                         <CardArz key={crypto.id} {...crypto} />
                       </SwiperSlide>
                     ))}
