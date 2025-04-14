@@ -40,7 +40,7 @@ export default function TableRow({ index, crypto }) {
   const { name, image, price, change24h } = crypto;
 
   return (
-    <tr className="border-b">
+    <tr className="border-b transition-all duration-500 hover:bg-white">
       <td className="hidden w-[3rem] px-1 py-3 sm:table-cell">
         <span className="text-sm font-bold text-black">{index + 1}</span>
       </td>
@@ -67,7 +67,7 @@ export default function TableRow({ index, crypto }) {
         <img src={change24h > 0 ? chart : chart2} alt="chart svg" />
       </td>
       <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
-        <button className="hover:border-primary hover:bg-primary rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:text-[#FCFCFD]">
+        <button className="rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:border-primary hover:bg-primary hover:text-[#FCFCFD]">
           معامله
         </button>
       </td>
