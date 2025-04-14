@@ -1,6 +1,5 @@
 import React from "react";
 
-import Arz from "./arz/Arz";
 import Contact from "./contact/Contact";
 import Crypto from "./crypto/Crypto";
 import Hero from "./hero/Hero";
