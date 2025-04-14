@@ -90,7 +90,7 @@ export default function Content() {
             خرید و فروش <br /> <span className="text-blue-600"> رمزنگاری</span>{" "}
             در چند دقیقه
           </h1>
-          <p className="text-center text-sm font-semibold leading-7 text-[#777E90] md:text-right lg:max-w-[25rem]">
+          <p className="px-10 text-center text-sm font-semibold leading-7 text-[#777E90] md:px-0 md:text-right lg:max-w-[25rem]">
             بیت کوین، اتریوم، USDT و توپالت کوین ها را در صرافی افسانه ای دارایی
             های کریپتو معامله کنید.
           </p>
