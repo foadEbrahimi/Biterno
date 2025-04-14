@@ -90,12 +90,12 @@ export default function Content() {
           </p>
           <div className="flex items-center gap-5 md:hidden">
             <Link to="/auth/login">
-              <button className="rounded-full border-2 px-5 py-2 font-bold">
+              <button className="rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white">
                 ورود
               </button>
             </Link>
             <Link to="/auth/register">
-              <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white">
+              <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white transition-all duration-300 hover:bg-blue-600">
                 ثبت نام
               </button>
             </Link>
