@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function HowWork() {
   return (
-    <div className="flex h-[100dvh] items-center py-20 lg:py-0">
+    <div className="flex h-[100dvh] items-center bg-[#F4F5F6] py-20 lg:py-0">
       <div>
         {/* <Layout> */}
         <div className="~px-5/32">

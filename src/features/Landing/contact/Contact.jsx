@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Contact() {
   return (
-    <div className="mt-20 flex min-h-[100dvh] items-center py-20">
+    <div className="mt-20 flex min-h-[100dvh] items-center bg-[#F4F5F6] py-20">
       <Layout>
         <div className="flex flex-col items-center">
           <span className="mb-4 max-w-[23rem] font-bold !leading-[3rem] ~text-3xl/4xl md:text-center">

@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Subs() {
   return (
-    <div className="mt-20 bg-[#F4F5F6] pb-20 pt-10">
+    <div className="pb-20 pt-10">
       <Layout>
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">

@@ -9,7 +9,7 @@ import googlePlay from "@assets/imgs/google-play.svg";
 
 export default function Trade() {
   return (
-    <div className="bg-[#F4F5F6]">
+    <div className="">
       <Layout>
         <div className="flex flex-col md:h-[100dvh] md:flex-row md:items-center md:justify-between lg:py-10">
           <div className="flex-[1.3] md:order-2">
