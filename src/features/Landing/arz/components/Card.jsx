@@ -26,7 +26,7 @@ export function ArzCardSkeleton() {
 
 export default function CardArz({ name, image, price, change24h }) {
   return (
-    <div className="flex w-[15rem] max-w-[23rem] cursor-pointer items-center justify-between gap-4 rounded-full bg-white p-3 px-4 shadow transition-all duration-300 sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
+    <div className="flex w-[15rem] hover:shadow-lg max-w-[23rem] cursor-pointer items-center justify-between gap-4 rounded-full bg-white p-3 px-4 shadow transition-all duration-300 sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
       <div className="flex flex-1 flex-col items-start gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
