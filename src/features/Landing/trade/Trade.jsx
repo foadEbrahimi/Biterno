@@ -75,6 +75,22 @@ export default function Trade() {
                   <span className="text-xl font-bold">فروشگاه پلی</span>
                 </div>
               </div>
+              <div className="group flex cursor-pointer items-start gap-3 border-t py-6">
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#23262F]">
+                  <span className="w-9 uppercase text-white">pwa</span>
+                  <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    <img
+                      src={arrowLongWhite}
+                      alt="arrowLongWhite svg"
+                      className="scale-x-[-1]"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-sm">دانلود برای</span>
+                  <span className="text-xl font-bold">PWA اپلیکیشن</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
