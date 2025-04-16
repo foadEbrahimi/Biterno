@@ -26,35 +26,27 @@ export function ArzCardSkeleton() {
 
 export default function CardArz({ name, image, price, change24h }) {
   return (
-    <div className="flex w-[15rem] hover:shadow-lg max-w-[23rem] cursor-pointer items-center justify-between gap-4 rounded-full bg-white p-3 px-4 shadow transition-all duration-300 sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
-      <div className="flex flex-1 flex-col items-start gap-2">
+    <div className="flex w-[15rem] max-w-[23rem] cursor-pointer items-center justify-between gap-5 rounded-full bg-white px-5 py-6 shadow transition-all duration-300 hover:shadow-lg sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
+      <div className="flex flex-col items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
           <span className="font-vazirDemiBold text-sm uppercase text-gray-500">
             {name}/usdt
           </span>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="font-bold ~text-lg/2xl">
-            {formatToTomanWithCommas(price)}
-          </span>
-          <svg
-            aria-hidden="true"
-            data-prefix="fal"
-            data-icon="arrow-up"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            className={`drop-shadow-green-600 ${change24h > 0 ? "drop-shadow-green-600 text-green-600" : "drop-shadow-red-600 scale-y-[-1] text-red-600"} w-4 drop-shadow-2xl`}
+        <div className="flex w-full justify-end">
+          {/* <span
+            className={`mr-1 font-bold ~text-sm/2xl ${change24h > 0 ? "text-green-600" : "text-red-600"}`}
+            dir="ltr"
           >
-            <path
-              fill="currentColor"
-              d="M4.465 263.536l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L207 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l178.494 178.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.05c-4.686-4.686-12.284-4.686-16.971 0L4.465 246.566c-4.687 4.686-4.687 12.284 0 16.97z"
-            ></path>
-          </svg>
+            {change24h}
+          </span> */}
+          <span className="font-bold ~text-sm/2xl">
+            {formatToTomanWithCommas(price.slice(0, -1))}
+          </span>
         </div>
       </div>
-      <div className="w-[4rem] flex-1 md:w-[7rem]">
+      <div className="w-[7rem] flex-1 md:w-[7rem]">
         <img src={change24h > 0 ? chart : chart2} alt="" />
       </div>
     </div>
