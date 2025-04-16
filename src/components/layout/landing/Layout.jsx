@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function Layout({ children }) {
-  return <div className="~px-5/40 w-full">{children}</div>;
+export default function Layout({ children, className }) {
+  return <div className={`w-full ~px-5/40 ${className}`}>{children}</div>;
 }

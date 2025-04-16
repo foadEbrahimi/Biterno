@@ -3,6 +3,8 @@ import TableRow, { TableRowSkeleton } from "./components/TableRow";
 
 import Layout from "@/components/layout/landing/Layout";
 
+import img from "@assets/imgs/hero/object.png";
+
 import {
   Select,
   SelectContent,
@@ -103,11 +105,14 @@ export default function MarketTrend() {
   }, []);
 
   return (
-    <div className="py-20 flex items-center bg-[#F4F5F6]">
-      <Layout>
+    <div className="mt-10 flex items-center rounded-t-[50px] bg-[#F4F5F6]">
+      <Layout className="relative py-10">
+        <div className="absolute left-0 top-0 h-full w-full">
+          <img src={img} alt="" />
+        </div>
         <div className="flex items-center justify-between">
-          <span className="text-4xl font-bold">روند بازار</span>
-          <button className="hover:border-primary hover:bg-primary hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:text-[#FCFCFD] sm:flex lg:text-base">
+          <span className="text-2xl font-bold">روند بازار</span>
+          <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] sm:flex lg:text-base">
             مشاهده بیشتر
           </button>
         </div>
