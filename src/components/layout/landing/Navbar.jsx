@@ -20,14 +20,14 @@ export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
   return (
     <div className="flex justify-center">
-      <div className="absolute !z-20 w-full rounded-b-2xl bg-white py-3 shadow ~px-5/20 lg:!max-w-[95%]">
+      <div className="absolute !z-20 w-full rounded-b-2xl bg-white p-[18px] shadow lg:!max-w-[85%]">
         <div className="">
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
-                <div className="flex cursor-pointer items-center gap-3">
-                  <img src={logo} alt="bitCloud logo" />
-                  <span className="font-vazirBold text-2xl text-blue-500">
+                <div className="flex cursor-pointer items-center gap-2">
+                  <img src={logo} className="w-7" alt="bitCloud logo" />
+                  <span className="font-vazirBold text-lg text-blue-500">
                     بیت‌کلود
                   </span>
                 </div>
