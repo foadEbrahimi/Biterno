@@ -7,7 +7,7 @@ import img from "@assets/imgs/hero/object.png";
 export default function Hero() {
   return (
     <div>
-      <div className="relative ">
+      <div className="relative">
         <div className="absolute right-0 top-0 !-z-10 h-full w-full">
           <img src={img} alt="" />
         </div>

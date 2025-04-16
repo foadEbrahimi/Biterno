@@ -78,8 +78,8 @@ export default function Content() {
   }, []);
 
   return (
-    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0">
-      <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
+    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0 md:pt-36">
+      <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:items-start md:justify-between">
         <div className="flex flex-1 flex-col items-center gap-5 md:flex md:items-start">
           <h1 className="text-center font-bold !leading-[3.5rem] text-textColor ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
             <span className="text-primary">بیترنو</span> نسل نوین <br /> معاملات
@@ -102,7 +102,7 @@ export default function Content() {
             </Link>
           </div>
           <Link to="/auth/login">
-            <button className="hidden gap-2 rounded-xl bg-blue-200 px-5 py-3 font-vazirBold text-sm text-blue-700 transition-all duration-500 hover:bg-blue-600 hover:text-white md:flex">
+            <button className="hidden gap-2 rounded-xl bg-primary/20 px-5 py-3 font-vazirBold text-sm text-black transition-all duration-500 hover:bg-primary hover:text-white md:flex">
               همین الان شروع کنید
               <svg
                 ariaHidden="true"
@@ -122,7 +122,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="relative w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[18rem] lg:w-[29rem]">
+            <div className="relative h-[15rem] w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[15rem] lg:w-[29rem]">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
@@ -147,10 +147,10 @@ export default function Content() {
                 cardsEffect={{
                   rotate: false,
                   slideShadows: false,
-                  perSlideOffset: 95,
+                  perSlideOffset: 80,
                 }}
                 modules={[EffectCards, Autoplay]}
-                className="arzSlider hidden md:block"
+                className="arzSlider hidden h-[20rem] md:block"
               >
                 {isLoading
                   ? Array(4)
@@ -162,7 +162,7 @@ export default function Content() {
                       ))
                   : topCryptos.map((crypto) => (
                       <SwiperSlide
-                        className="!w-full !bg-transparent pb-6 ~mr-9/7"
+                        className="!w-full !bg-transparent pb-6 ~mr-9/7 md:mr-12 xl:mr-9"
                         style={{
                           filter: "grayscale(100)",
                         }}
@@ -227,21 +227,8 @@ export default function Content() {
               </Swiper>
             </div>
           </div>
-          {/* <button
-            onClick={scrollToSection}
-            className="hidden h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-full border-2 border-[#E6E8EC] transition-all duration-200 lg:mt-10 lg:flex"
-          >
-            <div id="scroll_line" className="flex translate-y-[-23px] flex-col">
-              <img
-                src={arrow}
-                className="mb-[24px] rotate-90"
-                alt="arrow svg"
-              />
-              <img src={arrow} className="rotate-90" alt="arrow svg" />
-            </div>
-          </button> */}
         </div>
-        <div className="hidden h-full w-full flex-[1.5] md:flex md:items-center md:justify-center">
+        <div className="hidden h-full w-full flex-[1.5] md:mt-3 md:flex md:items-center md:justify-center">
           <img
             src={cards}
             draggable={false}
