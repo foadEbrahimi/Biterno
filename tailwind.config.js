@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         primary: "#009b87",
+        textColor: "var(--text-color)",
       },
       fontFamily: {
         arial: ["Arial"],
