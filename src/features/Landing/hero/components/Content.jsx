@@ -122,7 +122,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="relative xl:mt-8 h-[10rem] md:h-[17rem] w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[15rem] lg:w-[29rem]">
+            <div className="relative h-[10rem] w-[26rem] gap-2 sm:w-[39rem] md:h-[16.5rem] md:w-fit lg:h-[15rem] lg:w-[29rem] xl:mt-8">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
@@ -134,6 +134,11 @@ export default function Content() {
                   delay: 10000,
                   disableOnInteraction: false,
                 }}
+                // breakpoints={{
+                //   cardsEffect: {
+                //     perSlideOffset: 90,
+                //   },
+                // }}
                 loop={true}
                 loopedSlides={3}
                 speed={500}
@@ -147,7 +152,7 @@ export default function Content() {
                 cardsEffect={{
                   rotate: false,
                   slideShadows: false,
-                  perSlideOffset: 80,
+                  perSlideOffset: 90,
                 }}
                 modules={[EffectCards, Autoplay]}
                 className="arzSlider hidden h-[20rem] md:block"
