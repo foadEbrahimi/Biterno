@@ -78,9 +78,9 @@ export default function Content() {
   }, []);
 
   return (
-    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0 md:pt-36">
+    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0 md:pt-36 xl:pt-24">
       <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:items-start md:justify-between">
-        <div className="flex flex-1 flex-col items-center gap-5 md:flex md:items-start">
+        <div className="flex flex-1 flex-col items-center gap-2.5 md:flex md:items-start">
           <h1 className="text-center font-bold !leading-[3.5rem] text-textColor ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
             <span className="text-primary">بیترنو</span> نسل نوین <br /> معاملات
             هوشمند
@@ -122,7 +122,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="relative h-[15rem] w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[15rem] lg:w-[29rem]">
+            <div className="relative xl:mt-8 h-[10rem] md:h-[17rem] w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[15rem] lg:w-[29rem]">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
