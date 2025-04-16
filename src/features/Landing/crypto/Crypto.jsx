@@ -17,24 +17,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Crypto() {
   return (
-    <div className="py-10" id="cryptoSection">
+    <div id="cryptoSection" className="pb-5 md:mt-10 xl:mt-14">
       <Layout>
         <div>
           <div className="flex items-center justify-between">
-            <span className="font-bold ~text-3xl/4xl">یادگیری کریپتو</span>
+            <span className="font-bold ~text-xl/4xl">اخبار بازار</span>
             <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] md:flex lg:text-base">
               مشاهده بیشتر
             </button>
           </div>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <ul className="text-md hidden font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
               <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
                 همه
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
-        <div className="mt-12 space-y-5">
+        <div className="mt-2 space-y-5">
           <div className="lg:hidden">
             <Swiper
               dir="ltr"
@@ -52,28 +52,24 @@ export default function Crypto() {
               loop={true}
               loopedslides={3}
               speed={800}
-              slidesPerView={1}
+              slidesPerView={2}
               spaceBetween={10}
               modules={[Navigation, Autoplay]}
               navigation={{
                 nextEl: ".nextSlide",
                 prevEl: ".prevSlide",
               }}
-              breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                },
-              }}
+              breakpoints={{}}
               className="mySwiper"
             >
               <SwiperSlide>
-                <Card height="h-[20rem]" img={blog1} />
+                <Card height="lg:!h-[20rem]" img={blog1} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card height="h-[20rem]" img={blog1} />
+                <Card height="lg:!h-[20rem]" img={blog2} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card height="h-[20rem]" img={blog1} />
+                <Card height="lg:!h-[20rem]" img={blog3} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -102,7 +98,7 @@ export default function Crypto() {
               />
             </div>
           </div>
-          <div className="!mt-10 flex items-center justify-center gap-3 md:justify-start lg:hidden">
+          <div className="!mt-1 flex items-center justify-center gap-3 md:justify-start lg:hidden">
             <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4" />
             </button>
@@ -110,7 +106,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="hover:pri !mt-10 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
+          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>
