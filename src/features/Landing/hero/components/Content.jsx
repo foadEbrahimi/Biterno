@@ -3,13 +3,14 @@ import { Link } from "react-router";
 
 import cards from "@assets/imgs/hero/investing.svg";
 
+// import arrow from "@assets/imgs/arrow-long.svg";
 import CardArz, {
   ArzCardSkeleton,
 } from "@features/Landing/arz/components/Card";
 
+import "swiper/css";
 import { Autoplay, EffectCards, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 export default function Content() {
   // const scrollToSection = () => {
@@ -29,9 +30,9 @@ export default function Content() {
         const nobitexData = await nobitexRes.json();
         // Define the top 5 cryptocurrencies
         const cryptos = [
+          { name: "USDT", flag: "usdt-rls", id: "tether" },
           { name: "BTC", flag: "btc-rls", id: "bitcoin" },
           { name: "ETH", flag: "eth-rls", id: "ethereum" },
-          { name: "USDT", flag: "usdt-rls", id: "tether" },
           { name: "BNB", flag: "bnb-rls", id: "binancecoin" },
           { name: "ADA", flag: "ada-rls", id: "cardano" },
         ];
@@ -77,25 +78,25 @@ export default function Content() {
   }, []);
 
   return (
-    <div id="heroSection" className="pt-20 ~px-5/40 md:!pl-0">
+    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0">
       <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:justify-between">
         <div className="flex flex-1 flex-col items-center gap-5 md:flex md:items-start">
-          <h1 className="text-center font-bold !leading-[3.5rem] text-[#23262F] ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
-            خرید و فروش <br /> <span className="text-blue-600"> رمزنگاری</span>{" "}
-            در چند دقیقه
+          <h1 className="text-center font-bold !leading-[3.5rem] text-textColor ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
+            <span className="text-primary">بیترنو</span> نسل نوین <br /> معاملات
+            هوشمند
           </h1>
-          <p className="px-10 text-center text-sm font-semibold leading-7 text-[#777E90] md:px-0 md:text-right lg:max-w-[25rem]">
-            بیت کوین، اتریوم، USDT و توپالت کوین ها را در صرافی افسانه ای دارایی
-            های کریپتو معامله کنید.
+          <p className="px-10 text-center text-sm font-semibold leading-7 text-[#777E90] dark:text-[#666] md:px-0 md:text-right lg:max-w-[25rem]">
+            با قدم در آینده دارایی های دیجیتال و با ایجاد امنیت در دل تکنولوژی
+            اعتماد می آفرینیم
           </p>
           <div className="flex items-center gap-5 md:hidden">
             <Link to="/auth/login">
-              <button className="rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white">
+              <button className="rounded-full border-2 px-6 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white">
                 ورود
               </button>
             </Link>
             <Link to="/auth/register">
-              <button className="rounded-full bg-[#3772FF] px-5 py-2 font-semibold text-white transition-all duration-300 hover:bg-blue-600">
+              <button className="rounded-full bg-primary px-5 py-2 font-semibold text-white transition-all duration-300 hover:bg-primary">
                 ثبت نام
               </button>
             </Link>
@@ -121,7 +122,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="relative h-[18rem] w-[25rem] gap-2 py-5 sm:w-[39rem] md:w-fit lg:w-[29rem]">
+            <div className="relative w-[26rem] gap-2 sm:w-[39rem] md:w-fit lg:h-[18rem] lg:w-[29rem]">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
@@ -129,10 +130,10 @@ export default function Content() {
                 centeredSlides={true}
                 slidesPerView={1.7}
                 initialSlide={1}
-                // autoplay={{
-                //   delay: 1500,
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 10000,
+                  disableOnInteraction: false,
+                }}
                 loop={true}
                 loopedSlides={3}
                 speed={500}
@@ -203,7 +204,7 @@ export default function Content() {
                   slideShadows: false,
                 }}
                 modules={[EffectCoverflow, Autoplay]}
-                className="arzSlider !h-fit pt-10 md:hidden"
+                className="arzSlider !h-fit pt-5 md:hidden"
               >
                 {isLoading
                   ? Array(4)
