@@ -87,7 +87,7 @@ export default function Navbar() {
                   <button className="flex items-center gap-1 font-bold uppercase">
                     <img
                       src={iranFlag}
-                      className="h-7 w-7 rounded-full object-fill"
+                      className="h-6 w-6 rounded-full object-fill"
                       alt="iran flag"
                     />
                   </button>
