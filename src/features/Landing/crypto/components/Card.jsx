@@ -13,18 +13,18 @@ export default function Card({ height, vertical, img, max = false }) {
         <img
           src={img}
           alt="img"
-          className={`rounded-2xl transition-all duration-700 group-hover:scale-110 ${height} w-full`}
+          className={`h-[7rem] w-full rounded-2xl transition-all duration-700 group-hover:scale-110 sm:~h-40/72 lg:h-fit lg:!w-fit ${height}`}
         />
       </div>
       <div
         className={`flex flex-col items-end space-y-2 lg:items-start ${max && "max-w-[15rem]"}`}
       >
         <span
-          className={`text-[#23262F] ${vertical ? "" : "text-lg lg:text-2xl"} group-hover:text-primary text-right font-bold transition-all duration-300`}
+          className={`text-[#23262F] ${vertical ? "" : "text-lg lg:text-2xl"} text-right font-bold transition-all duration-300 ~text-xs/lg group-hover:text-primary`}
         >
           توکن های اهرمی اکنون در دسترس هستند
         </span>
-        <p className="max-w-[20rem] text-right text-xs font-semibold leading-6 text-[#777E90] lg:!min-w-full lg:text-sm">
+        <p className="hidden max-w-[20rem] text-right text-xs font-semibold leading-6 text-[#777E90] lg:flex lg:!min-w-full lg:text-sm">
           چیزهای خوب در 3 ثانیه می آیند. اکنون 3 برابر توکن اهرمی دریافت
           کنید.{" "}
         </p>
