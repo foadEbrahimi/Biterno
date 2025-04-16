@@ -105,13 +105,13 @@ export default function MarketTrend() {
   }, []);
 
   return (
-    <div className="mt-10 flex items-center rounded-t-[50px] bg-[#F4F5F6]">
+    <div className="mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6]">
       <Layout className="relative py-10">
-        <div className="absolute left-0 top-0 h-full w-full">
-          <img src={img} alt="" />
+      <div className="absolute right-0 top-0 h-full w-[250%]">
+          <img src={img} alt="img png" />
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold">روند بازار</span>
+          <span className="font-bold ~text-xl/4xl">روند بازار</span>
           <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] sm:flex lg:text-base">
             مشاهده بیشتر
           </button>
@@ -135,13 +135,13 @@ export default function MarketTrend() {
           </div>
         </div>
 
-        <div className="relative mt-10 overflow-x-auto lg:mt-20">
+        <div className="relative mt-10 overflow-x-visible pl-12 lg:mt-20">
           <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
             <thead className="border-b uppercase text-gray-700">
               <tr className="xl:text-[15px]">
                 <th
                   scope="col"
-                  className="hidden w-[3rem] px-1 py-3 sm:table-cell"
+                  className="hidden w-[3rem] px-3 py-3 sm:table-cell"
                 >
                   #
                 </th>
@@ -151,7 +151,7 @@ export default function MarketTrend() {
                 <th scope="col" className="w-[8rem] px-1 py-3">
                   قیمت
                 </th>
-                <th scope="col" className="w-[8rem] px-1 py-3">
+                <th scope="col" className="w-[8rem] px-1 py-3 2xl:pr-5">
                   تغییر 24 ساعته
                 </th>
                 <th
