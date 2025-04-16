@@ -122,7 +122,7 @@ export default function Content() {
             </button>
           </Link>
           <div>
-            <div className="relative h-[10rem] w-[26rem] gap-2 sm:w-[39rem] md:h-[16.5rem] md:w-fit lg:h-[15rem] lg:w-[29rem] xl:mt-8">
+            <div className="relative h-[10rem] w-[26rem] gap-2 sm:w-[39rem] md:h-[16.5rem] md:w-fit lg:h-[15rem] lg:w-[29rem] 2xl:h-[16rem] xl:mt-8">
               <Swiper
                 direction="vertical"
                 grabCursor={true}
