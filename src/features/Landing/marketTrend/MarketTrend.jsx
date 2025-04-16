@@ -135,7 +135,7 @@ export default function MarketTrend() {
           </div>
         </div>
 
-        <div className="relative mt-10 overflow-x-visible pl-12 lg:mt-20">
+        <div className="relative mt-10 overflow-x-visible xl:pl-12 lg:mt-20">
           <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
             <thead className="border-b uppercase text-gray-700">
               <tr className="xl:text-[15px]">
@@ -152,7 +152,7 @@ export default function MarketTrend() {
                   قیمت
                 </th>
                 <th scope="col" className="w-[8rem] px-1 py-3 2xl:pr-5">
-                  تغییر 24 ساعته
+                  درصد تغییرات
                 </th>
                 <th
                   scope="col"
