@@ -12,7 +12,7 @@ export default function Trade() {
     <div className="">
       <Layout>
         <div className="flex flex-col md:h-[100dvh] md:flex-row md:items-center md:justify-between lg:py-10">
-          <div className="flex-[1.3] md:order-2">
+          <div className="flex-[1.3] md:order-2" id="trade-img">
             <img src={img} alt="trade img" />
           </div>
           <div className="flex flex-1 flex-col gap-4">
