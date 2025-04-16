@@ -6,6 +6,13 @@ import englandFlag from "@assets/imgs/england-flag.webp";
 import iranFlag from "@assets/imgs/iran-flag.png";
 import logo from "@assets/imgs/logo.svg";
 
+import linkedin from "@assets/imgs/linkedin.svg";
+import telegram from "@assets/imgs/telegram.svg";
+import twitter from "@assets/imgs/twitter.svg";
+import youtube from "@assets/imgs/youtube.svg";
+import facebook from "@assets/imgs/facebook.svg";
+import instagram from "@assets/imgs/instagram.svg";
+
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -28,7 +35,7 @@ export default function Navbar() {
                 <div className="flex cursor-pointer items-center gap-2">
                   <img src={logo} className="w-7" alt="bitCloud logo" />
                   <span className="font-vazirBold text-lg text-primary">
-                    بیت‌کلود
+                    بیترنو
                   </span>
                 </div>
               </Link>
@@ -167,13 +174,18 @@ export default function Navbar() {
         className={`fixed mt-14 transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-10 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
+          <Link onClick={() => toggleNav()} to="/market">
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+              بازار
+            </li>
+          </Link>
           <Link onClick={() => toggleNav()} to="/auth/login">
-            <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               تبدیل
             </li>
           </Link>
           <Link onClick={() => toggleNav()} to="/auth/login">
-            <li className="flex items-center gap-1 border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="flex items-center gap-1 border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               خرید کریپتو
               <img
                 src={chevronBottom}
@@ -182,28 +194,31 @@ export default function Navbar() {
               />
             </li>
           </Link>
-          <Link onClick={() => toggleNav()} to="/market">
-            <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
-              بازار
-            </li>
-          </Link>
           <Link onClick={() => toggleNav()} to="/contact">
-            <li className="border-r-blue-600 py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
               ارتباط با ما
             </li>
           </Link>
         </ul>
-        <div className="mt-auto flex w-full items-center gap-3 px-5">
+        <div className="flex w-full flex-col items-center gap-3 px-5">
           <Link to="/auth/login" className="w-full">
-            <button className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+            <button className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white">
               ورود
             </button>
           </Link>
           <Link className="w-full" to="/auth/register">
-            <button className="w-full rounded-full bg-[#3772FF] px-5 py-2 font-bold text-white transition-all duration-200 hover:bg-[#0045ea]">
+            <button className="w-full rounded-full bg-primary/20 px-5 py-2.5 font-bold text-black transition-all duration-500 hover:bg-primary hover:text-white">
               ثبت نام
             </button>
           </Link>
+        </div>
+        <div className="mt-auto flex items-center justify-between border-t-2 px-5 pt-3">
+          <img src={linkedin} className="w-7" alt="linkedin svg" />
+          <img src={twitter} className="w-7" alt="twitter svg" />
+          <img src={youtube} className="w-7" alt="youtube svg" />
+          <img src={telegram} className="w-7" alt="telegram svg" />
+          <img src={facebook} className="w-7" alt="telegram svg" />
+          <img src={instagram} className="w-7" alt="telegram svg" />
         </div>
       </div>
     </div>
