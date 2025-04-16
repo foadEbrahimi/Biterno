@@ -20,14 +20,14 @@ export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
   return (
     <div className="flex justify-center">
-      <div className="absolute !z-20 w-full rounded-b-2xl bg-white p-[18px] shadow lg:!max-w-[85%]">
+      <div className="absolute !z-20 w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
         <div className="">
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
                 <div className="flex cursor-pointer items-center gap-2">
                   <img src={logo} className="w-7" alt="bitCloud logo" />
-                  <span className="font-vazirBold text-lg text-blue-500">
+                  <span className="font-vazirBold text-lg text-primary">
                     بیت‌کلود
                   </span>
                 </div>
@@ -86,9 +86,9 @@ export default function Navbar() {
                 <DropdownMenuTrigger className="ml-1" asChild>
                   <button className="flex items-center gap-1 font-bold uppercase">
                     <img
-                      src={englandFlag}
-                      className="h-8 w-8 scale-75 rounded-full"
-                      alt="england flag"
+                      src={iranFlag}
+                      className="h-7 w-7 rounded-full object-fill"
+                      alt="iran flag"
                     />
                   </button>
                 </DropdownMenuTrigger>
@@ -102,9 +102,9 @@ export default function Navbar() {
                   <DropdownMenuSeparator />
                   <DropdownMenuCheckboxItem className="cursor-pointer space-x-2">
                     <img
-                      src={iranFlag}
-                      className="h-7 w-7 rounded-full object-fill"
-                      alt="iran flag"
+                      src={englandFlag}
+                      className="h-8 w-8 scale-75 rounded-full"
+                      alt="england flag"
                     />
                     <span className="text-[#23262F]">انگلیسی</span>
                   </DropdownMenuCheckboxItem>
@@ -133,7 +133,7 @@ export default function Navbar() {
                 />
               </svg>
               <div className="mr-2 hidden md:flex md:items-center md:gap-3">
-                <button className="group flex items-center gap-2 rounded-lg bg-blue-200 p-2.5 px-4 font-vazirBold text-blue-700 transition-all duration-500 hover:bg-blue-600 hover:text-white">
+                <button className="group flex items-center gap-2 rounded-lg bg-primary/20 p-2.5 px-4 font-vazirBold text-black transition-all duration-500 hover:bg-primary hover:text-white">
                   <svg
                     style={{
                       width: "1.5rem",
@@ -143,7 +143,7 @@ export default function Navbar() {
                     }}
                     viewBox="0 0 1024 1024"
                     version="1.1"
-                    className="w-6 fill-blue-700 transition-colors duration-500 group-hover:fill-white"
+                    className="w-6 fill-black transition-colors duration-500 group-hover:!fill-white"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path d="M843.282963 870.115556c-8.438519-140.515556-104.296296-257.422222-233.908148-297.14963C687.881481 536.272593 742.4 456.533333 742.4 364.088889c0-127.241481-103.158519-230.4-230.4-230.4S281.6 236.847407 281.6 364.088889c0 92.444444 54.518519 172.183704 133.12 208.877037-129.611852 39.727407-225.46963 156.634074-233.908148 297.14963-0.663704 10.903704 7.964444 20.195556 18.962963 20.195556l0 0c9.955556 0 18.299259-7.774815 18.962963-17.73037C227.745185 718.506667 355.65037 596.385185 512 596.385185s284.254815 122.121481 293.357037 276.195556c0.568889 9.955556 8.912593 17.73037 18.962963 17.73037C835.318519 890.311111 843.946667 881.019259 843.282963 870.115556zM319.525926 364.088889c0-106.287407 86.186667-192.474074 192.474074-192.474074s192.474074 86.186667 192.474074 192.474074c0 106.287407-86.186667 192.474074-192.474074 192.474074S319.525926 470.376296 319.525926 364.088889z" />
