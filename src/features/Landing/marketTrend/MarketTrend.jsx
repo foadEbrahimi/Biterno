@@ -22,7 +22,7 @@ const API_ENDPOINTS = {
   COINGECKO_API_KEY: import.meta.env.VITE_COINGECKO_API_KEY,
 };
 
-export default function MarketTrend() {
+export default function MarketTrend({ bg, maxCrypto }) {
   const [topCryptos, setTopCryptos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -105,7 +105,9 @@ export default function MarketTrend() {
   }, []);
 
   return (
-    <div className="mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] bg-gray-100">
+    <div
+      className={`mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] ${bg ? "bg-gray-100" : ""}`}
+    >
       <Layout className="relative py-10">
         <div className="absolute right-0 top-0 h-full w-[250%]">
           <img src={img} alt="img png" />
@@ -173,9 +175,11 @@ export default function MarketTrend() {
                 ? Array(5)
                     .fill(0)
                     .map((_, index) => <TableRowSkeleton key={index} />)
-                : topCryptos.map((crypto, index) => (
-                    <TableRow key={crypto.id} index={index} crypto={crypto} />
-                  ))}
+                : topCryptos
+                    .slice(0, maxCrypto)
+                    .map((crypto, index) => (
+                      <TableRow key={crypto.id} index={index} crypto={crypto} />
+                    ))}
             </tbody>
           </table>
         </div>
