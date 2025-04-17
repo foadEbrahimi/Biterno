@@ -15,7 +15,7 @@ export default function Content() {
           است
         </span>
       </div>
-      <div className="w-full pt-5 sm:flex-[1.5] xl:flex-1">
+      <div className="w-full pt-5 sm:flex-[1.5] xl:flex-1 xl:pt-24">
         <img src={market} alt="market img" />
       </div>
     </div>
