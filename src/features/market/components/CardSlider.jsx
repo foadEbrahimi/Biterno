@@ -14,11 +14,15 @@ export default function CardSlider({ cryptos }) {
     <Swiper
       effect={"coverflow"}
       grabCursor={true}
-      slidesPerView={"1.6"}
+      slidesPerView={"1"}
       breakpoints={{
         640: {
-          slidesPerView: 2.5,
+          slidesPerView: 3,
         },
+      }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
       }}
       spaceBetween={20}
       initialSlide={0}
@@ -26,7 +30,7 @@ export default function CardSlider({ cryptos }) {
       className="!h-fit pt-5"
     >
       {cryptos.slice(0, 3).map((crypto) => (
-        <SwiperSlide className="!w-fit !bg-transparent">
+        <SwiperSlide className="!w-full lg:!w-fit !bg-transparent">
           <Card key={crypto.id} {...crypto} />
         </SwiperSlide>
       ))}

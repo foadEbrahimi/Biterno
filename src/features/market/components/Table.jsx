@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import chartLine from "@assets/imgs/chartLine.svg";
 import marketplace from "@assets/imgs/marketplace.svg";
 
 import { COIN_MAPPING } from "@/constants/coins";
@@ -187,11 +186,6 @@ export default function Table() {
               </th>
               <th scope="col" className="flex items-center gap-1 px-1 py-3">
                 <img src={marketplace} alt="" /> بازار
-              </th>
-              <th scope="col" className="hidden px-1 py-3 xl:table-cell">
-                <div className="flex items-center gap-1">
-                  <img src={chartLine} alt="" /> میزان صدا (24 ساعت)
-                </div>
               </th>
               <th scope="col" className="hidden px-1 py-3 lg:table-cell">
                 نمودار{" "}

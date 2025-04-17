@@ -42,7 +42,7 @@ export function TableRowSkeleton() {
 
 export default function TableRow({ index, crypto }) {
   if (!crypto) return null;
-  const { name, image, price, change24h, change7d, marketCap, volume } = crypto;
+  const { name, image, price, change24h, change7d, marketCap } = crypto;
 
   return (
     <tr className="group/row border-gray-200 bg-white transition-all duration-200 hover:bg-[#F4F5F6]">
@@ -82,7 +82,7 @@ export default function TableRow({ index, crypto }) {
         {formatToTomanWithCommas(price.slice(0, -1))}
       </td>
       <td
-        className={`py-4 font-bold ${change24h > 0 ? "text-green-600" : "text-red-600"}`}
+        className={`py-4 pr-5 font-bold ${change24h > 0 ? "text-green-600" : "text-red-600"}`}
         dir="ltr"
       >
         {change24h}
@@ -95,9 +95,6 @@ export default function TableRow({ index, crypto }) {
       </td>
       <td className="py-4 font-bold text-[#23262F]">
         {formatToTomanWithCommas(marketCap).slice(0, -1)}
-      </td>
-      <td className="hidden py-4 font-bold text-[#23262F] xl:table-cell">
-        {formatToTomanWithCommas(volume).slice(0, -1)}
       </td>
       <td className="hidden lg:table-cell">
         <img

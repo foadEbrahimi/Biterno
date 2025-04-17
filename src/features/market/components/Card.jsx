@@ -1,8 +1,8 @@
 import React from "react";
 
-import { formatToTomanWithCommas } from "@/utils/helper";
 import chart from "@assets/imgs/chart.svg";
 import chart2 from "@assets/imgs/chart2.svg";
+import { formatToTomanWithCommas } from "@/utils/helper";
 
 export default function Card({ image, name, price, change24h }) {
   return (
@@ -10,31 +10,35 @@ export default function Card({ image, name, price, change24h }) {
       className="group/hover flex !w-fit cursor-pointer items-start gap-5"
       dir="rtl"
     >
-      <div className="flex items-start gap-3">
-        <img src={image} className="w-8" alt="bitcoin svg" />
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2">
-            <span className="font-sans font-semibold text-[#777E90]">
-              {name}
-            </span>
-            <span
-              dir="ltr"
-              className={`flex items-center justify-center rounded-full py-0.5 font-vazirDemiBold text-sm ${
-                change24h > 0 ? "text-green-600" : "text-red-600"
-              } px-2`}
-            >
-              {" "}
-              {change24h}
-            </span>
+      <div className="flex items-center gap-1">
+        <div className="flex gap-3">
+          <div className="flex w-6 flex-col">
+            <img src={image} className="" alt="bitcoin svg" />
           </div>
-          <span className="mt-1 flex items-center gap-2 font-vazirBold text-lg transition-all duration-200 group-hover/hover:text-[#3772FF]">
-            {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
-          </span>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <span className="font-sans font-semibold text-[#777E90]">
+                {name}
+              </span>
+              <span
+                dir="ltr"
+                className={`flex items-center justify-center rounded-full py-0.5 font-vazirDemiBold text-sm ${
+                  change24h > 0 ? "text-green-600" : "text-red-600"
+                } px-2`}
+              >
+                {" "}
+                {change24h}
+              </span>
+            </div>
+          </div>
         </div>
+        <span className="mt-1 flex items-center gap-2 font-vazirBold text-[16px] transition-all duration-200 group-hover/hover:text-[#3772FF] lg:text-lg">
+          {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
+        </span>
       </div>
       <img
         src={change24h > 0 ? chart : chart2}
-        className="hidden xl:flex"
+        className="hidden w-[5rem] lg:w-[6rem] xl:flex"
         alt="chart svg"
       />
     </div>
