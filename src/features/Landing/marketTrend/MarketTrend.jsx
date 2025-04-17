@@ -22,7 +22,7 @@ const API_ENDPOINTS = {
   COINGECKO_API_KEY: import.meta.env.VITE_COINGECKO_API_KEY,
 };
 
-export default function MarketTrend({ bg = true, maxCrypto }) {
+export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
   const [topCryptos, setTopCryptos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -183,10 +183,11 @@ export default function MarketTrend({ bg = true, maxCrypto }) {
             </tbody>
           </table>
         </div>
-
-        <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] sm:hidden lg:text-base">
-          مشاهده بیشتر
-        </button>
+        {btn && (
+          <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] sm:hidden lg:text-base">
+            مشاهده بیشتر
+          </button>
+        )}
       </Layout>
     </div>
   );
