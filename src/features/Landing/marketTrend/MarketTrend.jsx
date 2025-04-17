@@ -105,9 +105,9 @@ export default function MarketTrend() {
   }, []);
 
   return (
-    <div className="mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6]">
+    <div className="mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] bg-gray-100">
       <Layout className="relative py-10">
-      <div className="absolute right-0 top-0 h-full w-[250%]">
+        <div className="absolute right-0 top-0 h-full w-[250%]">
           <img src={img} alt="img png" />
         </div>
         <div className="flex items-center justify-between">
@@ -135,7 +135,7 @@ export default function MarketTrend() {
           </div>
         </div>
 
-        <div className="relative mt-10 overflow-x-visible xl:pl-12 lg:mt-20">
+        <div className="relative mt-10 overflow-x-visible lg:mt-20 xl:pl-12">
           <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
             <thead className="border-b uppercase text-gray-700">
               <tr className="xl:text-[15px]">
