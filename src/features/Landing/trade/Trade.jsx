@@ -11,9 +11,9 @@ import googlePlay from "@assets/imgs/google-play.svg";
 
 export default function Trade() {
   return (
-    <div className="">
+    <div className="mt-10">
       <Layout>
-        <div className="flex flex-col md:h-[100dvh] md:flex-row md:items-center md:justify-between lg:py-10">
+        <div className="flex flex-col gap-5 md:h-[100dvh] md:flex-row md:items-center md:justify-between lg:py-10">
           <div className="flex-[1.3] md:order-2" id="trade-img">
             <img src={img} alt="trade img" />
           </div>
