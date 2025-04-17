@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "@/components/layout/landing/Layout";
 
 import arrowLongWhite from "@assets/imgs/arrow-long-white.svg";
-import img from "@assets/imgs/download-pic.png";
+import img from "@assets/imgs/mobile.svg";
 
 import mayket from "@assets/imgs/mayket.svg";
 import cafeBazar from "@assets/imgs/cafe-bazar.svg";
