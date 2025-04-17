@@ -1,19 +1,19 @@
 import React from "react";
 
-import img from "@assets/imgs/news-pic-2.png";
-
-export default function Card() {
+export default function Card({ title, desc, img }) {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl p-4 lg:flex-row lg:bg-white lg:px-10">
       <div className="order-2 mt-5 flex w-full flex-col items-center justify-center gap-2 rounded-2xl lg:order-1 lg:items-start lg:gap-5">
-        <span className="font-semibold text-[#777E90]">اخبار دیزاین</span>
+        <span className="font-semibold text-[#777E90]">
+          کانال های اطلاع رسانی
+        </span>
         <span className="text-center font-bold !leading-[2.5rem] ~text-3xl/4xl lg:text-right">
-          بخشی از جامعه جهانی ما باشید
+          {title}
         </span>
-        <span className="font-vazirDemiBold max-w-[15rem] text-center text-[#777E90] lg:min-w-fit lg:text-right">
-          Stack مشکلات کسب و کار را از ساده تا پیچیده حل می کند.
+        <span className="max-w-[15rem] text-center font-vazirDemiBold text-[#777E90] lg:min-w-fit lg:text-right">
+          {desc}
         </span>
-        <button className="font-vazirDemiBold mt-10 w-fit rounded-full border-2 px-4 py-2.5 text-[16px] text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD]">
+        <button className="mt-10 w-fit rounded-full border-2 px-4 py-2.5 font-vazirDemiBold text-[16px] text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD]">
           اکنون عضو شوید
         </button>
       </div>
