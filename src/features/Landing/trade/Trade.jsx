@@ -19,7 +19,7 @@ export default function Trade() {
           </div>
           <div className="flex flex-1 flex-col gap-4">
             <div className="flex flex-col gap-4">
-              <h3 className="font-bold !leading-[3rem] text-[#23262F] ~text-3xl/5xl">
+              <h3 className="font-bold !leading-[3rem] text-[#23262F] ~text-2xl/5xl">
                 اپلیکیشن بیترنو ( بزودی )
               </h3>
               <span className="text-sm font-semibold text-[#777E90]">

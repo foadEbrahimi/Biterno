@@ -8,7 +8,7 @@ export default function Card({ image, name, price, change24h }) {
   return (
     <div
       className="group/hover flex w-fit cursor-pointer items-start gap-5"
-      dir="ltr"
+      dir="rtl"
     >
       <div className="flex items-start gap-3">
         <img src={image} className="w-10" alt="bitcoin svg" />
