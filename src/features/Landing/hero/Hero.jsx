@@ -3,6 +3,7 @@ import React from "react";
 import Content from "./components/Content";
 
 import img from "@assets/imgs/hero/object.png";
+import Navbar from "@/components/layout/landing/Navbar";
 
 export default function Hero() {
   return (
@@ -12,6 +13,7 @@ export default function Hero() {
           <img src={img} alt="" />
         </div>
         <div className="absolute -left-20 -top-20 !-z-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <Navbar />
         <Content />
       </div>
     </div>

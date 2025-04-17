@@ -21,7 +21,7 @@ export default function App() {
           path="/"
           element={
             <>
-              <Navbar />
+              {/* <Navbar /> */}
               <Outlet />
               <Footer />
             </>

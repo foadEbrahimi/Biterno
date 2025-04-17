@@ -26,8 +26,8 @@ import { useLocalState } from "@/store/context/LocalStateProvider";
 export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
   return (
-    <div className={`flex justify-center`}>
-      <div className="sticky top-0 z-20 w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
+    <div className={`!fixed !top-0 !z-20 flex w-full justify-center`}>
+      <div className="w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
         <div className="">
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
