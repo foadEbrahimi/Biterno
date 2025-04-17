@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card({ title, desc, img }) {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl p-4 lg:flex-row lg:bg-white lg:px-10">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl bg-gray-100 p-4 lg:flex-row lg:px-10">
       <div className="order-2 mt-5 flex w-full flex-col items-center justify-center gap-2 rounded-2xl lg:order-1 lg:items-start lg:gap-5">
         <span className="font-semibold text-[#777E90]">
           کانال های اطلاع رسانی
