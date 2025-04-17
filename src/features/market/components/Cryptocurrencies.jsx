@@ -72,7 +72,7 @@ export default function Cryptocurrencies() {
         <div className="px-5 pb-[26px]">
           <CardSlider isLoading={isLoading} cryptos={cryptos} />
         </div>
-        <div className="border-t px-5 py-5">
+        <div className="border-t px-5 py-5 lg:hidden">
           <div className="lg:hidden">
             <Select dir="rtl">
               <SelectTrigger>
