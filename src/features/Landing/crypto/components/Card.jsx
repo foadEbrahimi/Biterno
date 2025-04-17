@@ -9,11 +9,11 @@ export default function Card({ height, vertical, img, max = false }) {
           : "flex flex-col"
       }`}
     >
-      <div className="w-full overflow-hidden rounded-2xl">
+      <div className="flex w-full justify-center overflow-hidden rounded-2xl bg-gray-100 p-1">
         <img
           src={img}
           alt="img"
-          className={`h-[7rem] w-full rounded-2xl transition-all duration-700 group-hover:scale-110 sm:~h-40/72 lg:h-fit lg:!w-fit ${height}`}
+          className={`h-[7rem] rounded-2xl transition-all duration-700 group-hover:scale-110 sm:~h-40/72 lg:h-fit ${height}`}
         />
       </div>
       <div
