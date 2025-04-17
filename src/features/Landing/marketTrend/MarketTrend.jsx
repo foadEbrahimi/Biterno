@@ -22,7 +22,7 @@ const API_ENDPOINTS = {
   COINGECKO_API_KEY: import.meta.env.VITE_COINGECKO_API_KEY,
 };
 
-export default function MarketTrend({ bg, maxCrypto }) {
+export default function MarketTrend({ bg = true, maxCrypto }) {
   const [topCryptos, setTopCryptos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
