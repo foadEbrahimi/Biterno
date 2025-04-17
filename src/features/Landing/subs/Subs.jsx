@@ -1,17 +1,17 @@
 import React from "react";
 
-import Card from "./components/Card";
 import Layout from "@/components/layout/landing/Layout";
+import Card from "./components/Card";
 
 import arrow from "@assets/imgs/arrow-long.svg";
-import logo from "@assets/imgs/logo.svg";
+import logo from "@assets/imgs/logo.png";
 
 // Import Swiper styles
+import { subs } from "@/constants/subs";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { subs } from "@/constants/subs";
 
 export default function Subs() {
   return (
@@ -19,8 +19,7 @@ export default function Subs() {
       <Layout>
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
-            <img src={logo} alt="logo svg" />
-            <span className="text-2xl">بیترنو</span>
+            <img src={logo} alt="logo svg" className="w-20" />
           </div>
           <span className="mt-5 text-center font-semibold !leading-[3rem] ~text-4xl/5xl">
             با بیترنو از اخرین تحولات بازار رمز ارزها مطلع باشید

@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
+import { Link } from "react-router";
 import apple from "../../../assets/imgs/auth/apple.svg";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import google from "../../../assets/imgs/auth/google.svg";
-import logo from "../../../assets/imgs/logo.svg";
-import { Link } from "react-router";
+import logo from "../../../assets/imgs/logo.png";
 
 export default function Signup() {
   const passwordRef = useRef(null);
@@ -79,7 +79,7 @@ export default function Signup() {
                 id="email"
                 type="email"
                 placeholder="آدرس ایمیل"
-                className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                className="placeholder:font-vazir rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
               />
             </div>
             <div className="mt-5 flex flex-col gap-2">
@@ -95,7 +95,7 @@ export default function Signup() {
                   id="password"
                   type="password"
                   placeholder="رمز عبور"
-                  className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
+                  className="placeholder:font-vazir border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
                 />
                 <div
                   onClick={(e) =>
@@ -124,7 +124,7 @@ export default function Signup() {
                   id="reapetpassword"
                   type="password"
                   placeholder="رمز عبور"
-                  className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
+                  className="placeholder:font-vazir border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
                 />
                 <div
                   onClick={(e) =>

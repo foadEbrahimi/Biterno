@@ -4,14 +4,14 @@ import { Link, NavLink } from "react-router";
 import chevronBottom from "@assets/imgs/chevronBottom.svg";
 import englandFlag from "@assets/imgs/england-flag.webp";
 import iranFlag from "@assets/imgs/iran-flag.png";
-import logo from "@assets/imgs/logo.svg";
+import logo from "@assets/imgs/logo.png";
 
+import facebook from "@assets/imgs/facebook.svg";
+import instagram from "@assets/imgs/instagram.svg";
 import linkedin from "@assets/imgs/linkedin.svg";
 import telegram from "@assets/imgs/telegram.svg";
 import twitter from "@assets/imgs/twitter.svg";
 import youtube from "@assets/imgs/youtube.svg";
-import facebook from "@assets/imgs/facebook.svg";
-import instagram from "@assets/imgs/instagram.svg";
 
 import {
   DropdownMenu,
@@ -33,10 +33,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
                 <div className="flex cursor-pointer items-center gap-2">
-                  <img src={logo} className="w-7" alt="bitCloud logo" />
-                  <span className="font-vazirBold text-lg text-primary">
-                    بیترنو
-                  </span>
+                  <img src={logo} className="w-20" alt="bitCloud logo" />
                 </div>
               </Link>
             </div>

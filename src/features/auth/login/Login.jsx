@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
+import { Link } from "react-router";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import lock from "../../../assets/imgs/auth/lock.svg";
-import logo from "../../../assets/imgs/logo.svg";
-import { Link } from "react-router";
+import logo from "../../../assets/imgs/logo.png";
 
 export default function Login() {
   const [part, setPart] = useState("email");
@@ -86,7 +86,7 @@ export default function Login() {
                   id="phone"
                   type="phone"
                   placeholder="شماره تماس"
-                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                  className="placeholder:font-vazir rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
                 />
               </div>
             ) : (
@@ -99,7 +99,7 @@ export default function Login() {
                   id="email"
                   type="email"
                   placeholder="آدرس ایمیل"
-                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazir placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                  className="placeholder:font-vazir rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
                 />
               </div>
             )}
@@ -116,7 +116,7 @@ export default function Login() {
                   id="password"
                   type="password"
                   placeholder="رمز عبور"
-                  className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazir placeholder:text-[#777E90] focus:outline-none"
+                  className="placeholder:font-vazir border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
                 />
                 <div onClick={togglePasswordVisibility}>
                   <img
