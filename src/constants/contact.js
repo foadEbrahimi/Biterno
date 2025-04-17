@@ -1,6 +1,6 @@
-import karmozed from "@assets/imgs/karmozed.png";
-import step3 from "@assets/imgs/step-3@2x.png";
-import step2 from "@assets/imgs/step-1@2x.png";
+import karmozed from "@assets/imgs/savings.svg";
+import support from "@assets/imgs/support.svg";
+import cashBack from "@assets/imgs/cashBack.svg";
 
 export const contact = [
   {
@@ -11,11 +11,11 @@ export const contact = [
   {
     title: "پشتیبانی",
     desc: "تیم پشتیبانی ما به صورت ۲۴ ساعته و ۷ روز هفته آماده خدمت‌رسانی به شماست؛ در هر زمان و مکانی که نیاز داشته باشید، می‌توانید به راحتی با ما در ارتباط باشید. با پاسخگویی سریع و مؤثر، به سوالات و مشکلات شما رسیدگی خواهیم کرد!",
-    img: step2,
+    img: support,
   },
   {
     title: "تسویه حساب آنی",
     desc: "تجربه‌ای بی‌نظیر از تسویه حساب آنی را با ما داشته باشید؛ با سرعتی بی‌سابقه، می‌توانید دارایی‌های خود را به راحتی مدیریت کنید. دیگر نگران زمان و پیچیدگی‌های تسویه حساب نباشید و از امنیت و شفافیت بالای تراکنش‌ها بهره‌مند شوید!",
-    img: step3,
+    img: cashBack,
   },
 ];
