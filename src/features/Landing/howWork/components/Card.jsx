@@ -6,7 +6,7 @@ export default function Card({ image, step, title, desc, index }) {
   return (
     <div className="flex w-fit max-w-[15rem] flex-col gap-5 text-right lg:text-center xl:mr-10 2xl:max-w-[22rem]">
       <div className="flex items-center gap-5 lg:hidden">
-        <img src={image} className={`~w-12/24`} alt="step img" />
+        <img src={image} className={`~w-20/24`} alt="step img" />
         <img
           src={connectLine}
           className={`w-32 md:w-52 md:flex-none lg:w-fit ${
