@@ -7,7 +7,7 @@ export default function Card({ title, desc, img }) {
       <img src={img} className="mx-auto h-[10rem] flex max-w-[40%] pt-10" alt="" />
       <div className="mt-10 space-y-2 pb-12 text-center">
         <span className="text-xl font-bold">{title}</span>
-        <p className="!pt-3 text-right font-vazirMedium text-[#777E90]">
+        <p dir="rtl" className="!pt-3 text-center font-vazirMedium text-[#777E90]">
           {desc}
         </p>
       </div>

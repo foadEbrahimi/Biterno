@@ -40,7 +40,7 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="text-xl font-bold">مایکت</span>
+                  <span className="font-vazirBold text-lg">مایکت</span>
                 </div>
               </div>
               <div className="group flex cursor-pointer items-start gap-3 border-y py-6">
@@ -56,7 +56,7 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="text-xl font-bold">فروشگاه پلی</span>
+                  <span className="font-vazirBold text-lg">کافه بازار</span>
                 </div>
               </div>
               <div className="group flex cursor-pointer items-start gap-3 py-6">
@@ -72,7 +72,7 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="text-xl font-bold">فروشگاه پلی</span>
+                  <span className="font-vazirBold text-lg">پلی استور</span>
                 </div>
               </div>
               <div className="group flex cursor-pointer items-start gap-3 border-t py-6">
@@ -88,7 +88,7 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود برای</span>
-                  <span className="text-xl font-bold">PWA اپلیکیشن</span>
+                  <span className="font-vazirBold text-lg">PWA اپلیکیشن</span>
                 </div>
               </div>
             </div>

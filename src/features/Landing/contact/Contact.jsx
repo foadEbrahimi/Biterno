@@ -18,10 +18,10 @@ export default function Contact() {
     <div className="relative mt-20 flex min-h-[100dvh] items-center rounded-b-[50px] rounded-t-[50px] bg-gray-100 py-20">
       <Layout>
         <div className="flex flex-col items-center">
-          <span className="mb-4 max-w-[23rem] font-bold !leading-[3rem] ~text-3xl/4xl md:text-center">
+          <span className="mb-3 max-w-[23rem] font-bold !leading-[3rem] ~text-2xl/4xl md:text-center">
             چرا بیترنو ؟{" "}
           </span>
-          <p className="text-sm font-semibold text-[#777E90]">
+          <p className="text-center text-sm font-semibold text-[#777E90]">
             خرید و فروش ارزهای دیجیتال به صورت آنی و با نقد شوندگی بالا و کمترین
             کارمزد
           </p>
