@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { subs } from "@/constants/subs";
 
 export default function Subs() {
   return (
@@ -19,14 +20,12 @@ export default function Subs() {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <img src={logo} alt="logo svg" />
-            <span className="text-2xl">بیتکلود</span>
+            <span className="text-2xl">بیترنو</span>
           </div>
           <span className="mt-5 text-center font-semibold !leading-[3rem] ~text-4xl/5xl">
-            با بیتکلود از کریپتو آگاه باشید
+            با بیترنو از اخرین تحولات بازار رمز ارزها مطلع باشید
           </span>
-          <p className="mt-4 text-[#777E90]">
-            آژانس خلاقی که رهبری و الهام بخش است
-          </p>
+          <p className="mt-4 text-[#777E90]">دسترسی لحظه ای به اطلاعات بازار</p>
         </div>
         <div className="relative !mx-auto ~mt-10/16 md:mx-10 md:max-w-[80%] xl:h-[30rem]">
           <button className="nextSlide absolute -bottom-8 left-[38%] flex h-10 w-10 translate-x-[-50%] translate-y-[50%] items-center justify-center rounded-full border-2 md:-left-10 md:bottom-[50%]">
@@ -60,15 +59,11 @@ export default function Subs() {
             }}
             className="mySwiper w-full"
           >
-            <SwiperSlide className="!w-full !bg-transparent">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full !bg-transparent">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full !bg-transparent">
-              <Card />
-            </SwiperSlide>
+            {subs.map((item, index) => (
+              <SwiperSlide className="!w-full !bg-transparent">
+                <Card {...item} key={index} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </Layout>
