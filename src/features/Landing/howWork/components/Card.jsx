@@ -4,7 +4,7 @@ import connectLine from "@assets/imgs/connect-line.svg";
 
 export default function Card({ image, step, title, desc, index }) {
   return (
-    <div className="flex w-fit mr-10 max-w-[15rem] flex-col gap-5 text-right lg:text-center 2xl:max-w-[22rem]">
+    <div className="flex w-fit max-w-[15rem] flex-col gap-5 text-right lg:text-center xl:mr-10 2xl:max-w-[22rem]">
       <div className="flex items-center gap-5 lg:hidden">
         <img src={image} className={`~w-12/24`} alt="step img" />
         <img
@@ -20,7 +20,7 @@ export default function Card({ image, step, title, desc, index }) {
           مرحله {step}
         </span>
         <h2 className="my-3 mt-5 font-vazirBold text-xl">{title}</h2>
-        <p className="text-[16px] text-[#353945]">{desc}</p>
+        <p className={`text-[16px] text-[#353945]`}>{desc}</p>
       </div>
     </div>
   );
