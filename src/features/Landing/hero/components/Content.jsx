@@ -102,7 +102,7 @@ export default function Content() {
             </Link>
           </div>
           <Link to="/auth/login">
-            <button className="hidden gap-2 rounded-xl bg-primary/20 px-5 py-3 font-vazirBold text-sm text-black transition-all duration-500 hover:bg-primary hover:text-white md:flex">
+            <button className="hidden gap-2 rounded-xl bg-primary px-5 py-3 font-vazirBold text-sm text-white transition-all duration-500 hover:text-black md:flex">
               همین الان شروع کنید
               <svg
                 ariaHidden="true"
