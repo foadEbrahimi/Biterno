@@ -21,7 +21,7 @@ export default function Subs() {
           <div className="flex items-center gap-1">
             <img src={logo} alt="logo svg" className="w-20" />
           </div>
-          <span className="mt-5 text-center font-semibold !leading-[3rem] ~text-4xl/5xl">
+          <span className="mt-5 text-center font-semibold !leading-[2.5rem] ~text-2xl/5xl">
             با بیترنو از اخرین تحولات بازار رمز ارزها مطلع باشید
           </span>
           <p className="mt-4 text-[#777E90]">دسترسی لحظه ای به اطلاعات بازار</p>
