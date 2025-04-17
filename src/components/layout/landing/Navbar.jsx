@@ -204,7 +204,7 @@ export default function Navbar() {
             </button>
           </Link>
           <Link className="w-full" to="/auth/register">
-            <button className="w-full rounded-full bg-primary/20 px-5 py-2.5 font-bold text-black transition-all duration-500 hover:bg-primary hover:text-white">
+            <button className="w-full rounded-full bg-primary px-5 py-2.5 font-bold text-white transition-all duration-500 hover:text-black">
               ثبت نام
             </button>
           </Link>

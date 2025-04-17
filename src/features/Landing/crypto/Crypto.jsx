@@ -99,7 +99,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:bg-[#23262F] hover:text-[#FCFCFD] md:hidden lg:hidden">
+          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>
