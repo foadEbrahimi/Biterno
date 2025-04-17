@@ -23,9 +23,9 @@ export default function CardSlider({ cryptos }) {
       spaceBetween={20}
       initialSlide={0}
       modules={[Autoplay]}
-      className="!h-fit pt-5 md:hidden"
+      className="!h-fit pt-5"
     >
-      {cryptos.slice(0, 4).map((crypto) => (
+      {cryptos.slice(0, 3).map((crypto) => (
         <SwiperSlide className="!w-fit !bg-transparent">
           <Card key={crypto.id} {...crypto} />
         </SwiperSlide>
