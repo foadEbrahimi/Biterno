@@ -2,49 +2,34 @@ import React from "react";
 
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
 import Card from "./Card";
 import { Skeleton } from "@/components/ui/Skeleton";
 
-export default function CardSlider({ isLoading, cryptos }) {
+export default function CardSlider({ cryptos }) {
   return (
     <Swiper
-      autoplay={{
-        delay: 1500,
-        disableOnInteraction: false,
-      }}
-      slidesPerView={1.2}
-      loop
-      spaceBetween={10}
-      modules={[Navigation, Autoplay]}
-      navigation={{
-        nextEl: ".nextSlide",
-        prevEl: ".prevSlide",
-      }}
+      effect={"coverflow"}
+      grabCursor={true}
+      slidesPerView={"1.6"}
       breakpoints={{
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
+        640: {
+          slidesPerView: 2.5,
         },
       }}
-      className="mySwiper"
+      spaceBetween={20}
+      initialSlide={0}
+      modules={[Autoplay]}
+      className="!h-fit pt-5 md:hidden"
     >
-      {isLoading
-        ? [1, 2, 3].map((i) => (
-            <SwiperSlide key={i}>
-              <Skeleton className="h-[136px] w-full max-w-[312px] rounded-2xl" />
-            </SwiperSlide>
-          ))
-        : cryptos.map((crypto) => (
-            <SwiperSlide key={crypto.id}>
-              <Card {...crypto} />
-            </SwiperSlide>
-          ))}
+      {cryptos.slice(0, 4).map((crypto) => (
+        <SwiperSlide className="!w-fit !bg-transparent">
+          <Card key={crypto.id} {...crypto} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
