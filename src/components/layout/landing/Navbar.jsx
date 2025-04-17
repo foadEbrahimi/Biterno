@@ -26,9 +26,9 @@ import { useLocalState } from "@/store/context/LocalStateProvider";
 export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
   return (
-    <div className={`!fixed !top-0 !z-20 flex w-full justify-center`}>
-      <div className="w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
-        <div className="">
+    <div className={`flex w-full justify-center`}>
+      <div className="!fixed !top-0 z-40 w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
+        <div>
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
@@ -168,7 +168,7 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`fixed mt-14 transition-all duration-300 ${showNav ? "z-10 opacity-100" : "-z-40 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
+        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/market">
