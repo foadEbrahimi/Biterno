@@ -1,13 +1,13 @@
 import React from "react";
 
-import Card from "./components/Card";
 import Layout from "@/components/layout/landing/Layout";
+import Card from "./components/Card";
 
 import arrow from "@assets/imgs/arrow-long.svg";
-import blog1 from "@assets/imgs/blog-1.jpg";
-import blog2 from "@assets/imgs/blog-2.jpg";
-import blog3 from "@assets/imgs/blog-3.jpg";
-import blog4 from "@assets/imgs/blog-4.jpg";
+import blog1 from "@assets/imgs/crypto/img1.svg";
+import blog2 from "@assets/imgs/crypto/img2.svg";
+import blog3 from "@assets/imgs/crypto/img3.svg";
+import blog4 from "@assets/imgs/crypto/img4.svg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,13 +26,6 @@ export default function Crypto() {
               مشاهده بیشتر
             </button>
           </div>
-          {/* <div className="mt-6">
-            <ul className="text-md hidden font-semibold text-[#777E90] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-0.5 [&>*]:hover:bg-[#353945] [&>*]:hover:text-white">
-              <li className="rounded-full bg-[#353945] px-3 py-0.5 text-white">
-                همه
-              </li>
-            </ul>
-          </div> */}
         </div>
         <div className="mt-2 space-y-5">
           <div className="lg:hidden">
@@ -63,37 +56,37 @@ export default function Crypto() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <Card height="lg:!h-[20rem]" img={blog1} />
+                <Card height="lg:!h-[20rem] h-[5rem] w-fit" img={blog1} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card height="lg:!h-[20rem]" img={blog2} />
+                <Card height="lg:!h-[20rem] h-[5rem] w-fit" img={blog2} />
               </SwiperSlide>
               <SwiperSlide>
-                <Card height="lg:!h-[20rem]" img={blog3} />
+                <Card height="lg:!h-[20rem] h-[5rem] w-fit" img={blog3} />
               </SwiperSlide>
             </Swiper>
           </div>
           <div className="hidden items-start gap-20 lg:flex">
             <div className="flex-1 lg:max-w-[50rem]">
-              <Card height="h-[31rem]" img={blog1} />
+              <Card height="h-[31rem]" img={blog4} />
             </div>
             <div className="space-y-5">
               <Card
                 max
                 vertical={true}
-                height="h-[12rem] w-[14rem]"
+                height="!h-[10rem] !w-[10rem]"
                 img={blog2}
               />
               <Card
                 max
                 vertical={true}
-                height="h-[12rem] w-[14rem]"
-                img={blog4}
+                height="!h-[10rem] !w-[10rem]"
+                img={blog1}
               />
               <Card
                 max
                 vertical={true}
-                height="h-[12rem] w-[14rem]"
+                height="!h-[10rem] !w-[10rem]"
                 img={blog3}
               />
             </div>
