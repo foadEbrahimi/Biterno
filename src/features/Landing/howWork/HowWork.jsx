@@ -17,15 +17,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function HowWork() {
   return (
-    <div className="flex h-[80dvh] items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 lg:py-0">
+    <div className="flex h-[70dvh] items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 lg:py-0">
       <div>
         {/* <Layout> */}
         <div className="~px-5/32">
           <div className="flex flex-col items-center justify-center gap-2">
-            <span className="text-center font-bold ~text-4xl/5xl">
+            <span className="text-center font-bold ~text-2xl/5xl">
               شروع کار در بیترنو
             </span>
-            <p className="mt-4 max-w-[30rem] text-center font-vazirDemiBold !leading-[2rem] text-[#353945]">
+            <p className="text-sm mt-3 max-w-[30rem] text-center font-vazirDemiBold !leading-[2rem] text-[#353945]">
               فرایند ساده و سریع برای شروع فعالیت شما
             </p>
           </div>
