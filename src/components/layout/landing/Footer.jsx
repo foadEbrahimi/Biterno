@@ -65,17 +65,20 @@ export default function Footer() {
             <div className="space-y-5">
               <span className="ml-8 text-2xl font-bold">درباره بیترنو</span>
               <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
-                <li className="transition-all duration-300 hover:text-blue-600">
-                  پروژه ها
+                <li className="transition-all duration-300 hover:text-primary">
+                  احرازهویت
                 </li>
-                <li className="transition-all duration-300 hover:text-blue-600">
-                  ما چه کاری انجام میدیم؟
+                <li className="transition-all duration-300 hover:text-primary">
+                  درباره ما
                 </li>
-                <li className="transition-all duration-300 hover:text-blue-600">
-                  پرسس
+                <li className="transition-all duration-300 hover:text-primary">
+                  کارمزد
                 </li>
-                <li className="transition-all duration-300 hover:text-blue-600">
-                  شغل ها
+                <li className="transition-all duration-300 hover:text-primary">
+                  قوانین و شرایط
+                </li>
+                <li className="transition-all duration-300 hover:text-primary">
+                  تماس با ما
                 </li>
               </ul>
             </div>
@@ -83,25 +86,27 @@ export default function Footer() {
           <div className="flex w-full flex-col space-y-5 border-t-2 py-10 md:items-center md:border-r md:border-t-0 md:pr-5">
             <span className="ml-16 font-bold ~text-xl/2xl">ارتباط باما</span>
             <ul className="flex flex-col gap-3 text-sm lg:text-base [&>*]:cursor-pointer [&>*]:text-[#90949B]">
-              <li className="transition-all duration-300 hover:text-blue-600">
+              <li className="transition-all duration-300 hover:text-primary">
                 تهران
               </li>
-              <li className="transition-all duration-300 hover:text-blue-600">
+              <li className="transition-all duration-300 hover:text-primary">
                 Zackerychester
               </li>
-              <li className="transition-all duration-300 hover:text-blue-600">
+              <li className="transition-all duration-300 hover:text-primary">
                 Bahamas
               </li>
-              <li className="transition-all duration-300 hover:text-blue-600">
+              <li className="transition-all duration-300 hover:text-primary">
+                732-528-4945
+              </li>
+              <li className="transition-all duration-300 hover:text-primary">
                 732-528-4945
               </li>
             </ul>
           </div>
-          <div className="flex w-full flex-col space-y-5 border-t-2 pb-[53px] pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5">
+          <div className="flex w-full flex-col space-y-5 border-t-2 pb-[88px] pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5">
             <span className="text-2xl font-bold">خبرنامه</span>
             <span className="max-w-[20rem] text-[#23262F]">
-              برای دریافت دوره و منبع طراحی رایگان بیشتر در خبرنامه ما مشترک
-              شوید.
+              برای دریافت اخرین خبرهای بازار در خبرنامه ما مشترک شوید.
             </span>
             <div className="grid grid-cols-[auto_2.5rem] rounded-full border-2 px-3 py-1">
               <input
