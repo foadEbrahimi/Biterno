@@ -34,7 +34,7 @@ export default function Market() {
       </div>
       <Layout>
         <div className="~mt-32/40 lg:hidden">
-          <MarketTrend bg={false} maxCrypto={10} />
+          <MarketTrend btn={false} bg={false} maxCrypto={10} />
         </div>
         <Table />
         {/* <Learn /> */}
