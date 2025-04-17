@@ -13,7 +13,7 @@ export default function Landing() {
     <div className="relative overflow-hidden">
       <Hero />
       <Crypto />
-      <MarketTrend />
+      <MarketTrend maxCrypto={5} />
       <Trade />
       <Contact />
       <Subs />
