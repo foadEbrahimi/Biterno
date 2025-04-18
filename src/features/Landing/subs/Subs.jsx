@@ -40,10 +40,10 @@ export default function Subs() {
             loop={true}
             loopedslides={3}
             speed={800}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 1500,
+            //   disableOnInteraction: false,
+            // }}
             modules={[Navigation, Autoplay]}
             on={{
               transitionEnd: function () {

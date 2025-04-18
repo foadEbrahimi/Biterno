@@ -3,7 +3,7 @@ import React from "react";
 export default function Card({ title, desc, img }) {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-2xl p-4 lg:flex-row lg:px-10">
-      <div className="order-2 mt-5 flex w-full flex-col items-center justify-center gap-2 rounded-2xl lg:order-1 lg:items-start lg:gap-5">
+      <div className="order-2 mt-5 flex-1 flex w-full flex-col items-center justify-center gap-2 rounded-2xl lg:order-1 lg:items-start lg:gap-5">
         <span className="text-sm font-semibold text-[#777E90]">
           کانال های اطلاع رسانی
         </span>
@@ -17,11 +17,11 @@ export default function Card({ title, desc, img }) {
           اکنون عضو شوید
         </button>
       </div>
-      <div className="order-1 lg:order-2">
+      <div className="order-1 flex-[1] lg:order-2">
         <img
           src={img}
           alt=""
-          className="mx-auto max-h-[7rem] lg:min-h-fit w-full object-cover xl:w-[70%]"
+          className="mr-auto max-h-[7rem] w-full object-cover lg:min-h-fit xl:w-[70%]"
         />
       </div>
     </div>

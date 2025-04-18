@@ -1,5 +1,5 @@
 import news from "@assets/imgs/test.png";
-import news2 from "@assets/imgs/news2.svg";
+import news2 from "@assets/imgs/news2.png";
 
 export const subs = [
   {
