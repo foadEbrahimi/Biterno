@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/shadcn/select";
 
 import { COIN_MAPPING } from "@/constants/coins";
+import { Link } from "react-router";
 
 // ثابت‌های API از فایل env
 const API_ENDPOINTS = {
@@ -106,17 +107,19 @@ export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
 
   return (
     <div
-      className={`mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px] ${bg ? "bg-gray-100" : ""}`}
+      className={`relative mt-10 flex ${bg ? "bg-gray-100" : ""} items-center overflow-hidden rounded-b-[50px] rounded-t-[50px]`}
     >
-      <Layout className="relative py-10">
-        <div className="absolute right-0 top-0 h-full w-[250%]">
-          <img src={img} alt="img png" />
-        </div>
+      <div className="absolute right-0 top-0 h-full w-[250%]">
+        <img src={img} alt="img png" className="" />
+      </div>
+      <Layout className="relative z-10 w-full py-10">
         <div className="flex items-center justify-between">
           <span className="font-bold ~text-xl/4xl">روند بازار</span>
-          <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] sm:flex lg:text-base">
-            مشاهده بیشتر
-          </button>
+          <Link to="/market">
+            <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] sm:flex lg:text-base">
+              مشاهده بیشتر
+            </button>
+          </Link>
         </div>
 
         <div className="mt-7">
@@ -184,9 +187,11 @@ export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
           </table>
         </div>
         {btn && (
-          <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-[#23262F] hover:bg-[#23262F] hover:text-[#FCFCFD] sm:hidden lg:text-base">
-            مشاهده بیشتر
-          </button>
+          <Link to="/market">
+            <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white sm:hidden lg:text-base">
+              مشاهده بیشتر
+            </button>
+          </Link>
         )}
       </Layout>
     </div>
