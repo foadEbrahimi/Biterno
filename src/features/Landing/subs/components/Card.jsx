@@ -17,11 +17,11 @@ export default function Card({ title, desc, img }) {
           اکنون عضو شوید
         </button>
       </div>
-      <div className="order-1 flex-[1] lg:order-2">
+      <div className="order-1 mt-6 flex-[1] lg:order-2">
         <img
           src={img}
           alt=""
-          className="mr-auto max-h-[3rem] w-full object-cover lg:max-h-[7rem] xl:w-[70%]"
+          className="mr-auto max-h-[7rem] w-full object-cover lg:max-h-fit xl:w-[70%]"
         />
       </div>
     </div>
