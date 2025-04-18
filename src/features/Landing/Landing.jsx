@@ -24,7 +24,7 @@ export default function Landing() {
         <img
           src={news2}
           alt=""
-          className="mr-auto h-fit w-full lg:max-h-fit xl:w-[70%]"
+          className="mr-auto h-[10rem] w-full xl:w-[70%]"
         />
       </div>
     </div>
