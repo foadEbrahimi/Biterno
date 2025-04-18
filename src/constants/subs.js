@@ -1,4 +1,4 @@
-import news from "@assets/imgs/news.svg";
+import news from "@assets/imgs/test.png";
 import news2 from "@assets/imgs/news2.svg";
 
 export const subs = [
