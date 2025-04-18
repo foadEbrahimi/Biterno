@@ -26,10 +26,10 @@ export default function Trade() {
                 معامله در هرجا و هر مکان با اپلیکیشن بیترنو
               </span>
             </div>
-            <div className="mt-5 flex flex-col md:max-w-[20rem]">
+            <div className="mt-5 grid grid-cols-2 md:max-w-[20rem]">
               <div className="group flex cursor-pointer items-start gap-3 py-6">
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#23262F]">
-                  <img src={mayket} className="w-9" alt="googlePlay svg" />
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#23262F]">
+                  <img src={mayket} className="w-8" alt="googlePlay svg" />
                   <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
                     <img
                       src={arrowLongWhite}
@@ -40,11 +40,11 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="font-vazirBold text-lg">مایکت</span>
+                  <span className="font-vazirBold ">مایکت</span>
                 </div>
               </div>
-              <div className="group flex cursor-pointer items-start gap-3 border-y py-6">
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#23262F]">
+              <div className="group flex cursor-pointer items-start gap-3 py-6">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#23262F]">
                   <img src={cafeBazar} alt="googlePlay svg" />
                   <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
                     <img
@@ -56,12 +56,12 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="font-vazirBold text-lg">کافه بازار</span>
+                  <span className="font-vazirBold ">کافه بازار</span>
                 </div>
               </div>
               <div className="group flex cursor-pointer items-start gap-3 py-6">
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#23262F]">
-                  <img src={googlePlay} className="w-9" alt="" />
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#23262F]">
+                  <img src={googlePlay} className="w-8" alt="" />
                   <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
                     <img
                       src={arrowLongWhite}
@@ -72,11 +72,11 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود از</span>
-                  <span className="font-vazirBold text-lg">پلی استور</span>
+                  <span className="font-vazirBold ">پلی استور</span>
                 </div>
               </div>
-              <div className="group flex cursor-pointer items-start gap-3 border-t py-6">
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#23262F]">
+              <div className="group flex cursor-pointer items-start gap-3 py-6">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#23262F]">
                   <span className="w-9 uppercase text-white">pwa</span>
                   <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
                     <img
@@ -88,7 +88,7 @@ export default function Trade() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-sm">دانلود برای</span>
-                  <span className="font-vazirBold text-lg">PWA اپلیکیشن</span>
+                  <span className="font-vazirBold ">PWA اپلیکیشن</span>
                 </div>
               </div>
             </div>
