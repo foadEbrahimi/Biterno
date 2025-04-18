@@ -8,8 +8,6 @@ import MarketTrend from "./marketTrend/MarketTrend";
 import Subs from "./subs/Subs";
 import Trade from "./trade/Trade";
 
-import news2 from "@assets/imgs/news2.png";
-
 export default function Landing() {
   return (
     <div className="relative overflow-hidden">
@@ -20,13 +18,6 @@ export default function Landing() {
       <Contact />
       <Subs />
       <HowWork />
-      <div className="order-1 mx-auto mt-6 max-w-[13rem] lg:order-2">
-        <img
-          src={news2}
-          alt=""
-          className="mr-auto h-[10rem] w-full xl:w-[70%]"
-        />
-      </div>
     </div>
   );
 }
