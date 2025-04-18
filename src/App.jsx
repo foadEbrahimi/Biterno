@@ -11,6 +11,7 @@ import Contact from "@features/contact/Contact";
 import Discover from "@features/discover/Discover";
 import Market from "@features/market/Market";
 import Layout from "./components/layout/auth/Layout";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 export default function App() {
   return (
@@ -21,7 +22,6 @@ export default function App() {
           path="/"
           element={
             <>
-              {/* <Navbar /> */}
               <Outlet />
               <Footer />
             </>
@@ -38,6 +38,7 @@ export default function App() {
           <Route path="register" element={<Signup />} />
         </Route>
       </Routes>
+      <ScrollToTop />
     </>
   );
 }
