@@ -423,3 +423,17 @@ html {
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.439 0 0);
 }
+
+@media screen and (min-width: 1024px) {
+  #marketHero {
+    height: calc(80dvh - 56px) !important;
+    padding-top: 150px !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #marketHero {
+    height: calc(90dvh - 56px) !important;
+    padding-top: 150px !important;
+  }
+}

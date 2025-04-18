@@ -16,6 +16,7 @@ export default function Market() {
     <div className="overflow-x-hidden">
       <Navbar />
       <div
+        id="marketHero"
         style={{
           height: "calc(100dvh - 56px)",
         }}
