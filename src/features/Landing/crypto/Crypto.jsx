@@ -17,7 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Crypto() {
   return (
-    <div id="cryptoSection" className="pb-5 md:mt-10 xl:mt-14">
+    <div id="cryptoSection" className="pb-5 md:mt-10 xl:mt-28">
       <Layout>
         <div>
           <div className="flex items-center justify-between">
