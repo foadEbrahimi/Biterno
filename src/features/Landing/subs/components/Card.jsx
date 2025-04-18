@@ -21,7 +21,7 @@ export default function Card({ title, desc, img }) {
         <img
           src={img}
           alt=""
-          className="mr-auto max-h-[7rem] w-full object-cover xl:w-[70%]"
+          className="mr-auto h-[10rem] w-full object-cover lg:h-[14rem] xl:w-[70%]"
         />
       </div>
     </div>
