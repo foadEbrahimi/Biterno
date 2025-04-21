@@ -1,17 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 
-import chevronBottom from "@assets/imgs/chevronBottom.svg";
-import englandFlag from "@assets/imgs/england-flag.webp";
-import iranFlag from "@assets/imgs/iran-flag.png";
+import chevronBottom from "@assets/imgs/landing/hero/chevronBottom.svg";
+import englandFlag from "@assets/imgs/landing/hero/england-flag.webp";
+import iranFlag from "@assets/imgs/landing/hero/iran-flag.png";
 import logo from "@assets/imgs/logo.png";
 
-import facebook from "@assets/imgs/facebook.svg";
-import instagram from "@assets/imgs/instagram.svg";
-import linkedin from "@assets/imgs/linkedin.svg";
-import telegram from "@assets/imgs/telegram.svg";
-import twitter from "@assets/imgs/twitter.svg";
-import youtube from "@assets/imgs/youtube.svg";
+import facebook from "@assets/imgs/landing/socialIcons/facebook.svg";
+import instagram from "@assets/imgs/landing/socialIcons/instagram.svg";
+import linkedin from "@assets/imgs/landing/socialIcons/linkedin.svg";
+import telegram from "@assets/imgs/landing/socialIcons/telegram.svg";
+import twitter from "@assets/imgs/landing/socialIcons/twitter.svg";
+import youtube from "@assets/imgs/landing/socialIcons/youtube.svg";
 
 import {
   DropdownMenu,
