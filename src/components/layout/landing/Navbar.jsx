@@ -118,14 +118,14 @@ export default function Navbar() {
                   </DropdownMenuCheckboxItem>
                 </DropdownMenuContent> */}
               </DropdownMenu>
-              {theme === "dark" ? (
+              {theme === "light" ? (
                 <button onClick={() => setTheme("dark")}>
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    className="hover:fill-texttext-textColor cursor-pointer fill-[#777E90] transition-all duration-200"
+                    className="cursor-pointer fill-[#777E90] transition-all duration-200 hover:fill-textColor"
                     xmlnsXlink="http://www.w3.org/2000/svg"
                   >
                     <path d="M12 2C11.4477 2 11 2.44772 11 3C11 3.55228 11.4477 4 12 4C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2Z" />
@@ -145,7 +145,11 @@ export default function Navbar() {
                 </button>
               ) : (
                 <button onClick={() => setTheme("light")}>
-                  <svg xmlnsXlink="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <svg
+                    xmlnsXlink="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    className="w-5 fill-[#777E90] transition-all duration-200 hover:fill-textColor"
+                  >
                     <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
                   </svg>
                 </button>

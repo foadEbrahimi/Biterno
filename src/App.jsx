@@ -17,31 +17,33 @@ import { ThemeProvider } from "./components/common/theme-provider";
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="light">
-      <Routes>
-        {/* landing */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Outlet />
-              <Footer />
-            </>
-          }
-        >
-          <Route index element={<Landing />} />
-          <Route path="market" element={<Market />} />
-          <Route path="discover" element={<Discover />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-        {/* auth */}
-        <Route path="/auth" element={<Layout />}>
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Signup />} />
-          <Route path="forget" element={<ForgetPass />} />
-        </Route>
-      </Routes>
-      <ScrollToTop />
-    </ThemeProvider>
+    <>
+      <ThemeProvider defaultTheme="light">
+        <Routes>
+          {/* landing */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Outlet />
+                <Footer />
+              </>
+            }
+          >
+            <Route index element={<Landing />} />
+            <Route path="market" element={<Market />} />
+            <Route path="discover" element={<Discover />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+          {/* auth */}
+          <Route path="/auth" element={<Layout />}>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Signup />} />
+            <Route path="forget" element={<ForgetPass />} />
+          </Route>
+        </Routes>
+        <ScrollToTop />
+      </ThemeProvider>
+    </>
   );
 }
