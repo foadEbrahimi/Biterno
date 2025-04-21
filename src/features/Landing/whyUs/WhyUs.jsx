@@ -1,19 +1,11 @@
 import React from "react";
 
-import Card from "./components/Card";
 import Layout from "@/components/layout/landing/Layout";
+import Slider from "./components/Slider";
 
 import arrow from "@assets/imgs/arrow-long.svg";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { contact } from "@/constants/contact";
-
-export default function Contact() {
+export default function WhyUs() {
   return (
     <div className="relative mt-20 flex min-h-[100dvh] items-center rounded-b-[50px] rounded-t-[50px] bg-gray-100 py-20">
       <Layout>
@@ -27,35 +19,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="mt-16">
-          <Swiper
-            dir="ltr"
-            slidesPerView={"auto"}
-            spaceBetween={40}
-            modules={[Navigation, Autoplay]}
-            navigation={{
-              nextEl: ".nextSlide",
-              prevEl: ".prevSlide",
-            }}
-            // autoplay={{
-            //   delay: 1500,
-            //   disableOnInteraction: false,
-            // }}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-              },
-              1200: {
-                slidesPerView: 3,
-              },
-            }}
-            className="mySwiper p-3"
-          >
-            {contact.map((item, index) => (
-              <SwiperSlide className="rounded-2xl min-h-full !bg-transparent">
-                <Card {...item} key={index + 1} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Slider />
         </div>
         <div className="mt-8 flex items-center justify-center gap-3 text-white/50 lg:hidden">
           <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">

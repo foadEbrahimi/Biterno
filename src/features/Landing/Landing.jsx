@@ -1,12 +1,12 @@
 import React from "react";
 
-import Contact from "./contact/Contact";
+import Application from "./application/Application";
 import Crypto from "./crypto/Crypto";
 import Hero from "./hero/Hero";
 import HowWork from "./howWork/HowWork";
 import MarketTrend from "./marketTrend/MarketTrend";
 import Subs from "./subs/Subs";
-import Application from "./application/Application";
+import WhyUs from "./whyUs/WhyUs";
 
 export default function Landing() {
   return (
@@ -15,7 +15,7 @@ export default function Landing() {
       <Crypto />
       <MarketTrend maxCrypto={5} />
       <Application />
-      <Contact />
+      <WhyUs />
       <Subs />
       <HowWork />
     </div>
