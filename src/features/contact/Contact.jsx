@@ -12,8 +12,8 @@ export default function Contact() {
     <div className="relative py-20 lg:py-14 2xl:my-0">
       <img
         src={object}
-        className="absolute right-0 top-0 -z-10 h-full !min-w-[250%] lg:!min-w-[110%]"
-        alt=""
+        className="absolute right-0 top-0 -z-10 h-full w-full lg:!min-w-[110%]"
+        alt="object png"
       />
       <Navbar />
       <Layout>
@@ -23,7 +23,7 @@ export default function Contact() {
               <span className="text-primary">بیترنو</span> نسل نوین معاملات
               هوشمند
             </h1>
-            <ul className="flex items-center gap-2 text-[9px] lg:text-[18px] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-1.5">
+            <ul className="flex items-center gap-2 text-[10px] lg:text-[18px] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-1.5">
               <li
                 onClick={() => setState("general")}
                 className={`cursor-pointer ${state === "general" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
@@ -55,7 +55,7 @@ export default function Contact() {
                 تماس با ما
               </li>
             </ul>
-            <div className="flex flex-col gap-5 rounded-[30px] border p-10 text-right text-[16px] leading-10 text-black/80">
+            <div className="flex flex-col gap-5 rounded-[30px] border ~p-4/10 text-right text-[16px] leading-10 text-black/80">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
               در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
