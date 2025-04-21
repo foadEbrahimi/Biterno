@@ -4,6 +4,7 @@ import Layout from "@/components/layout/landing/Layout";
 import Slider from "./components/Slider";
 
 import arrow from "@assets/imgs/common/arrow-long.svg";
+import { Link } from "react-router";
 
 export default function WhyUs() {
   return (
@@ -29,9 +30,12 @@ export default function WhyUs() {
             <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
           </button>
         </div>
-        <button className="mx-auto mt-7 flex w-full items-center justify-center rounded-full bg-primary px-7 py-2.5 text-center text-lg font-semibold text-white transition-all duration-300 hover:text-black lg:w-fit xl:mt-14">
+        <Link
+          to="/contact"
+          className="mx-auto mt-7 flex w-full items-center justify-center rounded-full bg-primary px-7 py-2.5 text-center text-lg font-semibold text-white transition-all duration-300 hover:text-black lg:w-fit xl:mt-14"
+        >
           ارتباط با ما{" "}
-        </button>
+        </Link>
       </Layout>
     </div>
   );
