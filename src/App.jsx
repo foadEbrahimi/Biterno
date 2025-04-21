@@ -13,9 +13,11 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import Layout from "./components/layout/auth/Layout";
 import ForgetPass from "./features/auth/forget/ForgetPass";
 
+import { ThemeProvider } from "./components/common/theme-provider";
+
 export default function App() {
   return (
-    <>
+    <ThemeProvider defaultTheme="light">
       <Routes>
         {/* landing */}
         <Route
@@ -40,6 +42,6 @@ export default function App() {
         </Route>
       </Routes>
       <ScrollToTop />
-    </>
+    </ThemeProvider>
   );
 }
