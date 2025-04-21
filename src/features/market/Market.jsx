@@ -22,9 +22,12 @@ export default function Market() {
         className="relative p-2 py-10 lg:flex lg:items-center"
       >
         <div className="absolute right-0 top-0 z-10 h-full w-full">
-          <img src={object} alt="object png" />
+          <img src={object} alt="object png" draggable={false} />
         </div>
-        <div className="absolute -left-20 -top-20 z-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <div
+          draggable={false}
+          className="absolute -left-20 -top-20 z-10 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"
+        ></div>
         <Layout>
           <div className="!z-20 mt-5">
             <Content />

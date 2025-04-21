@@ -16,7 +16,7 @@ export default function Content() {
         </span>
       </div>
       <div className="w-full pt-5 sm:flex-[1.5] xl:flex-1 xl:pt-24">
-        <img src={market} alt="market img" />
+        <img src={market} draggable={false} alt="market img" />
       </div>
     </div>
   );
