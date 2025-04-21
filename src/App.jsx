@@ -11,6 +11,7 @@ import Discover from "@features/discover/Discover";
 import Market from "@features/market/Market";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Layout from "./components/layout/auth/Layout";
+import ForgetPass from "./features/auth/forget/ForgetPass";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/auth" element={<Layout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Signup />} />
+          <Route path="forget" element={<ForgetPass />} />
         </Route>
       </Routes>
       <ScrollToTop />
