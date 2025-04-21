@@ -1,6 +1,6 @@
 import React from "react";
 
-import connectLine from "@assets/imgs/connect-line.svg";
+import connectLine from "@assets/imgs/landing/how/connect-line.svg";
 
 export default function Card({ image, step, title, desc, index }) {
   return (
