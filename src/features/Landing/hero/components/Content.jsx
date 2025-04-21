@@ -64,7 +64,7 @@ export default function Content() {
             width="835.21315"
             height="613.09812"
             viewBox="0 0 835.21315 613.09812"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             role="img"
             artist="Katerina Limpitsouni"
             source="https://undraw.co/"
