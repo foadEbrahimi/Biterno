@@ -6,7 +6,7 @@ import Hero from "./hero/Hero";
 import HowWork from "./howWork/HowWork";
 import MarketTrend from "./marketTrend/MarketTrend";
 import Subs from "./subs/Subs";
-import Trade from "./trade/Trade";
+import Application from "./application/Application";
 
 export default function Landing() {
   return (
@@ -14,7 +14,7 @@ export default function Landing() {
       <Hero />
       <Crypto />
       <MarketTrend maxCrypto={5} />
-      <Trade />
+      <Application />
       <Contact />
       <Subs />
       <HowWork />

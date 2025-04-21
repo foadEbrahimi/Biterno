@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "@/components/layout/landing/Layout";
 
-import arrowLong from "@assets/imgs/landing/trade/arrow-long-white.svg";
+import arrowLong from "@assets/imgs/landing/application/arrow-long-white.svg";
 import facebook from "@assets/imgs/landing/socialIcons/facebook.svg";
 import instagram from "@assets/imgs/landing/socialIcons/instagram.svg";
 import linkedin from "@assets/imgs/landing/socialIcons/linkedin.svg";
