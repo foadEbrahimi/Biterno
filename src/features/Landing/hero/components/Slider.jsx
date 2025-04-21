@@ -80,11 +80,6 @@ export default function Slider() {
           delay: 10000,
           disableOnInteraction: false,
         }}
-        // breakpoints={{
-        //   cardsEffect: {
-        //     perSlideOffset: 90,
-        //   },
-        // }}
         loop={true}
         loopedSlides={3}
         speed={500}
@@ -130,10 +125,10 @@ export default function Slider() {
         loop={true}
         loopedslides={3}
         speed={800}
-        // autoplay={{
-        //   delay: 1000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
         on={{
           transitionEnd: function () {
             if (this.isEnd) {
