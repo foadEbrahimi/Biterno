@@ -96,7 +96,7 @@ export default function Navbar() {
                     />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent
+                {/* <DropdownMenuContent
                   dir="rtl"
                   className="ml-5 mt-4 w-56 bg-white p-3 shadow-xl lg:ml-0"
                 >
@@ -112,7 +112,7 @@ export default function Navbar() {
                     />
                     <span className="text-[#23262F]">انگلیسی</span>
                   </DropdownMenuCheckboxItem>
-                </DropdownMenuContent>
+                </DropdownMenuContent> */}
               </DropdownMenu>
               <svg
                 width="24"
