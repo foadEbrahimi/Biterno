@@ -10,7 +10,7 @@ import telegram from "@assets/imgs/landing/socialIcons/telegram.svg";
 import twitter from "@assets/imgs/landing/socialIcons/twitter.svg";
 import youtube from "@assets/imgs/landing/socialIcons/youtube.svg";
 
-import logo from "@assets/imgs/logo/logo.png";
+import logoB from "@assets/imgs/logo/biterno-b.svg";
 
 import {
   Accordion,
@@ -24,11 +24,6 @@ export default function Footer() {
     <div className="mt-10 border-t pt-10 md:py-0">
       <Layout>
         <div className="w-full md:flex md:items-start">
-          <div className="md:mt-10 md:hidden">
-            <div className="flex items-center gap-1">
-              <img src={logo} alt="logo svg" className="~w-20/16" />
-            </div>
-          </div>
           <Accordion
             defaultValue="item-1"
             className="mt-5 md:hidden"
@@ -61,7 +56,6 @@ export default function Footer() {
             </AccordionItem>
           </Accordion>
           <div className="hidden w-full items-start gap-10 border-t-2 py-10 md:flex md:border-t-0 md:pr-5">
-            <img src={logo} alt="" className="hidden w-20 md:flex" />
             <div className="space-y-5">
               <span className="ml-8 text-2xl font-bold">درباره بیترنو</span>
               <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
@@ -83,7 +77,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="flex w-full flex-col space-y-5 border-t-2 py-10 md:items-center md:border-r md:border-t-0 md:pr-5">
+          <div className="flex w-full flex-col space-y-5 border-t-2 py-10 md:border-r md:border-t-0 md:pr-5">
             <span className="ml-16 font-bold ~text-xl/2xl">ارتباط باما</span>
             <ul className="flex flex-col gap-3 text-sm lg:text-base [&>*]:cursor-pointer [&>*]:text-[#90949B]">
               <li className="transition-all duration-300 hover:text-primary">
@@ -105,7 +99,7 @@ export default function Footer() {
           </div>
           <div className="flex w-full flex-col space-y-5 border-t-2 pb-[88px] pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5">
             <span className="text-2xl font-bold">خبرنامه</span>
-            <span className="max-w-[20rem] text-[#23262F]">
+            <span className="max-w-[18rem] text-[#23262F]">
               برای دریافت اخرین خبرهای بازار در خبرنامه ما مشترک شوید.
             </span>
             <div className="grid grid-cols-[auto_2.5rem] rounded-full border-2 px-3 py-1">
@@ -126,8 +120,9 @@ export default function Footer() {
         </div>
       </Layout>
       <div className="flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
-        <span className="text-sm text-[#777E90]">
-          تمامی حقوق برای بیترنو محفوظ است. 2025 ©
+        <span className="flex items-center gap-1 text-sm text-[#777E90]">
+          <img src={logoB} className="w-5" alt="" />
+          تمامی حقوق مادی و معنوی برای بیترنو محفوظ است. 2025 ©{" "}
         </span>
         <div className="flex items-center gap-5 [&>*]:cursor-pointer">
           <a href="">
