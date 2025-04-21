@@ -10,15 +10,13 @@ export default function Contact() {
 
   return (
     <div className="bg-bg relative py-20 lg:py-14 2xl:my-0">
-      <Navbar />
       <Layout>
-        <div>
-          <div className="absolute right-0 top-0 h-full w-full">
-            <img src={object} alt="object png" />
-          </div>
-          <div className="absolute -left-20 -top-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-full">
+          <img src={object} alt="object png" />
         </div>
-        <div className="!z-10 flex w-full flex-col gap-5 md:flex-row">
+        <div className="absolute -left-20 -top-20 z-10 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <Navbar />
+        <div className="!z-20 flex w-full flex-col gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col items-center text-center ~gap-6/10 lg:pt-10 xl:pt-20">
             <h1 className="!leading-[4rem] ~text-4xl/5xl dark:text-white">
               <span className="text-primary">بیترنو</span> نسل نوین معاملات
