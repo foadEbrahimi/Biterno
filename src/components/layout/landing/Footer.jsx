@@ -21,7 +21,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="mt-10 border-t pt-10 md:py-0">
+    <div className="mt-10 border-t pt-3 md:py-0">
       <Layout>
         <div className="w-full md:flex md:items-start">
           <Accordion
@@ -40,16 +40,19 @@ export default function Footer() {
                     احرازهویت
                   </li>
                   <li className="transition-all duration-300 hover:text-primary">
-                    درباره ما
-                  </li>
-                  <li className="transition-all duration-300 hover:text-primary">
                     کارمزد
                   </li>
                   <li className="transition-all duration-300 hover:text-primary">
                     قوانین و شرایط
                   </li>
                   <li className="transition-all duration-300 hover:text-primary">
+                    درباره ما
+                  </li>
+                  <li className="transition-all duration-300 hover:text-primary">
                     تماس با ما
+                  </li>
+                  <li className="transition-all duration-300 hover:text-primary">
+                    سوالات متداول
                   </li>
                 </ul>
               </AccordionContent>
@@ -63,22 +66,25 @@ export default function Footer() {
                   احرازهویت
                 </li>
                 <li className="transition-all duration-300 hover:text-primary">
-                  درباره ما
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
                   کارمزد
                 </li>
                 <li className="transition-all duration-300 hover:text-primary">
                   قوانین و شرایط
                 </li>
                 <li className="transition-all duration-300 hover:text-primary">
+                  درباره ما
+                </li>
+                <li className="transition-all duration-300 hover:text-primary">
                   تماس با ما
+                </li>
+                <li className="transition-all duration-300 hover:text-primary">
+                  سوالات متداول
                 </li>
               </ul>
             </div>
           </div>
-          <div className="flex w-full flex-col space-y-5 border-t-2 py-10 md:border-r md:border-t-0 md:pr-5">
-            <span className="ml-16 font-bold ~text-xl/2xl">ارتباط باما</span>
+          <div className="flex w-full flex-col space-y-5 border-t-2 pb-10 pt-10 md:border-r md:border-t-0 md:pr-5 lg:pb-20">
+            <span className="ml-16 font-bold ~text-xl/2xl">ارتباط با ما</span>
             <ul className="flex flex-col gap-3 text-sm lg:text-base [&>*]:cursor-pointer [&>*]:text-[#90949B]">
               <li className="transition-all duration-300 hover:text-primary">
                 تهران
@@ -97,7 +103,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex w-full flex-col space-y-5 border-t-2 pb-[88px] pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5">
+          <div className="flex w-full flex-col space-y-5 border-t-2 pb-10 pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5 lg:pb-32">
             <span className="text-2xl font-bold">خبرنامه</span>
             <span className="max-w-[18rem] text-[#23262F]">
               برای دریافت اخرین خبرهای بازار در خبرنامه ما مشترک شوید.
