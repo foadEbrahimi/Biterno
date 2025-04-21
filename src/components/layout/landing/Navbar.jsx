@@ -81,7 +81,7 @@ export default function Navbar() {
                       : "pr-4 transition-all duration-300 hover:text-[#23262F]"
                   }
                 >
-                  <li>ارتباط باما</li>
+                  <li>تماس با ما</li>
                 </NavLink>
               </ul>
             </div>
