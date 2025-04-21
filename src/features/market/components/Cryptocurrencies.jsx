@@ -18,7 +18,7 @@ export default function Cryptocurrencies() {
         <div className="px-5 pb-[26px]">
           <CardSlider />
         </div>
-        <div className="border-t px-5 py-5 lg:hidden">
+        <div className="border-t px-5 py-5 hidden">
           <div className="lg:hidden">
             <Select dir="rtl">
               <SelectTrigger>

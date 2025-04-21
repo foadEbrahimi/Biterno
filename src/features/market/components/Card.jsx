@@ -39,7 +39,7 @@ export default function Card({ image, name, price, change24h }) {
       </div>
       <img
         src={change24h > 0 ? chart : chart2}
-        className="hidden w-[5rem] xl:flex xl:w-[4rem] 2xl:w-[6rem]"
+        className="hidden w-[5rem] xl:flex xl:w-[4rem] 2xl:w-[5.5rem]"
         alt="chart svg"
       />
     </div>
