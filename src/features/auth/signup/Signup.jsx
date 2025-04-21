@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
 import { Link } from "react-router";
-import apple from "../../../assets/imgs/auth/apple.svg";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
-import google from "../../../assets/imgs/auth/google.svg";
-import logo from "../../../assets/imgs/logo/logo.png";
+import lock from "../../../assets/imgs/auth/lock.svg";
+
+import logoB from "../../../assets/imgs/logo/biterno-b.svg";
 
 export default function Signup() {
   const passwordRef = useRef(null);
@@ -30,154 +30,127 @@ export default function Signup() {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center gap-4 md:mx-20 md:flex-row md:justify-between lg:mx-0 lg:items-center lg:justify-end">
-        <div className="flex cursor-pointer items-center justify-center gap-1 lg:hidden">
-          <img src={logo} alt="bitCloud logo" />
-          <span className="text-2xl">بیتکلود</span>
-        </div>
-        <p className="text-sm">
-          از قبل حساب کاربری دارید؟{" "}
-          <Link
-            to="/auth/login"
-            className="cursor-pointer font-bold text-[#3772FF]"
-          >
-            وارد شوید{" "}
-          </Link>
-        </p>
+    <div className="!z-20 mx-auto flex flex-col gap-3 sm:max-w-[25rem]">
+      <Link to="/">
+        <img src={logoB} className="mx-auto w-14" alt="" />
+      </Link>
+      <span className="text-center text-3xl font-bold text-[#23262F]">
+        ثبت نام کنید{" "}
+      </span>
+      <span className="mx-auto mt-1 max-w-fit text-xs font-semibold text-[#777E90]">
+        لطفاً مطمئن شوید که از آدرس اینترنتی صحیح بازدید می کنید.
+      </span>
+      <div className="mx-auto flex w-fit items-center gap-1 rounded-full bg-[#F4F5F6] px-3 py-1.5">
+        <span className="font-sans">
+          <span className="text-[#58BD7D]">https://</span>
+          <span>biterno.com/register</span>
+        </span>
+        <img src={lock} alt="" />
       </div>
-      <div className="mx-auto mt-20 flex flex-col gap-3 sm:max-w-[25rem]">
-        <span className="text-center text-3xl font-bold text-[#23262F]">
-          ثبت نام کنید{" "}
-        </span>
-        <span className="mx-auto mt-5 max-w-fit text-xs font-semibold text-[#777E90]">
-          از OpenID خود برای ثبت نام استفاده کنید{" "}
-        </span>
-        <div className="mt-3 flex items-center justify-center gap-3">
-          <button className="flex w-[10rem] flex-1 items-center justify-center gap-1 rounded-full bg-[#3772FF] p-3 text-white transition-all duration-300 hover:bg-[#0045ea]">
-            <img src={google} alt="google svg" />
-            <span>گوگل</span>
-          </button>
-          <button className="flex w-[10rem] flex-1 items-center justify-center gap-1 rounded-full bg-[#23262F] p-3 text-white transition-all duration-300 hover:bg-[#353945]">
-            <img src={apple} alt="google svg" />
-            <span>اپل</span>
-          </button>
-        </div>
-        <hr className="my-5" />
-        <span className="text-center text-[#777E90]">
-          یا با ایمیل ادامه دهید
-        </span>
-        {/* form */}
-        <div className="mt-4">
-          <form>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="font-semibold text-[#B1B5C3]">
-                ایمیل
-              </label>
-              <Input
-                inputMode="email"
-                id="email"
-                type="email"
-                placeholder="آدرس ایمیل"
-                className="placeholder:font-vazir rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
-              />
-            </div>
-            <div className="mt-5 flex flex-col gap-2">
-              <label
-                htmlFor="password"
-                className="font-semibold text-[#B1B5C3]"
-              >
-                رمز عبور
-              </label>
-              <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
-                <Input
-                  ref={passwordRef}
-                  id="password"
-                  type="password"
-                  placeholder="رمز عبور"
-                  className="placeholder:font-vazir border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
-                />
-                <div
-                  onClick={(e) =>
-                    togglePasswordVisibility(e, passwordRef, passwordEyeIconRef)
-                  }
-                >
-                  <img
-                    ref={passwordEyeIconRef}
-                    src={eye}
-                    className="cursor-pointer"
-                    alt="Toggle Password Visibility"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="mt-5 flex flex-col gap-2">
-              <label
-                htmlFor="reapetpassword"
-                className="font-semibold text-[#B1B5C3]"
-              >
-                تایید رمز عبور{" "}
-              </label>
-              <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
-                <Input
-                  ref={repeatpasswordRef}
-                  id="reapetpassword"
-                  type="password"
-                  placeholder="رمز عبور"
-                  className="placeholder:font-vazir border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
-                />
-                <div
-                  onClick={(e) =>
-                    togglePasswordVisibility(
-                      e,
-                      repeatpasswordRef,
-                      repeatPasswordEyeIconRef,
-                    )
-                  }
-                >
-                  <img
-                    ref={repeatPasswordEyeIconRef}
-                    src={eye}
-                    className="cursor-pointer"
-                    alt="Toggle Password Visibility"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="mt-5 flex items-start gap-3">
-              <li className="list-none">
-                <input id="c1" type="checkbox" defaultChecked />
-              </li>
-              <label
-                htmlFor="acceptPolicy"
-                className="text-sm font-semibold text-[#777E90]"
-              >
-                با ثبت‌نام، موافقت می‌کنم که ۱۸ سال یا بیشتر سن داشته باشم، با
-                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
-                  {" "}
-                  توافق‌نامه‌های کاربر
-                </span>
-                ،{" "}
-                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
-                  خط‌مشی رازداری،
-                </span>{" "}
-                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
-                  خط‌مشی کوکی
-                </span>
-                ،{" "}
-                <span className="cursor-pointer text-[#23262F] transition-all duration-300 hover:text-[#3772FF]">
-                  رضایت امضای الکترونیکی
-                </span>{" "}
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="mt-9 w-full rounded-full bg-[#3772FF] py-3 text-lg font-bold text-white transition-all duration-300 hover:bg-[#0045ea]"
+      <hr className="my-5" />
+      {/* form */}
+      <div>
+        <form>
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="phoneNumber"
+              className="font-semibold text-[#B1B5C3]"
             >
-              ثبت نام
-            </button>
-          </form>
-        </div>
+              شماره تماس
+            </label>
+            <Input
+              inputMode="number"
+              id="phoneNumber"
+              type="number"
+              placeholder="شماره تلفن"
+              className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazirRegular placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+            />
+          </div>
+          <div className="mt-5 flex flex-col gap-2">
+            <label htmlFor="password" className="font-semibold text-[#B1B5C3]">
+              رمز عبور
+            </label>
+            <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
+              <Input
+                ref={passwordRef}
+                id="password"
+                type="password"
+                placeholder="رمز عبور"
+                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazirRegular placeholder:text-[#777E90] focus:outline-none"
+              />
+              <div
+                onClick={(e) =>
+                  togglePasswordVisibility(e, passwordRef, passwordEyeIconRef)
+                }
+              >
+                <img
+                  ref={passwordEyeIconRef}
+                  src={eye}
+                  className="cursor-pointer"
+                  alt="Toggle Password Visibility"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-5 flex flex-col gap-2">
+            <label
+              htmlFor="reapetpassword"
+              className="font-semibold text-[#B1B5C3]"
+            >
+              تایید رمز عبور{" "}
+            </label>
+            <div className="group flex items-center gap-2 rounded-xl border-2 border-[#E6E8EC] pl-3 transition-colors duration-300 focus-within:border-[#777E90]">
+              <Input
+                ref={repeatpasswordRef}
+                id="reapetpassword"
+                type="password"
+                placeholder="رمز عبور"
+                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazirRegular placeholder:text-[#777E90] focus:outline-none"
+              />
+              <div
+                onClick={(e) =>
+                  togglePasswordVisibility(
+                    e,
+                    repeatpasswordRef,
+                    repeatPasswordEyeIconRef,
+                  )
+                }
+              >
+                <img
+                  ref={repeatPasswordEyeIconRef}
+                  src={eye}
+                  className="cursor-pointer"
+                  alt="Toggle Password Visibility"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-5 flex items-start gap-3">
+            <li className="list-none">
+              <input id="c1" type="checkbox" defaultChecked />
+            </li>
+            <label
+              htmlFor="acceptPolicy"
+              className="text-sm font-semibold text-[#777E90]"
+            >
+              با ثبت نام در بیترنو ،{" "}
+              <Link className="text-primary">قوانین و مقررات</Link> آن را
+              میپذیرید.
+            </label>
+          </div>
+          <button className="mt-4 flex w-full items-center gap-1">
+            قبلا ثبت نام کرده اید ؟{" "}
+            <Link to="/auth/login" className="font-vazirDemiBold text-primary">
+              ورود
+            </Link>
+          </button>
+          <button
+            type="submit"
+            className="mt-7 w-full rounded-full bg-primary py-3 text-lg font-bold text-white transition-all duration-300 hover:text-black"
+          >
+            ثبت نام
+          </button>
+        </form>
       </div>
     </div>
   );

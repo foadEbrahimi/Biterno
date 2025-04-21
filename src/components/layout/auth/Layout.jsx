@@ -9,7 +9,7 @@ export default function Layout() {
     <div className="grid h-screen lg:grid-cols-12">
       <div
         id="layoutBg"
-        className="relative hidden z-20 bg-[#23262fc6] p-5 lg:col-span-4 lg:block"
+        className="relative z-20 hidden bg-[#23262fc6] p-5 lg:col-span-4 lg:block"
       >
         <img
           src={bgImg}
@@ -19,12 +19,12 @@ export default function Layout() {
         />
         <div className="absolute -left-[22%] bottom-40 !-z-20 h-[326px] w-[422px] rounded-full bg-primary/30 blur-[40px]"></div>
       </div>
-      <div className="bg-white p-5 lg:col-span-8">
+      <div className="p-5 z-20 lg:col-span-8">
         <Outlet />
       </div>
       <img
         src={object}
-        className="absolute left-0 top-0 h-full !min-w-[250%] scale-x-[-1] lg:!min-w-[110%]"
+        className="absolute left-0 top-0 z-10 h-full !min-w-[250%] scale-x-[-1] lg:!min-w-[110%]"
         alt=""
       />
     </div>
