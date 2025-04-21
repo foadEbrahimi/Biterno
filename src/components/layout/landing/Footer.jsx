@@ -10,7 +10,7 @@ import telegram from "@assets/imgs/landing/socialIcons/telegram.svg";
 import twitter from "@assets/imgs/landing/socialIcons/twitter.svg";
 import youtube from "@assets/imgs/landing/socialIcons/youtube.svg";
 
-import logo from "@assets/imgs/logo.png";
+import logo from "@assets/imgs/logo/logo.png";
 
 import {
   Accordion,

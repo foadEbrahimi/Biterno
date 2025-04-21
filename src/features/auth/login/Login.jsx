@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import lock from "../../../assets/imgs/auth/lock.svg";
-import logo from "../../../assets/imgs/logo.png";
+import logo from "../../../assets/imgs/logo/logo.png";
 
 export default function Login() {
   const [part, setPart] = useState("email");

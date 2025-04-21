@@ -11,12 +11,14 @@ import "swiper/css/effect-fade";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Card from "./components/Card";
+import Navbar from "@/components/layout/landing/Navbar";
 
 export default function Contact() {
   const [state, setState] = useState("general");
 
   return (
     <div className="py-20 2xl:my-0">
+      <Navbar />
       <Layout>
         <div className="flex w-full flex-col items-start gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col ~gap-6/10 lg:pt-10 xl:pt-20">

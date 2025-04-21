@@ -6,7 +6,7 @@ import apple from "../../../assets/imgs/auth/apple.svg";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import google from "../../../assets/imgs/auth/google.svg";
-import logo from "../../../assets/imgs/logo.png";
+import logo from "../../../assets/imgs/logo/logo.png";
 
 export default function Signup() {
   const passwordRef = useRef(null);

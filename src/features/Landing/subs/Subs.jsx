@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "@/components/layout/landing/Layout";
 
 import arrow from "@assets/imgs/arrow-long.svg";
-import logo from "@assets/imgs/logo.png";
+import logo from "@assets/imgs/logo/logo.png";
 import Slider from "./components/Slider";
 
 export default function Subs() {

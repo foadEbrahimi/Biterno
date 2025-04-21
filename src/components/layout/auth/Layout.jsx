@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 
-import logo from "@assets/imgs/logo.png";
+import logo from "@assets/imgs/logo/logo.png";
 import bgImg from "@assets/imgs/auth/bg-login.png";
 
 export default function Layout() {
