@@ -99,7 +99,7 @@ export default function TableRow({ index, crypto }) {
           alt="chart svg"
           className="hidden group-hover/row:hidden xl:block"
         />
-        <button className="rounded-full bg-[#3772FF] px-5 py-2 text-[16px] font-semibold text-white transition-all duration-200 hover:bg-[#0045ea] group-hover/row:flex xl:hidden">
+        <button className="hover: rounded-full bg-primary px-5 py-2 text-[16px] font-semibold text-white transition-all duration-200 hover:text-black group-hover/row:flex xl:hidden">
           خرید
         </button>
       </td>
