@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Layout from "../../components/layout/landing/Layout";
 import Navbar from "@/components/layout/landing/Navbar";
+import Layout from "../../components/layout/landing/Layout";
 
 import object from "@assets/imgs/landing/hero/object.png";
 
@@ -18,23 +18,17 @@ export default function Contact() {
       <Navbar />
       <Layout>
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          <div className="flex w-full flex-1 flex-col items-center ~gap-6/10 lg:pt-10 xl:pt-20">
+          <div className="flex w-full flex-1 flex-col items-center text-center ~gap-6/10 lg:pt-10 xl:pt-20">
             <h1 className="!leading-[4rem] ~text-4xl/5xl">
               <span className="text-primary">بیترنو</span> نسل نوین معاملات
               هوشمند
             </h1>
-            <ul className="flex items-center gap-2 text-[10px] lg:text-[18px] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-1.5">
+            <ul className="grid grid-cols-3 items-center gap-3 text-[13px] lg:grid-cols-6 lg:text-[18px] [&>*]:rounded-full [&>*]:px-3 [&>*]:py-1.5">
               <li
                 onClick={() => setState("general")}
                 className={`cursor-pointer ${state === "general" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
               >
                 احرازهویت
-              </li>
-              <li
-                onClick={() => setState("support")}
-                className={`cursor-pointer ${state === "support" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
-              >
-                درباره ما
               </li>
               <li
                 onClick={() => setState("hosting")}
@@ -49,13 +43,25 @@ export default function Contact() {
                 قوانین و شرایط
               </li>
               <li
-                onClick={() => setState("product")}
+                onClick={() => setState("support")}
+                className={`cursor-pointer ${state === "support" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
+              >
+                درباره ما
+              </li>
+              <li
+                onClick={() => setState("tellUs")}
                 className={`cursor-pointer ${state === "tellUs" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
               >
                 تماس با ما
               </li>
+              <li
+                onClick={() => setState("faq")}
+                className={`cursor-pointer ${state === "faq" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
+              >
+                سوالات متداول
+              </li>
             </ul>
-            <div className="flex flex-col gap-5 rounded-[30px] border ~p-4/10 text-right text-[16px] leading-10 text-black/80">
+            <div className="flex flex-col gap-5 rounded-[30px] border text-center text-[16px] leading-10 text-black/80 ~p-4/10">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
               در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
