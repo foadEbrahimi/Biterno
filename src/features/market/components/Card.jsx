@@ -17,7 +17,7 @@ export default function Card({ image, name, price, change24h }) {
           </div>
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="font-sans font-semibold text-[#777E90]">
+              <span className="font-sans font-semibold text-[#777E90] lg:text-sm">
                 {name}
               </span>
               <span
@@ -32,13 +32,13 @@ export default function Card({ image, name, price, change24h }) {
             </div>
           </div>
         </div>
-        <span className="mt-1 flex items-center gap-2 font-vazirBold text-[16px] transition-all duration-200 group-hover/hover:text-[#3772FF] lg:text-lg">
+        <span className="mt-1 flex items-center gap-2 font-vazirBold text-[16px] transition-all duration-200 group-hover/hover:text-primary lg:text-lg xl:text-[16px] 2xl:text-xl">
           {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
         </span>
       </div>
       <img
         src={change24h > 0 ? chart : chart2}
-        className="hidden w-[5rem] lg:w-[6rem] xl:flex"
+        className="hidden w-[5rem] xl:flex xl:w-[4rem] 2xl:w-[6rem]"
         alt="chart svg"
       />
     </div>
