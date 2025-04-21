@@ -119,7 +119,7 @@ export default function Navbar() {
                 </DropdownMenuContent> */}
               </DropdownMenu>
               {theme === "light" ? (
-                <button onClick={() => setTheme("dark")}>
+                <button className="ml-3" onClick={() => setTheme("dark")}>
                   <svg
                     width="24"
                     height="24"
@@ -144,7 +144,7 @@ export default function Navbar() {
                   </svg>
                 </button>
               ) : (
-                <button onClick={() => setTheme("light")}>
+                <button className="ml-2" onClick={() => setTheme("light")}>
                   <svg
                     xmlnsXlink="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
