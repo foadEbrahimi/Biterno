@@ -18,10 +18,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/shadcn/accordion";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <div className="mt-10 border-t pt-3 md:py-0">
+    <div className="bg-bg mt-10 dark:mt-0 border-t pt-3 md:py-0">
       <Layout>
         <div className="w-full md:flex md:items-start">
           <Accordion
@@ -31,7 +32,7 @@ export default function Footer() {
             collapsible
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg font-bold">
+              <AccordionTrigger className="text-lg dark:text-white font-bold">
                 صفحات بیشتر
               </AccordionTrigger>
               <AccordionContent>
@@ -60,31 +61,47 @@ export default function Footer() {
           </Accordion>
           <div className="hidden w-full items-start gap-10 border-t-2 py-10 md:flex md:border-t-0 md:pr-5">
             <div className="space-y-5">
-              <span className="ml-8 text-2xl font-bold">درباره بیترنو</span>
+              <span className="ml-8 text-2xl font-bold dark:text-white">
+                درباره بیترنو
+              </span>
               <ul className="flex flex-col gap-3 [&>*]:cursor-pointer [&>*]:text-[#90949B]">
-                <li className="transition-all duration-300 hover:text-primary">
-                  احرازهویت
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
-                  کارمزد
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
-                  قوانین و شرایط
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
-                  درباره ما
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
-                  تماس با ما
-                </li>
-                <li className="transition-all duration-300 hover:text-primary">
-                  سوالات متداول
-                </li>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    احرازهویت
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    کارمزد
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    قوانین و شرایط
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    درباره ما
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    تماس با ما
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li className="transition-all duration-300 hover:text-primary">
+                    سوالات متداول
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
           <div className="flex w-full flex-col space-y-5 border-t-2 pb-10 pt-10 md:border-r md:border-t-0 md:pr-5 lg:pb-20">
-            <span className="ml-16 font-bold ~text-xl/2xl">ارتباط با ما</span>
+            <span className="ml-16 font-bold ~text-xl/2xl dark:text-white">
+              تماس با ما
+            </span>
             <ul className="flex flex-col gap-3 text-sm lg:text-base [&>*]:cursor-pointer [&>*]:text-[#90949B]">
               <li className="transition-all duration-300 hover:text-primary">
                 تهران
@@ -104,8 +121,8 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex w-full flex-col space-y-5 border-t-2 pb-10 pt-10 md:max-w-[25rem] md:border-r md:border-t-0 md:pr-5 lg:pb-32">
-            <span className="text-2xl font-bold">خبرنامه</span>
-            <span className="max-w-[18rem] text-[#23262F]">
+            <span className="text-2xl font-bold dark:text-white">خبرنامه</span>
+            <span className="max-w-[18rem] text-[#23262F] dark:text-white/80">
               برای دریافت اخرین خبرهای بازار در خبرنامه ما مشترک شوید.
             </span>
             <div className="grid grid-cols-[auto_2.5rem] rounded-full border-2 px-3 py-1">
@@ -126,7 +143,7 @@ export default function Footer() {
         </div>
       </Layout>
       <div className="flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
-        <span className="flex items-center gap-1 text-sm text-[#777E90]">
+        <span className="flex items-center gap-1 text-sm text-[#777E90] dark:text-white">
           <img src={logoB} className="w-5" alt="" />
           تمامی حقوق مادی و معنوی برای بیترنو محفوظ است. 2025 ©{" "}
         </span>

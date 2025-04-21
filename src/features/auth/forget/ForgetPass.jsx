@@ -26,12 +26,12 @@ export default function ForgetPass() {
   };
 
   return (
-    <div className="relative !z-20">
+    <div className="relative">
       <div className="mx-auto mt-14 flex flex-col gap-3 sm:max-w-[25rem]">
         <Link to="/">
           <img src={logoB} className="mx-auto w-14" alt="" />
         </Link>
-        <span className="text-center text-3xl font-bold text-[#23262F]">
+        <span className="text-center dark:text-white text-3xl font-bold text-[#23262F]">
           فراموشی رمز عبور
         </span>
         <hr className="my-5" />

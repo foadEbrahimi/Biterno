@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router";
 import chevronBottom from "@assets/imgs/landing/hero/chevronBottom.svg";
 import englandFlag from "@assets/imgs/landing/hero/england-flag.webp";
 import iranFlag from "@assets/imgs/landing/hero/iran-flag.png";
-import logo from "@assets/imgs/logo/logo.png";
+import logo from "@assets/imgs/logo/biterno-b.svg";
 
 import facebook from "@assets/imgs/landing/socialIcons/facebook.svg";
 import instagram from "@assets/imgs/landing/socialIcons/instagram.svg";
@@ -27,13 +27,16 @@ export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
   return (
     <div className={`flex w-full justify-center`}>
-      <div className="!fixed !top-0 z-40 w-full rounded-b-2xl bg-white p-[18px] shadow md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
+      <div className="bg-bg !fixed !top-0 z-40 w-full rounded-b-2xl p-[18px] shadow dark:border dark:border-t-0 dark:border-gray-700 md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
         <div>
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
-                <div className="flex cursor-pointer items-center gap-2">
-                  <img src={logo} className="w-20" alt="bitCloud logo" />
+                <div className="flex cursor-pointer items-center gap-1">
+                  <img src={logo} className="w-7" alt="bitCloud logo" />
+                  <span className="font-vazirDemiBold text-lg text-textColor">
+                    بیترنو
+                  </span>
                 </div>
               </Link>
             </div>
@@ -42,9 +45,7 @@ export default function Navbar() {
                 <NavLink
                   to="/auth/login"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-[#23262F]"
-                      : "transition-all duration-300 hover:text-[#23262F]"
+                    isActive ? "" : "text-textColor transition-all duration-300"
                   }
                 >
                   <li>تبدیل</li>
@@ -53,11 +54,11 @@ export default function Navbar() {
                   to="/auth/login"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#23262F]"
-                      : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                      ? ""
+                      : "pr-4 text-textColor transition-all duration-300"
                   }
                 >
-                  <li className="flex items-center gap-1 transition-all duration-300 hover:text-[#23262F]">
+                  <li className="flex items-center gap-1 text-textColor transition-all duration-300">
                     خرید کریپتو
                     <img src={chevronBottom} alt="line svg" className="w-5" />
                   </li>
@@ -66,8 +67,8 @@ export default function Navbar() {
                   to="/market"
                   className={({ isActive }) =>
                     isActive
-                      ? "pr-4 text-[#23262F]"
-                      : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                      ? "pr-4"
+                      : "pr-4 text-textColor transition-all duration-300"
                   }
                 >
                   <li>بازار</li>
@@ -77,8 +78,8 @@ export default function Navbar() {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? "pr-4 text-[#23262F]"
-                      : "pr-4 transition-all duration-300 hover:text-[#23262F]"
+                      ? "pr-4"
+                      : "pr-4 text-textColor transition-all duration-300"
                   }
                 >
                   <li>تماس با ما</li>
@@ -87,7 +88,7 @@ export default function Navbar() {
             </div>
             <div className="mr-auto flex items-center md:mr-0">
               <DropdownMenu>
-                <DropdownMenuTrigger className="ml-1" asChild>
+                <DropdownMenuTrigger className="ml-2" asChild>
                   <button className="flex items-center gap-1 font-bold uppercase">
                     <img
                       src={iranFlag}
@@ -110,7 +111,7 @@ export default function Navbar() {
                       className="h-8 w-8 scale-75 rounded-full"
                       alt="england flag"
                     />
-                    <span className="text-[#23262F]">انگلیسی</span>
+                    <span className="text-textColor">انگلیسی</span>
                   </DropdownMenuCheckboxItem>
                 </DropdownMenuContent> */}
               </DropdownMenu>
@@ -119,7 +120,7 @@ export default function Navbar() {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                className="hidden cursor-pointer fill-[#777E90] transition-all duration-200 hover:fill-[#23262F] md:flex"
+                className="hover:fill-texttext-textColor cursor-pointer fill-[#777E90] transition-all duration-200"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M12 2C11.4477 2 11 2.44772 11 3C11 3.55228 11.4477 4 12 4C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2Z" />
@@ -170,21 +171,21 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-white pb-5 pt-5 md:hidden`}
+        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} bg-bg left-0 top-0 flex h-screen w-full flex-col pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/market">
-            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               بازار
             </li>
           </Link>
           <Link onClick={() => toggleNav()} to="/auth/login">
-            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               تبدیل
             </li>
           </Link>
           <Link onClick={() => toggleNav()} to="/auth/login">
-            <li className="flex items-center gap-1 border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
+            <li className="flex items-center gap-1 border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               خرید کریپتو
               <img
                 src={chevronBottom}
@@ -194,14 +195,14 @@ export default function Navbar() {
             </li>
           </Link>
           <Link onClick={() => toggleNav()} to="/contact">
-            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8 hover:text-[#23262F]">
-              ارتباط با ما
+            <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
+              تماس با ما
             </li>
           </Link>
         </ul>
         <div className="flex w-full flex-col items-center gap-3 px-5">
           <Link to="/auth/login" className="w-full">
-            <button className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white">
+            <button className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
               ورود
             </button>
           </Link>

@@ -26,12 +26,12 @@ export function ArzCardSkeleton() {
 
 export default function CardArz({ name, image, price, change24h }) {
   return (
-    <div className="flex w-[15rem] max-w-[23rem] cursor-pointer items-center justify-between gap-5 rounded-full bg-white px-5 py-6 shadow-lg transition-all duration-300 hover:shadow-lg sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
+    <div className="flex w-[15rem] max-w-[23rem] cursor-pointer items-center justify-between gap-5 rounded-full bg-white px-5 py-6 shadow-lg transition-all duration-300 hover:shadow-lg dark:bg-[#161618] sm:h-[7rem] sm:w-[20rem] sm:px-8 md:h-[8.5rem] md:w-full md:gap-12 md:px-10 xl:!min-w-[90%] xl:!max-w-[90%]">
       <div className="flex flex-col items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
-          <span className="font-vazirDemiBold text-sm uppercase text-gray-500">
-            {name}/usdt
+          <span className="font-vazirDemiBold text-sm uppercase text-gray-500 dark:text-white">
+            {name}/irt
           </span>
         </div>
         <div className="flex w-full justify-end">
@@ -41,7 +41,7 @@ export default function CardArz({ name, image, price, change24h }) {
           >
             {change24h}
           </span> */}
-          <span className="font-bold ~text-sm/2xl">
+          <span className="font-bold ~text-sm/2xl dark:text-white">
             {formatToTomanWithCommas(price.slice(0, -1))}
           </span>
         </div>

@@ -361,7 +361,8 @@ html {
 }
 
 :root {
-  --text-color: #23262f;
+  --bg: #fff;
+  --text-color: #000;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -396,6 +397,7 @@ html {
 }
 
 .dark {
+  --bg: #141416;
   --text-color: #fff;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

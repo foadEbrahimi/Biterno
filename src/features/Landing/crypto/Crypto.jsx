@@ -13,11 +13,13 @@ import Slider from "./components/Slider";
 
 export default function Crypto() {
   return (
-    <div id="cryptoSection" className="pb-5 md:mt-10 xl:mt-28">
+    <div id="cryptoSection" className="bg-bg pb-5 md:mt-10 xl:mt-28">
       <Layout>
         <div className="flex items-center justify-between">
-          <span className="font-bold ~text-xl/4xl">اخبار بازار</span>
-          <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] md:flex lg:text-base">
+          <span className="font-bold ~text-xl/4xl dark:text-white">
+            اخبار بازار
+          </span>
+          <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white md:flex lg:text-base">
             مشاهده بیشتر
           </button>
         </div>
@@ -50,7 +52,7 @@ export default function Crypto() {
               />
             </div>
           </div>
-          <div className="!mt-1 flex items-center justify-center gap-3 md:justify-start lg:hidden">
+          <div className="!mt-1 flex items-center justify-center gap-3 lg:hidden">
             <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
               <img src={arrow} alt="" className="w-4" />
             </button>
@@ -58,7 +60,7 @@ export default function Crypto() {
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white md:hidden lg:hidden">
+          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white md:hidden lg:hidden">
             مشاهده بیشتر
           </button>
         </div>

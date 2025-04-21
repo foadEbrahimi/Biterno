@@ -31,7 +31,7 @@ export default function Login() {
         <Link to="/">
           <img src={logoB} className="mx-auto w-14" alt="" />
         </Link>
-        <span className="text-center text-3xl font-bold text-[#23262F]">
+        <span className="text-center text-3xl font-bold text-[#23262F] dark:text-white">
           وارد{" "}
           <Link
             to="/"

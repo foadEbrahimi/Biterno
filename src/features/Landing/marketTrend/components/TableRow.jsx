@@ -41,18 +41,20 @@ export default function TableRow({ index, crypto }) {
   const { name, image, price, change24h } = crypto;
 
   return (
-    <tr className="border-b transition-all duration-500 hover:scale-105 hover:bg-white/50 hover:shadow-md">
+    <tr className="border-b transition-all duration-500 hover:scale-105 hover:bg-white/50 dark:hover:bg-transparent hover:shadow-md">
       <td className="hidden w-[3rem] px-4 py-3 sm:table-cell">
-        <span className="text-sm font-bold text-black">{index + 1}</span>
+        <span className="text-sm font-bold text-black dark:text-white">
+          {index + 1}
+        </span>
       </td>
       <td className="w-[10rem] px-1 py-3">
         <div className="flex items-center gap-2">
           <img src={image} alt={name} className="h-8 w-8 rounded-full" />
-          <span className="font-bold text-black">{name}</span>
+          <span className="font-bold text-black dark:text-white">{name}</span>
         </div>
       </td>
       <td className="w-[8rem] px-1 py-3">
-        <span className="text-[16px] text-black">
+        <span className="text-[16px] text-black dark:text-white">
           {formatToTomanWithCommas(price.slice(0, -1))}
         </span>
       </td>
@@ -68,7 +70,7 @@ export default function TableRow({ index, crypto }) {
         <img src={change24h > 0 ? chart : chart2} alt="chart svg" />
       </td>
       <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
-        <button className="rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:border-primary hover:bg-primary hover:text-[#FCFCFD]">
+        <button className="rounded-full border-2 px-4 py-2 text-sm text-black transition-all hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white">
           معامله
         </button>
       </td>

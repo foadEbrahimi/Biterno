@@ -34,7 +34,7 @@ export default function Signup() {
       <Link to="/">
         <img src={logoB} className="mx-auto w-14" alt="" />
       </Link>
-      <span className="text-center text-3xl font-bold text-[#23262F]">
+      <span className="text-center text-3xl font-bold text-[#23262F] dark:text-white">
         ثبت نام کنید{" "}
       </span>
       <span className="mx-auto mt-1 max-w-fit text-xs font-semibold text-[#777E90]">
@@ -138,7 +138,7 @@ export default function Signup() {
               میپذیرید.
             </label>
           </div>
-          <button className="mt-4 flex w-full items-center gap-1">
+          <button className="mt-4 flex w-full items-center gap-1 dark:text-white">
             قبلا ثبت نام کرده اید ؟{" "}
             <Link to="/auth/login" className="font-vazirDemiBold text-primary">
               ورود

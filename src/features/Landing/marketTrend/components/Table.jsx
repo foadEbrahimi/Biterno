@@ -95,8 +95,8 @@ export default function Table({ maxCrypto }) {
 
   return (
     <div className="relative mt-10 overflow-x-visible lg:mt-20 xl:pl-12">
-      <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
-        <thead className="border-b uppercase text-gray-700">
+      <table className="w-full text-left text-sm rtl:text-right">
+        <thead className="border-b uppercase text-gray-700 dark:text-white">
           <tr className="xl:text-[15px]">
             <th scope="col" className="hidden w-[3rem] px-3 py-3 sm:table-cell">
               #

@@ -9,17 +9,18 @@ export default function Contact() {
   const [state, setState] = useState("general");
 
   return (
-    <div className="relative py-20 lg:py-14 2xl:my-0">
-      <img
-        src={object}
-        className="absolute right-0 top-0 -z-10 h-full w-full"
-        alt="object png"
-      />
+    <div className="bg-bg relative py-20 lg:py-14 2xl:my-0">
       <Navbar />
       <Layout>
-        <div className="flex w-full flex-col gap-5 md:flex-row">
+        <div>
+          <div className="absolute right-0 top-0 h-full w-full">
+            <img src={object} alt="object png" />
+          </div>
+          <div className="absolute -left-20 -top-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        </div>
+        <div className="!z-10 flex w-full flex-col gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col items-center text-center ~gap-6/10 lg:pt-10 xl:pt-20">
-            <h1 className="!leading-[4rem] ~text-4xl/5xl">
+            <h1 className="!leading-[4rem] ~text-4xl/5xl dark:text-white">
               <span className="text-primary">بیترنو</span> نسل نوین معاملات
               هوشمند
             </h1>
@@ -61,7 +62,7 @@ export default function Contact() {
                 سوالات متداول
               </li>
             </ul>
-            <div className="flex flex-col gap-5 rounded-[30px] border text-center text-[16px] leading-10 text-black/80 ~p-4/10">
+            <div className="flex flex-col gap-5 rounded-[30px] border text-center text-[16px] leading-10 text-black/80 ~p-4/10 dark:text-white">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
               در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد

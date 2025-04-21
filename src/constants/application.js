@@ -1,5 +1,5 @@
 import mayket from "@assets/imgs/landing/socialIcons/mayket.svg";
-import cafeBazar from "@assets/imgs/landing/socialIcons/cafe-bazar.svg";
+import cafeBazar from "@assets/imgs/landing/socialIcons/cafe-bazar.png";
 import googlePlay from "@assets/imgs/landing/socialIcons/google-play.svg";
 
 export const application = [

@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "@/components/layout/landing/Layout";
 
 import arrow from "@assets/imgs/common/arrow-long.svg";
-import logo from "@assets/imgs/logo/logo.png";
+import logo from "@assets/imgs/logo/biterno-b.svg";
 import Slider from "./components/Slider";
 
 export default function Subs() {
@@ -12,9 +12,12 @@ export default function Subs() {
       <Layout>
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
-            <img src={logo} alt="logo svg" className="w-20" />
+            <img src={logo} className="w-7" alt="bitCloud logo" />
+            <span className="font-vazirDemiBold text-lg text-textColor">
+              بیترنو
+            </span>
           </div>
-          <span className="mt-5 text-center font-semibold !leading-[2.5rem] ~text-2xl/5xl">
+          <span className="mt-5 text-center font-semibold !leading-[2.5rem] ~text-2xl/5xl dark:text-white">
             با بیترنو از اخرین تحولات بازار رمز ارزها مطلع باشید
           </span>
           <p className="mt-4 text-[#777E90]">دسترسی لحظه ای به اطلاعات بازار</p>

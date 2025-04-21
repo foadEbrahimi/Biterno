@@ -10,6 +10,7 @@ export default {
       colors: {
         primary: "#009b87",
         textColor: "var(--text-color)",
+        bg: "var(--bg)",
       },
       fontFamily: {
         arial: ["Arial"],
