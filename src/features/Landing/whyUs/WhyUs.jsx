@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "@/components/layout/landing/Layout";
 import Slider from "./components/Slider";
 
-import arrow from "@assets/imgs/arrow-long.svg";
+import arrow from "@assets/imgs/common/arrow-long.svg";
 
 export default function WhyUs() {
   return (

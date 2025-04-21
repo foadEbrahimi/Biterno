@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "@/components/layout/landing/Layout";
 
-import arrow from "@assets/imgs/arrow-long.svg";
+import arrow from "@assets/imgs/common/arrow-long.svg";
 import logo from "@assets/imgs/logo/logo.png";
 import Slider from "./components/Slider";
 

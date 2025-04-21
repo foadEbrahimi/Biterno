@@ -1,7 +1,8 @@
 import React from "react";
 
-import arrow from "../../assets/imgs/arrow-long.svg";
+import arrow from "../../assets/imgs/common/arrow-long.svg";
 import img from "../../assets/imgs/img.png";
+
 export default function Card() {
   return (
     <div className="flex flex-col items-start gap-3 md:flex-row-reverse md:gap-5">
@@ -10,9 +11,11 @@ export default function Card() {
         <span className="rounded-lg bg-[#23262F] px-3 py-1 text-sm font-semibold text-white">
           پیشفرض
         </span>
-        <h2 className="~text-xl/3xl font-bold">راهنمای مبتدیان برای TradingView</h2>
-        <span className="~text-sm/lg text-[#353945]">تولید، طراحی UI</span>
-        <p className="~text-sm/lg max-w-[30rem] text-[#777E90]">
+        <h2 className="font-bold ~text-xl/3xl">
+          راهنمای مبتدیان برای TradingView
+        </h2>
+        <span className="text-[#353945] ~text-sm/lg">تولید، طراحی UI</span>
+        <p className="max-w-[30rem] text-[#777E90] ~text-sm/lg">
           یک کیت صفحه فرود با ویژگی های کامل، شامل فایل های طراحی و تصاویر سه
           بعدی زیبا قابل ویرایش.
         </p>

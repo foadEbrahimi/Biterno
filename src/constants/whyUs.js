@@ -1,6 +1,6 @@
-import karmozed from "@assets/imgs/savings.svg";
-import support from "@assets/imgs/support.svg";
-import cashBack from "@assets/imgs/cashBack.svg";
+import karmozed from "@assets/imgs/landing/whyUs/savings.svg";
+import support from "@assets/imgs/landing/whyUs/support.svg";
+import cashBack from "@assets/imgs/landing/whyUs/cashBack.svg";
 
 export const contact = [
   {

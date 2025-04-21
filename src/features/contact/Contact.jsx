@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import arrow from "../../assets/imgs/arrow-long.svg";
+import arrow from "../../assets/imgs/common/arrow-long.svg";
 import contactImg from "../../assets/imgs/contact-pic.png";
 
 import Layout from "../../components/layout/landing/Layout";

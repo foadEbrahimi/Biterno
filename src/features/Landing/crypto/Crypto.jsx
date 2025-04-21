@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "@/components/layout/landing/Layout";
 import Card from "./components/Card";
 
-import arrow from "@assets/imgs/arrow-long.svg";
+import arrow from "@assets/imgs/common/arrow-long.svg";
 import blog1 from "@assets/imgs/landing/crypto/img1.svg";
 import blog2 from "@assets/imgs/landing/crypto/img2.svg";
 import blog3 from "@assets/imgs/landing/crypto/img3.svg";

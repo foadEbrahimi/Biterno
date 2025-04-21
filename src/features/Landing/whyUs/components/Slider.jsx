@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { contact } from "@/constants/contact";
+import { contact } from "@/constants/whyUs";
 
 export default function Slider() {
   return (
