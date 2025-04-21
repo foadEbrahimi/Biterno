@@ -42,7 +42,7 @@ export default function TableRow({ index, crypto }) {
   const { name, image, price, change24h, change7d, marketCap } = crypto;
 
   return (
-    <tr className="group/row border-gray-200 bg-white transition-all duration-200 hover:bg-[#F4F5F6]">
+    <tr className="group/row bg-bg border-gray-200 transition-all duration-200 hover:bg-[#F4F5F6]">
       <th
         scope="row"
         className="whitespace-nowrap py-4 font-medium text-gray-900"
@@ -72,10 +72,9 @@ export default function TableRow({ index, crypto }) {
         className="flex items-center gap-3 whitespace-nowrap py-5 font-medium text-gray-900"
       >
         <img src={image} className="w-8" alt="coin svg" />
-        <span className="font-vazir font-semibold">{name}</span>
-        <span className="font-sans text-sm text-[#B1B5C3]">{name}</span>
+        <span className="font-vazir font-semibold dark:text-white">{name}</span>
       </th>
-      <td className="py-4 font-bold text-[#23262F]">
+      <td className="py-4 font-bold text-[#23262F] dark:text-white">
         {formatToTomanWithCommas(price.slice(0, -1))}
       </td>
       <td
@@ -90,7 +89,7 @@ export default function TableRow({ index, crypto }) {
       >
         {change7d.toFixed(2)}
       </td>
-      <td className="py-4 font-bold text-[#23262F]">
+      <td className="py-4 font-bold text-[#23262F] dark:text-white">
         {formatToTomanWithCommas(marketCap).slice(0, -1)}
       </td>
       <td className="hidden lg:table-cell">

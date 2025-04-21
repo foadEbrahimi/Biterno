@@ -14,7 +14,7 @@ import Menu from "./Menu";
 export default function Cryptocurrencies() {
   return (
     <div className="absolute -bottom-[4.8rem] left-0 w-full ~px-5/32 lg:-bottom-[5rem]">
-      <div className="z-10 w-full rounded-[24px] border bg-white pt-5 shadow-2xl">
+      <div className="z-10 w-full rounded-[24px] border dark:bg-bg pt-5 shadow-2xl">
         <div className="px-5 pb-[26px]">
           <CardSlider />
         </div>

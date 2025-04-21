@@ -12,21 +12,21 @@ import object from "@assets/imgs/landing/hero/object.png";
 
 export default function Market() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="bg-bg overflow-x-hidden">
       <Navbar />
       <div
         id="marketHero"
         style={{
-          height: "calc(100dvh - 56px)",
+          height: "calc(90dvh - 56px)",
         }}
         className="relative p-2 py-10 lg:flex lg:items-center"
       >
-        <div className="absolute right-0 top-0 !-z-10 h-full w-full">
+        <div className="absolute right-0 top-0 z-10 h-full w-full">
           <img src={object} alt="object png" />
         </div>
-        <div className="absolute -left-20 -top-20 !-z-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <div className="absolute -left-20 -top-20 z-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
         <Layout>
-          <div className="mt-5">
+          <div className="!z-20 mt-5">
             <Content />
             <Cryptocurrencies />
           </div>

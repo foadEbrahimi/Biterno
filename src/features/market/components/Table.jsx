@@ -98,7 +98,7 @@ export default function Table() {
     <div className="mt-40 hidden lg:block">
       <div className="relative mt-5 overflow-x-auto">
         <table className="w-full text-left text-sm text-gray-500 rtl:text-right">
-          <thead className="border-b uppercase text-[#777E90]">
+          <thead className="border-b uppercase text-[#777E90] dark:text-white">
             <tr>
               <th scope="col" className="px-1 py-3">
                 <div className="flex items-center gap-2">
