@@ -1,5 +1,5 @@
-import news from "@assets/imgs/news.svg";
-import news2 from "@assets/imgs/news2.svg";
+import news from "@assets/imgs/landing/subs/news.svg";
+import news2 from "@assets/imgs/landing/subs/news2.svg";
 
 export const subs = [
   {
