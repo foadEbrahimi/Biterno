@@ -1,15 +1,14 @@
 import React from "react";
+
 import Layout from "../../components/layout/landing/Layout";
+import Navbar from "@/components/layout/landing/Navbar";
+import MarketTrend from "../Landing/marketTrend/MarketTrend";
 
 import Content from "./components/Content";
 import Cryptocurrencies from "./components/Cryptocurrencies";
-import Learn from "./components/Learn";
 import Table from "./components/Table";
-import SmallCards from "./components/SmallCards";
-import Navbar from "@/components/layout/landing/Navbar";
 
 import object from "@assets/imgs/landing/hero/object.png";
-import MarketTrend from "../Landing/marketTrend/MarketTrend";
 
 export default function Market() {
   return (
@@ -38,7 +37,6 @@ export default function Market() {
           <MarketTrend btn={false} bg={false} maxCrypto={10} />
         </div>
         <Table />
-        {/* <Learn /> */}
       </Layout>
     </div>
   );
