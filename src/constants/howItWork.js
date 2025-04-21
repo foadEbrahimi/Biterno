@@ -1,6 +1,6 @@
-import step1 from "../assets/imgs/how/step1.svg";
-import step2 from "../assets/imgs/how/step2.svg";
-import step3 from "../assets/imgs/how/step3.svg";
+import step1 from "../assets/imgs/landing/how/step1.svg";
+import step2 from "../assets/imgs/landing/how/step2.svg";
+import step3 from "../assets/imgs/landing/how/step3.svg";
 
 export const howItWork = [
   {

@@ -1,31 +1,22 @@
 import React from "react";
 
-import Card from "./components/Card";
+import connectLine from "@assets/imgs/landing/how/connect-line.svg";
+import step1 from "@assets/imgs/landing/how/step1.svg";
+import step2 from "@assets/imgs/landing/how/step2.svg";
+import step3 from "@assets/imgs/landing/how/step3.svg";
 
-import { howItWork } from "@/constants/howItWork";
-
-import connectLine from "@assets/imgs/connect-line.svg";
-import step1 from "@assets/imgs/how/step1.svg";
-import step2 from "@assets/imgs/how/step2.svg";
-import step3 from "@assets/imgs/how/step3.svg";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "./components/Slider";
 
 export default function HowWork() {
   return (
-    <div className="flex h-[70dvh] items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 lg:py-0">
+    <div className="flex h-[70dvh] items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 lg:h-[80dvh] lg:py-0">
       <div>
-        {/* <Layout> */}
         <div className="~px-5/32">
           <div className="flex flex-col items-center justify-center gap-2">
             <span className="text-center font-bold ~text-2xl/5xl">
               شروع کار در بیترنو
             </span>
-            <p className="text-sm mt-3 max-w-[30rem] text-center font-vazirDemiBold !leading-[2rem] text-[#353945]">
+            <p className="mt-3 max-w-[30rem] text-center font-vazirDemiBold text-sm !leading-[2rem] text-[#353945]">
               فرایند ساده و سریع برای شروع فعالیت شما
             </p>
           </div>
@@ -45,37 +36,9 @@ export default function HowWork() {
             <img src={step1} className="w-10 lg:w-32" alt="step3 svg" />
           </div>
           <div className="mt-10">
-            <Swiper
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: true,
-              }}
-              slidesPerView={"auto"}
-              spaceBetween={10}
-              modules={[Navigation, Autoplay]}
-              navigation={{
-                nextEl: ".nextSlide",
-                prevEl: ".prevSlide",
-              }}
-              breakpoints={{
-                1024: {
-                  spaceBetween: 120,
-                },
-                1285: {
-                  spaceBetween: 0,
-                },
-              }}
-              className="mySwiper"
-            >
-              {howItWork.map((item, index) => (
-                <SwiperSlide className="!w-fit !bg-transparent">
-                  <Card {...item} index={index + 1} key={index + 1} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <Slider />
           </div>
         </div>
-        {/* </Layout> */}
       </div>
     </div>
   );
