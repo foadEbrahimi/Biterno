@@ -93,7 +93,7 @@ export default function Slider() {
         cardsEffect={{
           rotate: false,
           slideShadows: false,
-          perSlideOffset: 90,
+          perSlideOffset: 95,
         }}
         modules={[EffectCards, Autoplay]}
         className="arzSlider hidden h-[20rem] md:block"
