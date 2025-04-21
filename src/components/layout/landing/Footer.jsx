@@ -2,13 +2,13 @@ import React from "react";
 
 import Layout from "@/components/layout/landing/Layout";
 
-import arrowLong from "@assets/imgs/arrow-long-white.svg";
-import facebook from "@assets/imgs/facebook.svg";
-import instagram from "@assets/imgs/instagram.svg";
-import linkedin from "@assets/imgs/linkedin.svg";
-import telegram from "@assets/imgs/telegram.svg";
-import twitter from "@assets/imgs/twitter.svg";
-import youtube from "@assets/imgs/youtube.svg";
+import arrowLong from "@assets/imgs/landing/trade/arrow-long-white.svg";
+import facebook from "@assets/imgs/landing/socialIcons/facebook.svg";
+import instagram from "@assets/imgs/landing/socialIcons/instagram.svg";
+import linkedin from "@assets/imgs/landing/socialIcons/linkedin.svg";
+import telegram from "@assets/imgs/landing/socialIcons/telegram.svg";
+import twitter from "@assets/imgs/landing/socialIcons/twitter.svg";
+import youtube from "@assets/imgs/landing/socialIcons/youtube.svg";
 
 import logo from "@assets/imgs/logo.png";
 
