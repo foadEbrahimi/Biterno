@@ -8,7 +8,7 @@ import Table from "./components/Table";
 import SmallCards from "./components/SmallCards";
 import Navbar from "@/components/layout/landing/Navbar";
 
-import img from "@assets/imgs/hero/object.png";
+import object from "@assets/imgs/landing/hero/object.png";
 import MarketTrend from "../Landing/marketTrend/MarketTrend";
 
 export default function Market() {
@@ -23,7 +23,7 @@ export default function Market() {
         className="relative p-2 py-10 lg:flex lg:items-center"
       >
         <div className="absolute right-0 top-0 !-z-10 h-full w-full">
-          <img src={img} alt="" />
+          <img src={object} alt="object png" />
         </div>
         <div className="absolute -left-20 -top-20 !-z-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
         <Layout>

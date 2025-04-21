@@ -8,7 +8,7 @@ import { formatToTomanWithCommas } from "../../../../utils/helper";
 
 export function ArzCardSkeleton() {
   return (
-    <div className="flex h-[8.5rem] !w-full animate-pulse cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow">
+    <div className="flex h-[8.5rem] animate-pulse cursor-pointer items-center justify-between gap-12 rounded-full bg-white px-10 shadow">
       <div className="flex flex-col items-start gap-2">
         <div className="flex items-center gap-2">
           <Skeleton className="h-8 w-8 rounded-full" />
