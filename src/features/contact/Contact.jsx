@@ -12,7 +12,7 @@ export default function Contact() {
     <div className="relative py-20 lg:py-14 2xl:my-0">
       <img
         src={object}
-        className="absolute right-0 top-0 -z-10 h-full w-full lg:!min-w-[110%]"
+        className="absolute right-0 top-0 -z-10 h-full w-full"
         alt="object png"
       />
       <Navbar />
