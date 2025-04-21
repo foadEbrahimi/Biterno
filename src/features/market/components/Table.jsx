@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import marketplace from "@assets/imgs/marketplace.svg";
+import marketplace from "@assets/imgs/market/marketplace.svg";
 
 import { COIN_MAPPING } from "@/constants/coins";
 import TableRow, { TableRowSkeleton } from "./TableRow";

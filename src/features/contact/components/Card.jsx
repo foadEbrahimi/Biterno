@@ -1,6 +1,6 @@
 import React from "react";
 
-import educationPic from "@assets/imgs/education-pic-3.png";
+import educationPic from "@assets/imgs/contact/education-pic-3.png";
 
 export default function Card() {
   return (

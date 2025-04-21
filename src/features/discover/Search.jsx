@@ -1,6 +1,7 @@
 import React from "react";
 
-import search from "../../assets/imgs/search.svg";
+import search from "../../assets/imgs/discover/search.svg";
+
 import {
   Select,
   SelectContent,

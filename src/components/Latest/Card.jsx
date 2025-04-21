@@ -1,7 +1,7 @@
 import React from "react";
 
 import arrow from "../../assets/imgs/common/arrow-long.svg";
-import img from "../../assets/imgs/img.png";
+import img from "../../assets/imgs/discover/img.png";
 
 export default function Card() {
   return (
