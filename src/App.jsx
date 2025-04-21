@@ -2,10 +2,9 @@ import React from "react";
 import { Outlet, Route, Routes } from "react-router";
 
 import Footer from "@/components/layout/landing/Footer";
-import Navbar from "@/components/layout/landing/Navbar";
 import Landing from "@features/Landing/Landing";
 
-import Contact from "@/features/Landing/whyUs/WhyUs";
+import Contact from "@/features/contact/Contact";
 import Login from "@features/auth/login/Login";
 import Signup from "@features/auth/signup/Signup";
 import Discover from "@features/discover/Discover";
