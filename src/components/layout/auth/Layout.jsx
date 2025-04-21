@@ -1,30 +1,32 @@
 import React from "react";
 import { Outlet } from "react-router";
 
-import logo from "@assets/imgs/logo/logo.png";
-import bgImg from "@assets/imgs/auth/bg-login.png";
+import bgImg from "@assets/imgs/auth/mobile.svg";
+import object from "@assets/imgs/landing/hero/object.png";
 
 export default function Layout() {
   return (
     <div className="grid h-screen lg:grid-cols-12">
       <div
         id="layoutBg"
-        className="relative hidden bg-[#23262F] p-5 lg:col-span-4 lg:block"
+        className="relative hidden z-20 bg-[#23262fc6] p-5 lg:col-span-4 lg:block"
       >
         <img
           src={bgImg}
           draggable={false}
-          alt="bg img "
-          className="absolute left-0 top-0 h-full scale-x-[-1]"
+          alt="mobile img"
+          className="absolute -right-10 top-0 h-full !min-w-[30rem] xl:!min-w-[35rem] 2xl:!min-w-[40rem]"
         />
-        <div className="flex cursor-pointer items-center gap-1">
-          <img src={logo} alt="bitCloud logo" className="w-10" />
-          <span className="text-3xl text-white">بیتکلود</span>
-        </div>
+        <div className="absolute -left-[22%] bottom-40 !-z-20 h-[326px] w-[422px] rounded-full bg-primary/30 blur-[40px]"></div>
       </div>
       <div className="bg-white p-5 lg:col-span-8">
         <Outlet />
       </div>
+      <img
+        src={object}
+        className="absolute left-0 top-0 h-full !min-w-[250%] scale-x-[-1] lg:!min-w-[110%]"
+        alt=""
+      />
     </div>
   );
 }
