@@ -1,7 +1,7 @@
 import React from "react";
 
-import chart from "@assets/imgs/chart.svg";
-import chart2 from "@assets/imgs/chart2.svg";
+import chart from "@assets/imgs/common/chart.svg";
+import chart2 from "@assets/imgs/common/chart2.svg";
 
 import { Skeleton } from "@/components/ui/Skeleton";
 import { formatToTomanWithCommas } from "@/utils/helper";
@@ -31,9 +31,6 @@ export function TableRowSkeleton() {
         <Skeleton className="h-8 w-20" />
       </td>
       <td className="hidden w-[12rem] px-1 py-3 sm:table-cell">
-        <Skeleton className="h-8 w-20" />
-      </td>
-      <td className="hidden w-[8rem] px-1 py-3 sm:table-cell">
         <Skeleton className="h-8 w-20" />
       </td>
     </tr>

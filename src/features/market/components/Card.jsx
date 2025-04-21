@@ -1,7 +1,8 @@
 import React from "react";
 
-import chart from "@assets/imgs/chart.svg";
-import chart2 from "@assets/imgs/chart2.svg";
+import chart from "@assets/imgs/common/chart.svg";
+import chart2 from "@assets/imgs/common/chart2.svg";
+
 import { formatToTomanWithCommas } from "@/utils/helper";
 
 export default function Card({ image, name, price, change24h }) {

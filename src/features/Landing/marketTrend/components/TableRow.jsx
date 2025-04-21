@@ -2,8 +2,9 @@ import React from "react";
 
 import { Skeleton } from "@/components/ui/Skeleton";
 
-import chart from "@assets/imgs/chart.svg";
-import chart2 from "@assets/imgs/chart2.svg";
+import chart from "@assets/imgs/common/chart.svg";
+import chart2 from "@assets/imgs/common/chart2.svg";
+
 import { formatToTomanWithCommas } from "@/utils/helper";
 
 export function TableRowSkeleton() {
