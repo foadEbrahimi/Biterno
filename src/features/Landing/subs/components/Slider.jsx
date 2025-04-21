@@ -34,7 +34,7 @@ export default function Slider() {
         nextEl: ".nextSlide",
         prevEl: ".prevSlide",
       }}
-      className="mySwiper w-full"
+      className="subsSlider w-full"
     >
       {subs.map((item, index) => (
         <SwiperSlide className="!w-full !bg-transparent">

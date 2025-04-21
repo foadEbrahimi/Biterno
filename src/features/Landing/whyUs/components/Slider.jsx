@@ -33,7 +33,7 @@ export default function Slider() {
           slidesPerView: 3,
         },
       }}
-      className="mySwiper p-3"
+      className="whyUsSlider p-3"
     >
       {contact.map((item, index) => (
         <SwiperSlide className="min-h-full rounded-2xl !bg-transparent">

@@ -81,7 +81,7 @@ export default function Slider() {
           disableOnInteraction: false,
         }}
         loop={true}
-        loopedSlides={3}
+        loopedslides={3}
         speed={500}
         on={{
           transitionEnd: function () {
