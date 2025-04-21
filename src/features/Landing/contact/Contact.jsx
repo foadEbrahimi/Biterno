@@ -36,10 +36,10 @@ export default function Contact() {
               nextEl: ".nextSlide",
               prevEl: ".prevSlide",
             }}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 1500,
+            //   disableOnInteraction: false,
+            // }}
             breakpoints={{
               768: {
                 slidesPerView: 2,
@@ -51,7 +51,7 @@ export default function Contact() {
             className="mySwiper p-3"
           >
             {contact.map((item, index) => (
-              <SwiperSlide className="rounded-2xl !bg-transparent">
+              <SwiperSlide className="rounded-2xl min-h-full !bg-transparent">
                 <Card {...item} key={index + 1} />
               </SwiperSlide>
             ))}
