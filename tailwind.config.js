@@ -14,10 +14,10 @@ export default {
       },
       fontFamily: {
         arial: ["Arial"],
-        vazirBold: ["vazir-bold"],
-        vazirRegular: ["vazir-regular"],
-        vazirDemiBold: ["vazir-demiBold"],
-        vazirMedium: ["vazir-medium"],
+        iranSansBold: ["iranSans-bold"],
+        iranSansRegular: ["iranSans-regular"],
+        iranSansDemiBold: ["iranSans-demiBold"],
+        iranSansMedium: ["iranSans-medium"],
       },
       keyframes: {
         "accordion-down": {

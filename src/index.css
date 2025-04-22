@@ -4,24 +4,25 @@
 
 /* base  */
 @font-face {
-  font-family: "vazir-bold";
+  font-family: "iranSans-bold";
   src: url("./assets/font/IRANSansXFaNum-Bold.woff2");
 }
 @font-face {
-  font-family: "vazir-regular";
+  font-family: "iranSans-regular";
   src: url("./assets/font/IRANSansXFaNum-Regular.woff2");
 }
 @font-face {
-  font-family: "vazir-demiBold";
+  font-family: "iranSans-demiBold";
   src: url("./assets/font/IRANSansXFaNum-DemiBold.woff2");
 }
 @font-face {
-  font-family: "vazir-medium";
+  font-family: "iranSans-medium";
   src: url("./assets/font/IRANSansXFaNum-Medium.woff2");
 }
+
 html {
   scroll-behavior: smooth;
-  font-family: "vazir-regular";
+  font-family: "iranSans-regular";
   overflow-x: hidden;
 }
 
