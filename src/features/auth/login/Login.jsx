@@ -129,9 +129,11 @@ export default function Login() {
                   همین حالا ثبت نام کنید
                 </button>
               </Link>
-              <button className="text-[14px] font-bold text-primary transition-all duration-300">
-                فراموشی رمز ؟
-              </button>
+              <Link to="/auth/forget">
+                <button className="text-[14px] font-bold text-primary transition-all duration-300">
+                  فراموشی رمز ؟
+                </button>
+              </Link>
             </div>
             <button
               type="submit"
