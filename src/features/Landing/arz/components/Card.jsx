@@ -30,7 +30,7 @@ export default function CardArz({ name, image, price, change24h }) {
       <div className="flex flex-col items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
-          <span className="font-vazirDemiBold text-sm uppercase text-gray-500 dark:text-white">
+          <span className="font-iranSansDemiBold text-sm uppercase text-gray-500 dark:text-white">
             {name}/irt
           </span>
         </div>

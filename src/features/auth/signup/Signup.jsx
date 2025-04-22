@@ -63,7 +63,7 @@ export default function Signup() {
               id="phoneNumber"
               type="number"
               placeholder="شماره تلفن"
-              className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazirRegular placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+              className="placeholder:font-iranSansRegular rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
             />
           </div>
           <div className="mt-5 flex flex-col gap-2">
@@ -76,7 +76,7 @@ export default function Signup() {
                 id="password"
                 type="password"
                 placeholder="رمز عبور"
-                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazirRegular placeholder:text-[#777E90] focus:outline-none"
+                className="placeholder:font-iranSansRegular border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
               />
               <div
                 onClick={(e) =>
@@ -105,7 +105,7 @@ export default function Signup() {
                 id="reapetpassword"
                 type="password"
                 placeholder="رمز عبور"
-                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-vazirRegular placeholder:text-[#777E90] focus:outline-none"
+                className="placeholder:font-iranSansRegular border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
               />
               <div
                 onClick={(e) =>
@@ -140,7 +140,10 @@ export default function Signup() {
           </div>
           <button className="mt-4 flex w-full items-center gap-1 dark:text-white">
             قبلا ثبت نام کرده اید ؟{" "}
-            <Link to="/auth/login" className="font-vazirDemiBold text-primary">
+            <Link
+              to="/auth/login"
+              className="font-iranSansDemiBold text-primary"
+            >
               ورود
             </Link>
           </button>

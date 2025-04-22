@@ -13,7 +13,7 @@ export default function Subs() {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <img src={logo} className="w-7" alt="bitCloud logo" />
-            <span className="font-vazirDemiBold text-lg text-textColor">
+            <span className="font-iranSansDemiBold text-lg text-textColor">
               بیترنو
             </span>
           </div>

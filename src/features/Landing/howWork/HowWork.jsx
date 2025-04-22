@@ -9,14 +9,14 @@ import Slider from "./components/Slider";
 
 export default function HowWork() {
   return (
-    <div className="flex h-[70dvh] dark:mb-10 items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 dark:bg-[#141416] lg:h-[80dvh] lg:py-0">
+    <div className="flex h-[70dvh] items-center justify-center rounded-b-[50px] rounded-t-[50px] bg-[#F4F5F6] py-20 dark:mb-10 dark:bg-[#141416] lg:h-[80dvh] lg:py-0">
       <div>
         <div className="~px-5/32">
           <div className="flex flex-col items-center justify-center gap-2">
             <span className="text-center font-bold ~text-2xl/5xl dark:text-white">
               شروع کار در بیترنو
             </span>
-            <p className="mt-3 max-w-[30rem] text-center font-vazirDemiBold text-sm !leading-[2rem] text-[#353945] dark:text-white/80">
+            <p className="font-iranSansDemiBold mt-3 max-w-[30rem] text-center text-sm !leading-[2rem] text-[#353945] dark:text-white/80">
               فرایند ساده و سریع برای شروع فعالیت شما
             </p>
           </div>

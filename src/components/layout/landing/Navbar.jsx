@@ -21,8 +21,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/shadcn/dropdown-menu";
 
-import { useLocalState } from "@/store/context/LocalStateProvider";
 import { useTheme } from "@/components/common/theme-provider";
+import { useLocalState } from "@/store/context/LocalStateProvider";
 
 export default function Navbar() {
   const { showNav, toggleNav } = useLocalState();
@@ -30,14 +30,14 @@ export default function Navbar() {
 
   return (
     <div className={`flex w-full justify-center`}>
-      <div className="bg-bg !fixed !top-0 z-40 w-full rounded-b-2xl p-[18px] shadow dark:border dark:border-t-0 dark:border-gray-700 md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
+      <div className="!fixed !top-0 z-40 w-full rounded-b-2xl bg-bg p-[18px] shadow dark:border dark:border-t-0 dark:border-gray-700 md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
         <div>
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
                 <div className="flex cursor-pointer items-center gap-1">
                   <img src={logo} className="w-7" alt="bitCloud logo" />
-                  <span className="font-vazirDemiBold text-lg text-textColor">
+                  <span className="font-iranSansDemiBold text-lg text-textColor">
                     بیترنو
                   </span>
                 </div>
@@ -157,7 +157,7 @@ export default function Navbar() {
 
               <Link to="/auth/login">
                 <div className="mr-2 hidden md:flex md:items-center md:gap-3">
-                  <button className="group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 font-vazirBold text-white transition-all duration-500 hover:text-black">
+                  <button className="font-iranSansBold group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 text-white transition-all duration-500 hover:text-black">
                     <svg
                       style={{
                         width: "1.5rem",
@@ -189,7 +189,7 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} bg-bg left-0 top-0 flex h-screen w-full flex-col pb-5 pt-5 md:hidden`}
+        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-bg pb-5 pt-5 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/market">

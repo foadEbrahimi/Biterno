@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router";
 
-import investing from "@assets/imgs/landing/hero/investing.svg";
-
 import Slider from "./Slider";
 
 export default function Content() {
   return (
-    <div id="heroSection" className="pt-12 ~px-5/40 md:!pl-0 md:pt-36 xl:pt-24">
+    <div
+      id="heroSection"
+      className="!z-40 pt-12 ~px-5/40 md:!pl-0 md:pt-36 xl:pt-24"
+    >
       <div className="flex h-full flex-col items-center gap-10 pt-10 md:flex-row md:items-start md:justify-between">
         <div className="flex flex-1 flex-col items-center gap-2.5 md:flex md:items-start">
           <h1 className="text-center font-bold !leading-[3.5rem] text-textColor ~text-4xl/5xl md:text-right lg:!leading-[4.4rem] xl:!leading-[4rem] 2xl:!leading-[4.5rem]">
@@ -31,7 +32,7 @@ export default function Content() {
             </Link>
           </div>
           <Link to="/auth/login">
-            <button className="hidden gap-2 rounded-xl bg-primary px-5 py-3 font-vazirBold text-sm text-white transition-all duration-500 hover:text-black md:flex">
+            <button className="font-iranSansBold hidden gap-2 rounded-xl bg-primary px-5 py-3 text-sm text-white transition-all duration-500 hover:text-black md:flex">
               همین الان شروع کنید
               <svg
                 aria-hidden="true"
@@ -53,11 +54,6 @@ export default function Content() {
           <Slider />
         </div>
         <div className="hidden h-full w-full flex-[1.5] md:mt-3 md:flex md:items-center md:justify-center">
-          {/* <img
-            src={investing}
-            draggable={false}
-            alt="card hero img"
-            /> */}
           <svg
             className="w-full scale-x-[-1]"
             xmlns="http://www.w3.org/2000/svg"

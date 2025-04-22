@@ -52,7 +52,7 @@ export default function Application() {
                     <span className="text-sm dark:text-white">
                       {item.title}
                     </span>
-                    <span className="font-vazirBold dark:text-white">
+                    <span className="font-iranSansBold dark:text-white">
                       {item.label}
                     </span>
                   </div>

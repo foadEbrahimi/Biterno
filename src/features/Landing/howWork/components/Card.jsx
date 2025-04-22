@@ -16,11 +16,15 @@ export default function Card({ image, step, title, desc, index }) {
         />
       </div>
       <div className="">
-        <span className="font-vazirDemiBold text-sm text-[#777E90]">
+        <span className="font-iranSansDemiBold text-sm text-[#777E90]">
           مرحله {step}
         </span>
-        <h2 className="my-3 mt-5 font-vazirBold dark:text-white text-xl">{title}</h2>
-        <p className={`text-[16px] text-[#353945] dark:text-white/80`}>{desc}</p>
+        <h2 className="font-iranSansBold my-3 mt-5 text-xl dark:text-white">
+          {title}
+        </h2>
+        <p className={`text-[16px] text-[#353945] dark:text-white/80`}>
+          {desc}
+        </p>
       </div>
     </div>
   );

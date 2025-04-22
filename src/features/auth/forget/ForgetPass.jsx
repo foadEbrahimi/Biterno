@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Input } from "../../../components/ui/shadcn/input";
 
+import { Link } from "react-router";
 import eye from "../../../assets/imgs/auth/eye.svg";
 import eyeFilled from "../../../assets/imgs/auth/eyeFilled.svg";
 import lock from "../../../assets/imgs/auth/lock.svg";
 import logoB from "../../../assets/imgs/logo/biterno-b.svg";
-import { Link } from "react-router";
 
 export default function ForgetPass() {
   const [part, setPart] = useState("phone");
@@ -31,7 +31,7 @@ export default function ForgetPass() {
         <Link to="/">
           <img src={logoB} className="mx-auto w-14" alt="" />
         </Link>
-        <span className="text-center dark:text-white text-3xl font-bold text-[#23262F]">
+        <span className="text-center text-3xl font-bold text-[#23262F] dark:text-white">
           فراموشی رمز عبور
         </span>
         <hr className="my-5" />
@@ -45,7 +45,7 @@ export default function ForgetPass() {
             </span>
             <span
               onClick={() => setPart("email")}
-              className={`cursor-pointer ${part === "email" ? "bg-[#353945] text-white" : "text-[#777E90] hover:text-[#353945]"} rounded-full px-4 py-1 font-vazirDemiBold transition-all placeholder:font-vazirRegular`}
+              className={`cursor-pointer ${part === "email" ? "bg-[#353945] text-white" : "text-[#777E90] hover:text-[#353945]"} font-iranSansDemiBold placeholder:font-iranSansRegular rounded-full px-4 py-1 transition-all`}
             >
               ایمیل
             </span>
@@ -64,7 +64,7 @@ export default function ForgetPass() {
                   id="email"
                   type="email"
                   placeholder="ایمیل"
-                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazirRegular placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                  className="placeholder:font-iranSansRegular rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
                 />
               </div>
             ) : (
@@ -77,13 +77,13 @@ export default function ForgetPass() {
                   id="phone"
                   type="phone"
                   placeholder="شماره تماس"
-                  className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-vazirRegular placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+                  className="placeholder:font-iranSansRegular rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
                 />
               </div>
             )}
             <div className="mt-4 flex items-center justify-between text-xs">
               <Link to="/auth/register">
-                <button className="font-vazirDemiBold text-[14px] text-primary">
+                <button className="font-iranSansDemiBold text-[14px] text-primary">
                   همین حالا ثبت نام کنید
                 </button>
               </Link>

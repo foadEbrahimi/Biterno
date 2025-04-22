@@ -41,7 +41,7 @@ export default function TableRow({ index, crypto }) {
   const { name, image, price, change24h } = crypto;
 
   return (
-    <tr className="border-b transition-all duration-500 hover:scale-105 hover:bg-white/50 dark:hover:bg-transparent hover:shadow-md">
+    <tr className="border-b transition-all duration-500 hover:scale-105 hover:bg-white/50 hover:shadow-md dark:hover:bg-transparent">
       <td className="hidden w-[3rem] px-4 py-3 sm:table-cell">
         <span className="text-sm font-bold text-black dark:text-white">
           {index + 1}
@@ -61,7 +61,7 @@ export default function TableRow({ index, crypto }) {
       <td className="w-[8rem] px-1 py-3 pl-7 text-center xl:pl-20">
         <span
           dir="ltr"
-          className={`font-vazirBold ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
+          className={`font-iranSansBold ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
         >
           {change24h}%
         </span>

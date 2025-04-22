@@ -10,10 +10,10 @@ export default function Card({ title, desc, img }) {
         <span className="text-center font-bold !leading-[2.5rem] ~text-2xl/4xl dark:text-white lg:text-right">
           {title}
         </span>
-        <span className="max-w-[15rem] text-center font-vazirDemiBold text-sm text-[#777E90] lg:min-w-fit lg:text-right">
+        <span className="font-iranSansDemiBold max-w-[15rem] text-center text-sm text-[#777E90] lg:min-w-fit lg:text-right">
           {desc}
         </span>
-        <button className="mt-10 w-fit rounded-full border-2 px-4 py-2.5 font-vazirDemiBold text-[16px] text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white">
+        <button className="font-iranSansDemiBold mt-10 w-fit rounded-full border-2 px-4 py-2.5 text-[16px] text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white">
           اکنون عضو شوید
         </button>
       </div>

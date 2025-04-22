@@ -23,7 +23,7 @@ export default function Card({ image, name, price, change24h }) {
               </span>
               <span
                 dir="ltr"
-                className={`flex items-center justify-center rounded-full py-0.5 font-vazirDemiBold text-sm ${
+                className={`font-iranSansDemiBold flex items-center justify-center rounded-full py-0.5 text-sm ${
                   change24h > 0 ? "text-green-600" : "text-red-600"
                 } px-2`}
               >
@@ -33,7 +33,7 @@ export default function Card({ image, name, price, change24h }) {
             </div>
           </div>
         </div>
-        <span className="mt-1 flex items-center gap-2 font-vazirBold text-[16px] transition-all duration-200 group-hover/hover:text-primary dark:text-white lg:text-lg xl:text-[16px] 2xl:text-xl">
+        <span className="font-iranSansBold mt-1 flex items-center gap-2 text-[16px] transition-all duration-200 group-hover/hover:text-primary dark:text-white lg:text-lg xl:text-[16px] 2xl:text-xl">
           {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
         </span>
       </div>
