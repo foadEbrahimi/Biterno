@@ -7,16 +7,16 @@ import object from "@assets/imgs/landing/hero/object.png";
 
 export default function Hero() {
   return (
-    <div className="bg-bg">
-      <div className="relative">
+    <div className="relative bg-bg">
+      <div className="relative z-20">
         <Navbar />
         <Content />
-        <div className="!z-10">
-          <div className="absolute right-0 top-0 h-full w-full">
-            <img src={object} alt="object png" />
-          </div>
-          <div className="absolute -left-20 -top-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+      </div>
+      <div className="!z-10">
+        <div className="absolute right-0 top-0 h-full w-full">
+          <img src={object} alt="object png" className="h-full" />
         </div>
+        <div className="absolute -left-20 -top-20 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
       </div>
     </div>
   );
