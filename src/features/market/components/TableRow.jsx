@@ -42,7 +42,7 @@ export default function TableRow({ index, crypto }) {
   const { name, image, price, change24h, change7d, marketCap } = crypto;
 
   return (
-    <tr className="group/row border-gray-200 bg-bg transition-all duration-200 hover:bg-[#F4F5F6]">
+    <tr className="group/row border-gray-200 bg-bg transition-all duration-500 hover:bg-[#F4F5F6] dark:hover:scale-95 dark:hover:bg-transparent">
       <th
         scope="row"
         className="whitespace-nowrap py-4 font-medium text-gray-900"
