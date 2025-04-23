@@ -4,7 +4,29 @@ import chart from "@assets/imgs/common/chart.svg";
 import chart2 from "@assets/imgs/common/chart2.svg";
 
 import { formatToTomanWithCommas } from "@/utils/helper";
+import { Skeleton } from "@/components/ui/Skeleton";
 
+export function CardSkeleton() {
+  return (
+    <div className="flex items-start gap-5 lg:!w-[17rem] xl:!w-[20rem] 2xl:!w-[25rem]" dir="rtl">
+      <div className="flex items-center gap-1">
+        <div className="flex gap-3">
+          <div className="flex flex-col">
+            <Skeleton className="h-8 w-10 rounded-full" />
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-8 w-14 rounded-full" />
+              <Skeleton className="h-8 w-14 rounded-full" />
+            </div>
+          </div>
+        </div>
+        <Skeleton className="h-8 w-8 rounded-full" />
+      </div>
+      <Skeleton className="hidden h-8 w-[8rem] rounded-full" />
+    </div>
+  );
+}
 export default function Card({ image, name, price, change24h }) {
   return (
     <div
@@ -23,7 +45,7 @@ export default function Card({ image, name, price, change24h }) {
               </span>
               <span
                 dir="ltr"
-                className={`font-iranSansDemiBold flex items-center justify-center rounded-full py-0.5 text-sm ${
+                className={`flex items-center justify-center rounded-full py-0.5 font-iranSansDemiBold text-sm ${
                   change24h > 0 ? "text-green-600" : "text-red-600"
                 } px-2`}
               >
@@ -33,7 +55,7 @@ export default function Card({ image, name, price, change24h }) {
             </div>
           </div>
         </div>
-        <span className="font-iranSansBold mt-1 flex items-center gap-2 text-[16px] transition-all duration-200 group-hover/hover:text-primary dark:text-white lg:text-lg xl:text-[16px] 2xl:text-xl">
+        <span className="mt-1 flex items-center gap-2 font-iranSansBold text-[16px] transition-all duration-200 group-hover/hover:text-primary dark:text-white lg:text-lg xl:text-[16px] 2xl:text-xl">
           {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
         </span>
       </div>

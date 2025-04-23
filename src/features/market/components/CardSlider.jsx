@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-import Card from "./Card";
+import Card, { CardSkeleton } from "./Card";
 import { Skeleton } from "@/components/ui/Skeleton";
 
 const API_ENDPOINTS = {
@@ -89,11 +89,17 @@ export default function CardSlider() {
       modules={[Autoplay]}
       className="!h-fit pt-5"
     >
-      {cryptos.slice(0, 3).map((crypto) => (
-        <SwiperSlide className="!w-full !bg-transparent lg:!w-fit">
-          <Card key={crypto.id} {...crypto} />
-        </SwiperSlide>
-      ))}
+      {isLoading
+        ? Array.from({ length: 3 }).map((_, index) => (
+            <SwiperSlide className="!w-full !bg-transparent lg:!w-fit">
+              <CardSkeleton key={index} />
+            </SwiperSlide>
+          ))
+        : cryptos.slice(0, 3).map((crypto) => (
+            <SwiperSlide className="!w-full !bg-transparent lg:!w-fit">
+              <Card key={crypto.id} {...crypto} />
+            </SwiperSlide>
+          ))}
     </Swiper>
   );
 }
