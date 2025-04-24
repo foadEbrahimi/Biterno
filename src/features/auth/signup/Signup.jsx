@@ -63,7 +63,7 @@ export default function Signup() {
               id="phoneNumber"
               type="number"
               placeholder="شماره تلفن"
-              className="placeholder:font-iranSansRegular rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none"
+              className="rounded-xl border-2 border-[#E6E8EC] px-3 py-3 font-sans text-[#23262F] transition-colors duration-300 placeholder:font-iranSansRegular placeholder:text-[#777E90] focus:border-[#777E90] focus:outline-none dark:text-white"
             />
           </div>
           <div className="mt-5 flex flex-col gap-2">
@@ -76,7 +76,7 @@ export default function Signup() {
                 id="password"
                 type="password"
                 placeholder="رمز عبور"
-                className="placeholder:font-iranSansRegular border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
+                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-iranSansRegular placeholder:text-[#777E90] focus:outline-none dark:text-white"
               />
               <div
                 onClick={(e) =>
@@ -105,7 +105,7 @@ export default function Signup() {
                 id="reapetpassword"
                 type="password"
                 placeholder="رمز عبور"
-                className="placeholder:font-iranSansRegular border-0 px-3 py-3 font-sans text-[#23262F] placeholder:text-[#777E90] focus:outline-none"
+                className="border-0 px-3 py-3 font-sans text-[#23262F] placeholder:font-iranSansRegular placeholder:text-[#777E90] focus:outline-none dark:text-white"
               />
               <div
                 onClick={(e) =>
