@@ -29,15 +29,15 @@ export default function Navbar() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <div className={`flex w-full justify-center`}>
+    <div className={`relative flex w-full justify-center`}>
       <div className="!fixed !top-0 z-40 w-full rounded-b-2xl bg-bg p-[18px] shadow dark:border dark:border-t-0 dark:border-gray-700 md:!max-w-[95%] lg:!max-w-[85%] xl:!max-w-[85%] 2xl:!max-w-[80%]">
         <div>
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
               <Link to="/">
-                <div className="flex cursor-pointer items-center gap-1">
-                  <img src={logo} className="w-7" alt="bitCloud logo" />
-                  <span className="font-iranSansDemiBold text-lg text-textColor">
+                <div className="flex cursor-pointer items-center ~gap-1/2">
+                  <img src={logo} className="~w-7/10" alt="bitCloud logo" />
+                  <span className="font-iranSansBold text-textColor ~text-lg/2xl">
                     بیترنو
                   </span>
                 </div>
@@ -157,7 +157,7 @@ export default function Navbar() {
 
               <Link to="/auth/login">
                 <div className="mr-2 hidden md:flex md:items-center md:gap-3">
-                  <button className="font-iranSansBold group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 text-white transition-all duration-500 hover:text-black">
+                  <button className="group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 font-iranSansBold text-white transition-all duration-500 hover:text-black">
                     <svg
                       style={{
                         width: "1.5rem",
@@ -189,7 +189,7 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`fixed mt-14 transition-all duration-300 ${showNav ? "!z-40 opacity-100" : "!-z-40 opacity-0"} left-0 top-0 flex h-screen w-full flex-col bg-bg pb-5 pt-5 md:hidden`}
+        className={`fixed left-0 top-0 mt-14 ${showNav ? "!z-20 !flex" : "hidden"} h-screen w-full flex-col bg-bg pb-5 pt-5 transition-all duration-300 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/market">
@@ -231,12 +231,24 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="mt-auto flex items-center justify-between border-t-2 px-5 pt-3">
-          <img src={linkedin} className="w-7" alt="linkedin svg" />
-          <img src={twitter} className="w-7" alt="twitter svg" />
-          <img src={youtube} className="w-7" alt="youtube svg" />
-          <img src={telegram} className="w-7" alt="telegram svg" />
-          <img src={facebook} className="w-7" alt="telegram svg" />
-          <img src={instagram} className="w-7" alt="telegram svg" />
+          <a href="https://linkedin.com/in/biternoex">
+            <img src={linkedin} className="w-7" alt="linkedin svg" />
+          </a>
+          <a href="https://twitter.com/biternoex" target="_blank">
+            <img src={twitter} className="w-7" alt="twitter svg" />
+          </a>
+          <a href="https://youtube.com/biternoex" target="_blank">
+            <img src={youtube} className="w-7" alt="youtube svg" />
+          </a>
+          <a href="https://t.me/biternoex" target="_blank">
+            <img src={telegram} className="w-7" alt="telegram svg" />
+          </a>
+          <a href="https://facebook.com/biternoex" target="_blank">
+            <img src={facebook} className="w-7" alt="telegram svg" />
+          </a>
+          <a href="https://instagram.com/biternoex" target="_blank">
+            <img src={instagram} className="w-7" alt="telegram svg" />
+          </a>
         </div>
       </div>
     </div>

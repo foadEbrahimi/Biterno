@@ -22,7 +22,7 @@ import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <div className="bg-bg mt-10 dark:mt-0 border-t pt-3 md:py-0">
+    <div className="mt-10 border-t bg-bg pt-3 dark:mt-0 md:py-0">
       <Layout>
         <div className="w-full md:flex md:items-start">
           <Accordion
@@ -32,7 +32,7 @@ export default function Footer() {
             collapsible
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg dark:text-white font-bold">
+              <AccordionTrigger className="text-lg font-bold dark:text-white">
                 صفحات بیشتر
               </AccordionTrigger>
               <AccordionContent>
@@ -53,7 +53,7 @@ export default function Footer() {
                     تماس با ما
                   </li>
                   <li className="transition-all duration-300 hover:text-primary">
-                    سوالات متداول
+                    حریم خصوصی{" "}
                   </li>
                 </ul>
               </AccordionContent>
@@ -92,7 +92,7 @@ export default function Footer() {
                 </Link>
                 <Link to="/contact">
                   <li className="transition-all duration-300 hover:text-primary">
-                    سوالات متداول
+                    حریم خصوصی
                   </li>
                 </Link>
               </ul>
@@ -143,19 +143,29 @@ export default function Footer() {
         </div>
       </Layout>
       <div className="flex flex-col space-y-5 border-t-2 py-5 ~px-5/20 md:flex-row md:items-center md:justify-between">
-        <span className="flex items-center gap-1 text-sm text-[#777E90] dark:text-white">
+        <span className="flex items-center gap-1 text-[#777E90] ~text-xs/sm dark:text-white">
           <img src={logoB} className="w-5" alt="" />
           تمامی حقوق مادی و معنوی برای بیترنو محفوظ است. 2025 ©{" "}
         </span>
         <div className="flex items-center gap-5 [&>*]:cursor-pointer">
-          <a href="">
+          <a href="https://linkedin.com/in/biternoex">
             <img src={linkedin} className="w-7" alt="linkedin svg" />
           </a>
-          <img src={twitter} className="w-7" alt="twitter svg" />
-          <img src={youtube} className="w-7" alt="youtube svg" />
-          <img src={telegram} className="w-7" alt="telegram svg" />
-          <img src={facebook} className="w-7" alt="telegram svg" />
-          <img src={instagram} className="w-7" alt="telegram svg" />
+          <a href="https://twitter.com/biternoex" target="_blank">
+            <img src={twitter} className="w-7" alt="twitter svg" />
+          </a>
+          <a href="https://youtube.com/biternoex" target="_blank">
+            <img src={youtube} className="w-7" alt="youtube svg" />
+          </a>
+          <a href="https://t.me/biternoex" target="_blank">
+            <img src={telegram} className="w-7" alt="telegram svg" />
+          </a>
+          <a href="https://facebook.com/biternoex" target="_blank">
+            <img src={facebook} className="w-7" alt="telegram svg" />
+          </a>
+          <a href="https://instagram.com/biternoex" target="_blank">
+            <img src={instagram} className="w-7" alt="telegram svg" />
+          </a>
         </div>
       </div>
     </div>
