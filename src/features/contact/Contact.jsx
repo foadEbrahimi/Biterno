@@ -9,7 +9,7 @@ export default function Contact() {
   const [state, setState] = useState("general");
 
   return (
-    <div className="bg-bg relative py-20 lg:py-14 2xl:my-0">
+    <div className="relative bg-bg py-20 lg:py-14 2xl:my-0">
       <Layout>
         <div className="absolute right-0 top-0 z-0 h-full w-full">
           <img src={object} alt="object png" />
@@ -57,7 +57,7 @@ export default function Contact() {
                 onClick={() => setState("faq")}
                 className={`cursor-pointer ${state === "faq" ? "bg-primary font-semibold text-white" : "hover:text-primabg-primary text-[#777E90]"}`}
               >
-                سوالات متداول
+                حریم خصوصی
               </li>
             </ul>
             <div className="flex flex-col gap-5 rounded-[30px] border text-center text-[16px] leading-10 text-black/80 ~p-4/10 dark:text-white">
