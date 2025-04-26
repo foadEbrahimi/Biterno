@@ -134,8 +134,10 @@ export default function Signup() {
               className="text-sm font-semibold text-[#777E90]"
             >
               با ثبت نام در بیترنو ،{" "}
-              <Link className="text-primary">قوانین و مقررات</Link> آن را
-              میپذیرید.
+              <Link to="/contact" className="text-primary">
+                قوانین و مقررات
+              </Link>{" "}
+              آن را میپذیرید.
             </label>
           </div>
           <button className="mt-4 flex w-full items-center gap-1 dark:text-white">
