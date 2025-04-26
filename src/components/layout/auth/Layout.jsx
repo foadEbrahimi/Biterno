@@ -6,7 +6,7 @@ import object from "@assets/imgs/landing/hero/object.png";
 
 export default function Layout() {
   return (
-    <div className="grid h-screen lg:grid-cols-12 dark:bg-black">
+    <div className="grid min-h-screen lg:grid-cols-12 dark:bg-black">
       <div
         id="layoutBg"
         className="relative z-30 hidden bg-[#23262fc6] dark:bg-black p-5 lg:col-span-4 lg:block"
@@ -19,7 +19,7 @@ export default function Layout() {
         />
         <div className="absolute -left-[22%] bottom-40 !-z-20 h-[326px] w-[422px] rounded-full bg-primary/30 blur-[40px]"></div>
       </div>
-      <div className="z-30 p-5 lg:col-span-8">
+      <div className="z-30 p-5 min-h-screen lg:col-span-8">
         <Outlet />
       </div>
       <img
