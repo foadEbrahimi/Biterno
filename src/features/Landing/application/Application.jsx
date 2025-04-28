@@ -17,9 +17,9 @@ export default function Application() {
           </div>
           <div className="flex flex-1 flex-col gap-4">
             <div className="flex flex-col gap-4">
-              <h3 className="font-bold !leading-[3rem] text-[#23262F] ~text-2xl/5xl dark:text-white">
+              <h1 className="font-bold !leading-[3rem] text-[#23262F] ~text-2xl/5xl dark:text-white">
                 اپلیکیشن بیترنو ( بزودی )
-              </h3>
+              </h1>
               <span className="text-sm font-semibold text-[#777E90]">
                 معامله در هرجا و هر مکان با اپلیکیشن بیترنو
               </span>
