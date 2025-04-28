@@ -19,7 +19,10 @@ export default function Crypto() {
           <span className="font-bold ~text-xl/4xl dark:text-white">
             اخبار بازار
           </span>
-          <button className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white md:flex lg:text-base">
+          <button
+            aria-label="View More"
+            className="hidden rounded-full border-2 px-4 py-2.5 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white md:flex lg:text-base"
+          >
             مشاهده بیشتر
           </button>
         </div>
@@ -53,14 +56,23 @@ export default function Crypto() {
             </div>
           </div>
           <div className="!mt-1 flex items-center justify-center gap-3 lg:hidden">
-            <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+            <button
+              aria-label="Next Slide"
+              className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2"
+            >
               <img src={arrow} alt="" className="w-4" />
             </button>
-            <button className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+            <button
+              aria-label="Previous Slide"
+              className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2"
+            >
               <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
             </button>
           </div>
-          <button className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white md:hidden lg:hidden">
+          <button
+            aria-label="View More"
+            className="hover:pri !mt-4 w-full rounded-full border-2 p-3 font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white md:hidden lg:hidden"
+          >
             مشاهده بیشتر
           </button>
         </div>

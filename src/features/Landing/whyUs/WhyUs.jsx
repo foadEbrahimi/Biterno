@@ -8,10 +8,10 @@ import { Link } from "react-router";
 
 export default function WhyUs() {
   return (
-    <div className="relative mt-20 flex min-h-[100dvh] items-center rounded-b-[50px] rounded-t-[50px] bg-gray-100 dark:bg-[#141416] py-20">
+    <div className="relative mt-20 flex min-h-[100dvh] items-center rounded-b-[50px] rounded-t-[50px] bg-gray-100 py-20 dark:bg-[#141416]">
       <Layout>
         <div className="flex flex-col items-center">
-          <span className="mb-3 max-w-[23rem] dark:text-white font-bold !leading-[3rem] ~text-2xl/4xl md:text-center">
+          <span className="mb-3 max-w-[23rem] font-bold !leading-[3rem] ~text-2xl/4xl dark:text-white md:text-center">
             چرا بیترنو ؟{" "}
           </span>
           <p className="text-center text-sm font-semibold text-[#777E90]">
@@ -23,10 +23,16 @@ export default function WhyUs() {
           <Slider />
         </div>
         <div className="mt-8 flex items-center justify-center gap-3 text-white/50 lg:hidden">
-          <button className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+          <button
+            aria-label="Next Slide"
+            className="nextSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2"
+          >
             <img src={arrow} alt="" className="w-4" />
           </button>
-          <button className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2">
+          <button
+            aria-label="Previous Slide"
+            className="prevSlide flex h-10 w-10 items-center justify-center rounded-full hover:border-2"
+          >
             <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
           </button>
         </div>

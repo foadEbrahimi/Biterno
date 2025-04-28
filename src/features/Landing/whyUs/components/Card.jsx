@@ -14,9 +14,12 @@ export default function Card({ title, desc, img }) {
           {desc}
         </p>
       </div>
-      <button className="font-iranSansDemiBold mx-auto flex rounded-full border-2 px-5 py-2 text-[16px] transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white">
-        خرید کریپتو
+      <button aria-label="View More" className="w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+        مشاهده بیشتر
       </button>
     </div>
+  );
+}
+
   );
 }

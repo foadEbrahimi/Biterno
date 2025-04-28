@@ -15,13 +15,13 @@ import {
 
 import Table from "./components/Table";
 
-export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
+export default function MarketTrend({ btn = true, maxCrypto }) {
   return (
     <div
       className={`relative mt-10 flex items-center overflow-hidden rounded-b-[50px] rounded-t-[50px]`}
     >
       <div className="absolute right-0 top-0 h-full w-[250%]">
-        <img src={object} alt="object png" className="" />
+        <img src={object} alt="object png" />
       </div>
       <Layout className="relative z-10 w-full py-10">
         <div className="flex items-center justify-between">
@@ -29,7 +29,10 @@ export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
             روند بازار
           </span>
           <Link to="/market">
-            <button className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white sm:flex lg:text-base">
+            <button
+              aria-label="View More"
+              className="hidden rounded-full border-2 px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white sm:flex lg:text-base"
+            >
               مشاهده بیشتر
             </button>
           </Link>
@@ -44,10 +47,12 @@ export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
           <div className="sm:hidden">
             <Select dir="rtl" className="">
               <SelectTrigger className="dark:!text-white">
-                <SelectValue placeholder="همه" />
+                <SelectValue aria-label="All" placeholder="همه" />
               </SelectTrigger>
               <SelectContent className="bg-white">
-                <SelectItem value="all">همه</SelectItem>
+                <SelectItem aria-label="All" value="all">
+                  همه
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -57,7 +62,10 @@ export default function MarketTrend({ bg = true, btn = true, maxCrypto }) {
 
         {btn && (
           <Link to="/market">
-            <button className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white sm:hidden lg:text-base">
+            <button
+              aria-label="View More"
+              className="mt-5 w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white sm:hidden lg:text-base"
+            >
               مشاهده بیشتر
             </button>
           </Link>
