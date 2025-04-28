@@ -100,7 +100,10 @@ export default function Navbar() {
             <div className="mr-auto flex items-center md:mr-0">
               <DropdownMenu>
                 <DropdownMenuTrigger className="ml-2" asChild>
-                  <button className="flex items-center gap-1 font-bold uppercase">
+                  <button
+                    aria-label="Language"
+                    className="flex items-center gap-1 font-bold uppercase"
+                  >
                     <img
                       src={iranFlag}
                       className="h-6 w-6 rounded-full object-fill"
@@ -127,7 +130,11 @@ export default function Navbar() {
                 </DropdownMenuContent> */}
               </DropdownMenu>
               {theme === "light" ? (
-                <button className="ml-2" onClick={() => setTheme("dark")}>
+                <button
+                  aria-label="Dark Theme"
+                  className="ml-2"
+                  onClick={() => setTheme("dark")}
+                >
                   <svg
                     width="24"
                     height="24"
@@ -152,7 +159,11 @@ export default function Navbar() {
                   </svg>
                 </button>
               ) : (
-                <button className="ml-2" onClick={() => setTheme("light")}>
+                <button
+                  aria-label="Light Theme"
+                  className="ml-2"
+                  onClick={() => setTheme("light")}
+                >
                   <svg
                     xmlnsXlink="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
@@ -165,7 +176,10 @@ export default function Navbar() {
 
               <Link to="/auth/login">
                 <div className="mr-2 hidden md:flex md:items-center md:gap-3">
-                  <button className="group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 font-iranSansBold text-white transition-all duration-500 hover:text-black">
+                  <button
+                    aria-label="User Account"
+                    className="group flex items-center gap-2 rounded-lg bg-primary p-2.5 px-4 font-iranSansBold text-white transition-all duration-500 hover:text-black"
+                  >
                     <svg
                       style={{
                         width: "1.5rem",
@@ -188,6 +202,7 @@ export default function Navbar() {
               </Link>
             </div>
             <button
+              aria-label="Toggle Navigation"
               id="navToggle"
               onClick={() => toggleNav()}
               className={`cursor-pointer ${showNav ? "activeNavToggle" : ""} md:!hidden`}
@@ -240,12 +255,18 @@ export default function Navbar() {
         </ul>
         <div className="flex w-full flex-col items-center gap-3 px-5">
           <Link to="/auth/login" className="w-full">
-            <button className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+            <button
+              aria-label="Login"
+              className="w-full rounded-full border-2 px-5 py-2 font-bold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white"
+            >
               ورود
             </button>
           </Link>
           <Link className="w-full" to="/auth/register">
-            <button className="w-full rounded-full bg-primary px-5 py-2.5 font-bold text-white transition-all duration-500 hover:text-black">
+            <button
+              aria-label="Register"
+              className="w-full rounded-full bg-primary px-5 py-2.5 font-bold text-white transition-all duration-500 hover:text-black"
+            >
               ثبت نام
             </button>
           </Link>
