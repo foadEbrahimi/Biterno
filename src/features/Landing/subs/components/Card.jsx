@@ -14,6 +14,7 @@ export default function Card({ title, desc, img, link }) {
           {desc}
         </span>
         <a
+          aria-label="Subscribe the channel"
           href={link}
           className="mt-10 w-fit rounded-full border-2 px-4 py-2.5 font-iranSansDemiBold text-[16px] text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-[#FCFCFD] dark:text-white"
         >
