@@ -98,27 +98,14 @@ export default function Table({ maxCrypto }) {
       <table className="w-full text-left text-sm rtl:text-right">
         <thead className="border-b uppercase text-gray-700 dark:text-white">
           <tr className="xl:text-[15px]">
-            <th scope="col" className="hidden w-[3rem] px-3 py-3 sm:table-cell">
-              #
-            </th>
-            <th scope="col" className="w-[10rem] px-1 py-3">
-              نام
-            </th>
-            <th scope="col" className="w-[8rem] px-1 py-3">
-              قیمت
-            </th>
-            <th scope="col" className="w-[8rem] px-1 py-3 2xl:pr-5">
-              درصد تغییرات
-            </th>
-            <th
-              scope="col"
-              className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]"
-            >
+            <th className="hidden w-[3rem] px-3 py-3 sm:table-cell">#</th>
+            <th className="w-[10rem] px-1 py-3">نام</th>
+            <th className="w-[8rem] px-1 py-3">قیمت</th>
+            <th className="w-[8rem] px-1 py-3 2xl:pr-5">درصد تغییرات</th>
+            <th className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">
               نمودار
             </th>
-            <th scope="col" className="hidden w-[8rem] px-1 py-3 sm:table-cell">
-              ترید
-            </th>
+            <th className="hidden w-[8rem] px-1 py-3 sm:table-cell">ترید</th>
           </tr>
         </thead>
         <tbody className="overflow-visible">

@@ -10,16 +10,16 @@ export default function Card({ title, desc, img }) {
       />
       <div className="mt-10 space-y-2 pb-12 text-center">
         <span className="text-xl font-bold dark:text-white">{title}</span>
-        <p className="font-iranSansMedium !pt-3 text-center text-[16px] leading-8 text-[#777E90] md:text-[15px] lg:text-[16px] xl:text-[16.8px] 2xl:text-[18px]">
+        <p className="!pt-3 text-center font-iranSansMedium text-[16px] leading-8 text-[#777E90] md:text-[15px] lg:text-[16px] xl:text-[16.8px] 2xl:text-[18px]">
           {desc}
         </p>
       </div>
-      <button aria-label="View More" className="w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+      <button
+        aria-label="View More"
+        className="w-full rounded-full border-2 p-3 font-semibold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white dark:text-white"
+      >
         مشاهده بیشتر
       </button>
     </div>
-  );
-}
-
   );
 }
