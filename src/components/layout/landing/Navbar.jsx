@@ -34,9 +34,9 @@ export default function Navbar() {
         <div>
           <div className="flex items-center md:justify-between">
             <div className="flex items-center justify-between ~gap-3/7">
-              <Link to="/">
+              <Link to="/" aria-label="Home">
                 <div className="flex cursor-pointer items-center ~gap-1/2">
-                  <img src={logo} className="~w-7/10" alt="bitCloud logo" />
+                  <img src={logo} className="~w-7/10" alt="Biterno logo" />
                   <span className="font-iranSansBold text-textColor ~text-lg/2xl">
                     بیترنو
                   </span>
@@ -50,6 +50,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     isActive ? "" : "text-textColor transition-all duration-300"
                   }
+                  aria-label="Convert"
                 >
                   <li>تبدیل</li>
                 </NavLink>
@@ -60,10 +61,15 @@ export default function Navbar() {
                       ? ""
                       : "pr-4 text-textColor transition-all duration-300"
                   }
+                  aria-label="Buy Crypto"
                 >
                   <li className="flex items-center gap-1 text-textColor transition-all duration-300">
                     خرید کریپتو
-                    <img src={chevronBottom} alt="line svg" className="w-5" />
+                    <img
+                      src={chevronBottom}
+                      alt="Dropdown icon"
+                      className="w-5"
+                    />
                   </li>
                 </NavLink>
                 <NavLink
@@ -73,6 +79,7 @@ export default function Navbar() {
                       ? "pr-4"
                       : "pr-4 text-textColor transition-all duration-300"
                   }
+                  aria-label="Market"
                 >
                   <li>بازار</li>
                 </NavLink>
@@ -84,6 +91,7 @@ export default function Navbar() {
                       ? "pr-4"
                       : "pr-4 text-textColor transition-all duration-300"
                   }
+                  aria-label="Contact Us"
                 >
                   <li>تماس با ما</li>
                 </NavLink>
@@ -192,17 +200,25 @@ export default function Navbar() {
         className={`fixed left-0 top-0 mt-14 ${showNav ? "!z-20 !flex" : "hidden"} h-screen w-full flex-col bg-bg pb-5 pt-5 transition-all duration-300 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
-          <Link onClick={() => toggleNav()} to="/market">
+          <Link onClick={() => toggleNav()} to="/market" aria-label="Market">
             <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               بازار
             </li>
           </Link>
-          <Link onClick={() => toggleNav()} to="/auth/login">
+          <Link
+            onClick={() => toggleNav()}
+            to="/auth/login"
+            aria-label="Convert"
+          >
             <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               تبدیل
             </li>
           </Link>
-          <Link onClick={() => toggleNav()} to="/auth/login">
+          <Link
+            onClick={() => toggleNav()}
+            to="/auth/login"
+            aria-label="Buy Crypto"
+          >
             <li className="flex items-center gap-1 border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               خرید کریپتو
               <img
@@ -212,7 +228,11 @@ export default function Navbar() {
               />
             </li>
           </Link>
-          <Link onClick={() => toggleNav()} to="/contact">
+          <Link
+            onClick={() => toggleNav()}
+            to="/contact"
+            aria-label="Contact Us"
+          >
             <li className="border-r-primary py-5 pr-5 transition-all duration-300 hover:border-r-2 hover:pr-8">
               تماس با ما
             </li>
@@ -231,23 +251,43 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="mt-auto flex items-center justify-between border-t-2 px-5 pt-3">
-          <a href="https://linkedin.com/in/biternoex">
-            <img src={linkedin} className="w-7" alt="linkedin svg" />
+          <a aria-label="LinkedIn" href="https://linkedin.com/in/biternoex">
+            <img src={linkedin} className="w-7" alt="LinkedIn icon" />
           </a>
-          <a href="https://twitter.com/biternoex" target="_blank">
-            <img src={twitter} className="w-7" alt="twitter svg" />
+          <a
+            aria-label="Twitter"
+            href="https://twitter.com/biternoex"
+            target="_blank"
+          >
+            <img src={twitter} className="w-7" alt="Twitter icon" />
           </a>
-          <a href="https://youtube.com/biternoex" target="_blank">
-            <img src={youtube} className="w-7" alt="youtube svg" />
+          <a
+            aria-label="YouTube"
+            href="https://youtube.com/biternoex"
+            target="_blank"
+          >
+            <img src={youtube} className="w-7" alt="YouTube icon" />
           </a>
-          <a href="https://t.me/biternoex" target="_blank">
-            <img src={telegram} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Telegram"
+            href="https://t.me/biternoex"
+            target="_blank"
+          >
+            <img src={telegram} className="w-7" alt="Telegram icon" />
           </a>
-          <a href="https://facebook.com/biternoex" target="_blank">
-            <img src={facebook} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Facebook"
+            href="https://facebook.com/biternoex"
+            target="_blank"
+          >
+            <img src={facebook} className="w-7" alt="Facebook icon" />
           </a>
-          <a href="https://instagram.com/biternoex" target="_blank">
-            <img src={instagram} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Instagram"
+            href="https://instagram.com/biternoex"
+            target="_blank"
+          >
+            <img src={instagram} className="w-7" alt="Instagram icon" />
           </a>
         </div>
       </div>

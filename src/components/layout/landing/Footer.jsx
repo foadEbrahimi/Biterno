@@ -148,23 +148,43 @@ export default function Footer() {
           تمامی حقوق مادی و معنوی برای بیترنو محفوظ است. 2025 ©{" "}
         </span>
         <div className="flex items-center gap-5 [&>*]:cursor-pointer">
-          <a href="https://linkedin.com/in/biternoex">
-            <img src={linkedin} className="w-7" alt="linkedin svg" />
+          <a aria-label="LinkedIn" href="https://linkedin.com/in/biternoex">
+            <img src={linkedin} className="w-7" alt="LinkedIn icon" />
           </a>
-          <a href="https://twitter.com/biternoex" target="_blank">
-            <img src={twitter} className="w-7" alt="twitter svg" />
+          <a
+            aria-label="Twitter"
+            href="https://twitter.com/biternoex"
+            target="_blank"
+          >
+            <img src={twitter} className="w-7" alt="Twitter icon" />
           </a>
-          <a href="https://youtube.com/biternoex" target="_blank">
-            <img src={youtube} className="w-7" alt="youtube svg" />
+          <a
+            aria-label="YouTube"
+            href="https://youtube.com/biternoex"
+            target="_blank"
+          >
+            <img src={youtube} className="w-7" alt="YouTube icon" />
           </a>
-          <a href="https://t.me/biternoex" target="_blank">
-            <img src={telegram} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Telegram"
+            href="https://t.me/biternoex"
+            target="_blank"
+          >
+            <img src={telegram} className="w-7" alt="Telegram icon" />
           </a>
-          <a href="https://facebook.com/biternoex" target="_blank">
-            <img src={facebook} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Facebook"
+            href="https://facebook.com/biternoex"
+            target="_blank"
+          >
+            <img src={facebook} className="w-7" alt="Facebook icon" />
           </a>
-          <a href="https://instagram.com/biternoex" target="_blank">
-            <img src={instagram} className="w-7" alt="telegram svg" />
+          <a
+            aria-label="Instagram"
+            href="https://instagram.com/biternoex"
+            target="_blank"
+          >
+            <img src={instagram} className="w-7" alt="Instagram icon" />
           </a>
         </div>
       </div>
