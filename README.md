@@ -21,10 +21,11 @@ The project is organized as follows:
 ├── src/                  # Source code
 │   ├── assets/           # Fonts, images, and other assets
 │   ├── components/       # Reusable UI components
-│   ├── context/          # Context providers for state management
-│   ├── layout/           # Layout components for different pages
 │   ├── lib/              # Utility functions
-│   ├── pages/            # Page components for routing
+│   ├── features/         # Page components for routing
+│   ├── store/            # Context providers and Redux for state management
+│   ├── constants/        # constants
+│   ├── utils/            # utils
 │   ├── index.css         # Global styles
 │   ├── main.jsx          # Application entry point
 │   └── App.jsx           # Main application component
