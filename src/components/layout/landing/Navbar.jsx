@@ -212,7 +212,7 @@ export default function Navbar() {
       </div>
       <div
         id="navSide"
-        className={`fixed left-0 top-0 mt-14 ${showNav ? "!z-20 !flex" : "hidden"} h-screen w-full flex-col bg-bg pb-5 pt-5 transition-all duration-300 md:hidden`}
+        className={`fixed left-0 top-0 mt-14 ${showNav ? "!z-40 !flex" : "hidden"} h-screen w-full flex-col bg-bg pb-5 pt-5 transition-all duration-300 md:hidden`}
       >
         <ul className="flex flex-col text-2xl font-bold [&>*]:cursor-pointer [&>*]:text-[#777E90]">
           <Link onClick={() => toggleNav()} to="/market" aria-label="Market">
