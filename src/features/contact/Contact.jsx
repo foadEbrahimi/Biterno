@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="absolute right-0 top-0 z-0 h-full w-full">
           <img src={object} alt="object png" />
         </div>
-        <div className="absolute -left-20 -top-20 z-0 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <div className="absolute ~-left-0/20 -top-20 z-0 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
         <Navbar />
         <div className="relative !z-20 flex w-full flex-col gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col items-center text-center ~gap-6/10 lg:pt-10 xl:pt-20">
