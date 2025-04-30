@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="absolute right-0 top-0 z-0 h-full w-full">
           <img src={object} alt="object png" />
         </div>
-        <div className="absolute ~-left-0/20 -top-20 z-0 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"></div>
+        <div className="absolute -top-20 z-0 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px] ~-left-0/20"></div>
         <Navbar />
         <div className="relative !z-20 flex w-full flex-col gap-5 md:flex-row">
           <div className="flex w-full flex-1 flex-col items-center text-center ~gap-6/10 lg:pt-10 xl:pt-20">
@@ -98,57 +98,6 @@ export default function Contact() {
           </div>
         </div>
       </Layout>
-      {/* <div className="mt-20 w-full">
-        <span className="flex justify-center text-center font-bold leading-8 text-[#777E90] ~px-5/40">
-          قبل از درخواست پاسخ، ممکن است آن را در مرکز یادگیری رمزنگاری ما بیابید
-        </span>
-        <div className="lg:px-6">
-          <Swiper
-            slidesPerView={"1"}
-            modules={[Navigation]}
-            navigation={{
-              nextEl: ".prevSlide",
-              prevEl: ".nextSlide",
-            }}
-            breakpoints={{
-              768: {
-                slidesPerView: 2, // For md screens
-              },
-              1280: {
-                slidesPerView: 3, // For lg screens
-              },
-              1536: {
-                slidesPerView: 4, // For 2xl screens
-              },
-            }}
-            className="mySwiper"
-          >
-            <SwiperSlide className="!w-full sm:!w-fit">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full sm:!w-fit">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full sm:!w-fit">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full sm:!w-fit">
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide className="!w-full sm:!w-fit">
-              <Card />
-            </SwiperSlide>
-            <div className="flex items-center justify-center gap-3">
-              <button className="nextSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
-                <img src={arrow} alt="" className="w-4" />
-              </button>
-              <button className="prevSlide flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:border-2">
-                <img src={arrow} alt="" className="w-4 scale-x-[-1]" />
-              </button>
-            </div>
-          </Swiper>
-        </div>
-      </div> */}
     </div>
   );
 }
