@@ -3,6 +3,7 @@ import { Outlet, Route, Routes } from "react-router";
 
 import Footer from "@/components/layout/landing/Footer";
 import Landing from "@features/Landing/Landing";
+import NotFound from "@/components/common/NotFound";
 
 import Contact from "@/features/contact/Contact";
 import Login from "@features/auth/login/Login";
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="register" element={<Signup />} />
             <Route path="forget" element={<ForgetPass />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ScrollToTop />
       </ThemeProvider>
