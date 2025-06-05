@@ -8,6 +8,14 @@ import "swiper/css";
 import { Autoplay, EffectCards, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+const cryptos = [
+  { name: "USDT", flag: "usdt-rls", id: "tether" },
+  { name: "BTC", flag: "btc-rls", id: "bitcoin" },
+  { name: "ETH", flag: "eth-rls", id: "ethereum" },
+  { name: "BNB", flag: "bnb-rls", id: "binancecoin" },
+  { name: "ADA", flag: "ada-rls", id: "cardano" },
+];
+
 export default function Slider() {
   const [topCryptos, setTopCryptos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,19 +23,6 @@ export default function Slider() {
   useEffect(() => {
     async function getCrypto() {
       try {
-        // Fetch data from Nobitex API
-        const nobitexRes = await fetch("https://api.nobitex.ir/market/stats");
-        const nobitexData = await nobitexRes.json();
-        // Define the top 5 cryptocurrencies
-        const cryptos = [
-          { name: "USDT", flag: "usdt-rls", id: "tether" },
-          { name: "BTC", flag: "btc-rls", id: "bitcoin" },
-          { name: "ETH", flag: "eth-rls", id: "ethereum" },
-          { name: "BNB", flag: "bnb-rls", id: "binancecoin" },
-          { name: "ADA", flag: "ada-rls", id: "cardano" },
-        ];
-
-        // Fetch additional data from CoinGecko API
         const ids = cryptos.map((crypto) => crypto.id).join(",");
         const coingeckoRes = await fetch(
           `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`,
@@ -41,23 +36,22 @@ export default function Slider() {
         );
         const coingeckoData = await coingeckoRes.json();
         // Combine data from both APIs
-        const combinedData = cryptos.map((crypto) => {
-          const nobitexStats = nobitexData.stats[crypto.flag] || {};
+        const finalResult = cryptos.map((crypto) => {
           const coingeckoStats =
             coingeckoData.find((c) => c.id === crypto.id) || {};
 
           return {
             name: crypto.name,
             flag: crypto.flag,
-            image: coingeckoStats.image, // Image from CoinGecko
-            price: nobitexStats.latest || 0, // Price from Nobitex
-            change24h: nobitexStats.dayChange || 0, // 24h change from Nobitex
+            image: coingeckoStats.image,
+            price: coingeckoStats.current_price || 0,
+            change24h: coingeckoStats.price_change_percentage_24h || 0,
             // marketCap: coingeckoStats.market_cap || 0, // Market Cap from CoinGecko
             // change7d:
             //   coingeckoStats.price_change_percentage_7d_in_currency || 0, // 7d change from CoinGecko
           };
         });
-        setTopCryptos(combinedData);
+        setTopCryptos(finalResult);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
       } finally {
@@ -80,16 +74,6 @@ export default function Slider() {
           delay: 2000,
           disableOnInteraction: false,
         }}
-        // loop={true}
-        // loopedslides={3}
-        // speed={500}
-        // on={{
-        //   transitionEnd: function () {
-        //     if (this.isEnd) {
-        //       this.slideTo(0);
-        //     }
-        //   },
-        // }}
         cardsEffect={{
           rotate: false,
           slideShadows: false,
