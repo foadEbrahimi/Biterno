@@ -65,7 +65,7 @@ export default function TableRow({ index, crypto }) {
           dir="ltr"
           className={`font-iranSansBold ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
         >
-          {change24h}
+          {change24h.toFixed(2)}
         </span>
       </td>
       <td className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">
