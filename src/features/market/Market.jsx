@@ -12,8 +12,8 @@ import object from "@assets/imgs/landing/hero/object.png";
 
 export default function Market() {
   return (
-    <div className="overflow-x-hidden bg-bg">
-      <div className="relative !z-20">
+    <div className="overflow-x-hidden relative bg-bg">
+      <div className=" !z-20">
         <Navbar />
         <div
           id="marketHero"
