@@ -7,13 +7,16 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 import Card, { CardSkeleton } from "./Card";
-import { Skeleton } from "@/components/ui/Skeleton";
 
 const API_ENDPOINTS = {
-  NOBITEX: import.meta.env.VITE_NOBITEX_API_URL,
   COINGECKO: import.meta.env.VITE_COINGECKO_API_URL,
   COINGECKO_API_KEY: import.meta.env.VITE_COINGECKO_API_KEY,
 };
+const cryptosIDS = [
+  { name: "USDT", id: "tether" },
+  { name: "BTC", id: "bitcoin" },
+  { name: "ETH", id: "ethereum" },
+];
 
 export default function CardSlider() {
   const [cryptos, setCryptos] = useState([]);
@@ -22,19 +25,7 @@ export default function CardSlider() {
   useEffect(() => {
     async function getCrypto() {
       try {
-        // Fetch data from Nobitex API
-        const nobitexRes = await fetch(API_ENDPOINTS.NOBITEX);
-        const nobitexData = await nobitexRes.json();
-
-        // Define the top 5 cryptocurrencies
-        const cryptos = [
-          { name: "USDT", flag: "usdt-rls", id: "tether" },
-          { name: "BTC", flag: "btc-rls", id: "bitcoin" },
-          { name: "ETH", flag: "eth-rls", id: "ethereum" },
-        ];
-
-        // Fetch additional data from CoinGecko API
-        const ids = cryptos.map((crypto) => crypto.id).join(",");
+        const ids = cryptosIDS.map((crypto) => crypto.id).join(",");
         const coingeckoRes = await fetch(
           `${API_ENDPOINTS.COINGECKO}?vs_currency=usd&ids=${ids}`,
           {
@@ -46,21 +37,21 @@ export default function CardSlider() {
           },
         );
         const coingeckoData = await coingeckoRes.json();
+
         // Combine data from both APIs
-        const combinedData = cryptos.map((crypto) => {
-          const nobitexStats = nobitexData.stats[crypto.flag] || {};
+        const finalResualt = cryptosIDS.map((crypto) => {
           const coingeckoStats =
             coingeckoData.find((c) => c.id === crypto.id) || {};
-
           return {
             name: crypto.name,
             flag: crypto.flag,
             image: coingeckoStats.image,
-            price: nobitexStats.latest || 0,
-            change24h: nobitexStats.dayChange || 0,
+            price: coingeckoStats.current_price || 0,
+            change24h: coingeckoStats.price_change_percentage_24h || 0,
           };
         });
-        setCryptos(combinedData);
+
+        setCryptos(finalResualt);
       } catch (error) {
         console.error("Error fetching crypto data:", error);
       } finally {
@@ -84,7 +75,6 @@ export default function CardSlider() {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      spaceBetween={20}
       initialSlide={0}
       modules={[Autoplay]}
       className="!h-fit pt-5"
@@ -95,8 +85,8 @@ export default function CardSlider() {
               <CardSkeleton key={index} />
             </SwiperSlide>
           ))
-        : cryptos.slice(0, 3).map((crypto) => (
-            <SwiperSlide className="!w-full !bg-transparent lg:!w-fit">
+        : cryptos.map((crypto) => (
+            <SwiperSlide className="!w-full !bg-transparent lg:!w-2/6">
               <Card key={crypto.id} {...crypto} />
             </SwiperSlide>
           ))}

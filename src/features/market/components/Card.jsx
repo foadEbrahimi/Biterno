@@ -3,12 +3,14 @@ import React from "react";
 import chart from "@assets/imgs/common/chart.svg";
 import chart2 from "@assets/imgs/common/chart2.svg";
 
-import { formatToTomanWithCommas } from "@/utils/helper";
 import { Skeleton } from "@/components/ui/Skeleton";
 
 export function CardSkeleton() {
   return (
-    <div className="flex items-start gap-5 lg:!w-[17rem] xl:!w-[20rem] 2xl:!w-[25rem]" dir="rtl">
+    <div
+      className="flex items-start gap-5 lg:!w-[17rem] xl:!w-[20rem] 2xl:!w-[25rem]"
+      dir="rtl"
+    >
       <div className="flex items-center gap-1">
         <div className="flex gap-3">
           <div className="flex flex-col">
@@ -30,7 +32,7 @@ export function CardSkeleton() {
 export default function Card({ image, name, price, change24h }) {
   return (
     <div
-      className="group/hover flex !w-fit cursor-pointer items-start gap-5"
+      className="group/hover flex !w-fit cursor-pointer items-start gap-5 dark:bg-[#161618] xl:dark:border xl:dark:border-white/50 xl:rounded-full xl:p-5"
       dir="rtl"
     >
       <div className="flex items-center gap-1">
@@ -50,13 +52,15 @@ export default function Card({ image, name, price, change24h }) {
                 } px-2`}
               >
                 {" "}
-                {change24h}
+                {change24h.toFixed(2)}
               </span>
             </div>
           </div>
         </div>
         <span className="mt-1 flex items-center gap-2 font-iranSansBold text-[16px] transition-all duration-200 group-hover/hover:text-primary dark:text-white lg:text-lg xl:text-[16px] 2xl:text-xl">
-          {formatToTomanWithCommas(price.slice(0, -1))} <span>تومان</span>
+          {new Intl.NumberFormat("en-US", {
+            currency: "USD",
+          }).format(price)}
         </span>
       </div>
       <img

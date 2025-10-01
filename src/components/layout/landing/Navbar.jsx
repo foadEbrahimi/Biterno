@@ -98,8 +98,8 @@ export default function Navbar() {
               </ul>
             </div>
             <div className="mr-auto flex items-center md:mr-0">
-              <DropdownMenu>
-                <DropdownMenuTrigger className="ml-2" asChild>
+              {/* <DropdownMenu> */}
+              {/* <DropdownMenuTrigger className="ml-2" asChild>
                   <button
                     aria-label="Language"
                     className="flex items-center gap-1 font-bold uppercase"
@@ -110,8 +110,8 @@ export default function Navbar() {
                       alt="iran flag"
                     />
                   </button>
-                </DropdownMenuTrigger>
-                {/* <DropdownMenuContent
+                </DropdownMenuTrigger> */}
+              {/* <DropdownMenuContent
                   dir="rtl"
                   className="ml-5 mt-4 w-56 bg-white p-3 shadow-xl lg:ml-0"
                 >
@@ -128,7 +128,7 @@ export default function Navbar() {
                     <span className="text-textColor">انگلیسی</span>
                   </DropdownMenuCheckboxItem>
                 </DropdownMenuContent> */}
-              </DropdownMenu>
+              {/* </DropdownMenu> */}
               {theme === "light" ? (
                 <button
                   aria-label="Dark Theme"

@@ -4,7 +4,6 @@ import chart from "@assets/imgs/common/chart.svg";
 import chart2 from "@assets/imgs/common/chart2.svg";
 
 import { Skeleton } from "@/components/ui/Skeleton";
-import { formatToTomanWithCommas } from "../../../../utils/helper";
 
 export function ArzCardSkeleton() {
   return (
@@ -31,7 +30,7 @@ export default function CardArz({ name, image, price, change24h }) {
         <div className="flex items-center gap-2">
           <img src={image} className="w-8" alt="" />
           <span className="font-iranSansDemiBold text-sm uppercase text-gray-500 dark:text-white">
-            {name}/irt
+            {name}/usdt
           </span>
         </div>
         <div className="flex w-full justify-end">
@@ -42,7 +41,9 @@ export default function CardArz({ name, image, price, change24h }) {
             {change24h}
           </span> */}
           <span className="font-bold ~text-sm/2xl dark:text-white">
-            {formatToTomanWithCommas(price.slice(0, -1))}
+            {new Intl.NumberFormat("en-US", {
+              currency: "USD",
+            }).format(price)}
           </span>
         </div>
       </div>

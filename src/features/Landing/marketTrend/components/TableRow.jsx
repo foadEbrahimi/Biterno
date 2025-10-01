@@ -50,12 +50,14 @@ export default function TableRow({ index, crypto }) {
       <td className="w-[10rem] px-1 py-3">
         <div className="flex items-center gap-2">
           <img src={image} alt={name} className="h-8 w-8 rounded-full" />
-          <span className="font-bold text-black dark:text-white">{name}</span>
+          <span className="font-iranSansBold dark:text-white">{name}</span>
         </div>
       </td>
       <td className="w-[8rem] px-1 py-3">
         <span className="text-[16px] text-black dark:text-white">
-          {formatToTomanWithCommas(price.slice(0, -1))}
+          {new Intl.NumberFormat("en-US", {
+            currency: "USD",
+          }).format(price)}
         </span>
       </td>
       <td className="w-[8rem] px-1 py-3 pl-7 text-center xl:pl-20">
@@ -63,7 +65,7 @@ export default function TableRow({ index, crypto }) {
           dir="ltr"
           className={`font-iranSansBold ${change24h >= 0 ? "text-green-500" : "text-red-500"}`}
         >
-          {change24h}%
+          {change24h.toFixed(2)}
         </span>
       </td>
       <td className="hidden w-[12rem] px-1 py-3 md:table-cell 2xl:w-[8rem]">

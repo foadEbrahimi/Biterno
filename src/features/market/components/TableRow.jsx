@@ -4,7 +4,6 @@ import chart from "@assets/imgs/common/chart.svg";
 import chart2 from "@assets/imgs/common/chart2.svg";
 
 import { Skeleton } from "@/components/ui/Skeleton";
-import { formatToTomanWithCommas } from "@/utils/helper";
 
 export function TableRowSkeleton() {
   return (
@@ -77,13 +76,15 @@ export default function TableRow({ index, crypto }) {
         </span>
       </th>
       <td className="py-4 font-bold text-[#23262F] dark:text-white">
-        {formatToTomanWithCommas(price.slice(0, -1))}
+        {new Intl.NumberFormat("en-US", {
+          currency: "USD",
+        }).format(price)}
       </td>
       <td
         className={`py-4 pr-5 font-bold ${change24h > 0 ? "text-green-600" : "text-red-600"}`}
         dir="ltr"
       >
-        {change24h}
+        {change24h.toFixed(2)}
       </td>
       <td
         className={`py-4 font-bold ${change7d > 0 ? "text-green-600" : "text-red-600"}`}
@@ -92,7 +93,9 @@ export default function TableRow({ index, crypto }) {
         {change7d.toFixed(2)}
       </td>
       <td className="py-4 font-bold text-[#23262F] dark:text-white">
-        {formatToTomanWithCommas(marketCap).slice(0, -1)}
+        {new Intl.NumberFormat("en-US", {
+          currency: "USD",
+        }).format(marketCap)}
       </td>
       <td className="hidden lg:table-cell">
         <img
