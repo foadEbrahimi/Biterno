@@ -1,6 +1,6 @@
-# Bitcloud - Crypto Exchange Market
+# Biterno - Crypto Exchange Market
 
-Bitcloud is a modern cryptocurrency exchange platform built with React and Vite. It provides a seamless user experience for trading cryptocurrencies, learning about blockchain, and staying updated with the latest trends in the crypto market.
+Biterno is a modern cryptocurrency exchange platform built with React and Vite. It provides a seamless user experience for trading cryptocurrencies, learning about blockchain, and staying updated with the latest trends in the crypto market.
 
 ## Features
 
@@ -40,8 +40,8 @@ The project is organized as follows:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/bitcloud.git
-   cd bitcloud
+   git clone https://github.com/your-username/biterno.git
+   cd biterno
    ```
 
 2. Install dependencies:
@@ -86,7 +86,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/foadEbrahimi/Bitcloud?tab=MIT-1-ov-file).
+This project is licensed under the [MIT License](https://github.com/foadEbrahimi/Biterno?tab=MIT-1-ov-file).
 
 ## Acknowledgments
 
