@@ -19,7 +19,7 @@ import { ThemeProvider } from "./components/common/theme-provider";
 export default function App() {
   return (
     <>
-      <ThemeProvider defaultTheme="light">
+      <ThemeProvider defaultTheme="dark">
         <Routes>
           {/* landing */}
           <Route
