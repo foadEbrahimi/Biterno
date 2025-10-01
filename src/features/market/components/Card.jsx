@@ -32,7 +32,7 @@ export function CardSkeleton() {
 export default function Card({ image, name, price, change24h }) {
   return (
     <div
-      className="group/hover flex !w-fit cursor-pointer items-start gap-5"
+      className="group/hover flex !w-fit cursor-pointer items-start gap-5 dark:bg-[#161618] xl:dark:border xl:dark:border-white/50 xl:rounded-full xl:p-5"
       dir="rtl"
     >
       <div className="flex items-center gap-1">

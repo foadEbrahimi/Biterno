@@ -81,12 +81,12 @@ export default function CardSlider() {
     >
       {isLoading
         ? Array.from({ length: 3 }).map((_, index) => (
-            <SwiperSlide className="!w-full lg:!w-fit">
+            <SwiperSlide className="!w-full !bg-transparent lg:!w-fit">
               <CardSkeleton key={index} />
             </SwiperSlide>
           ))
         : cryptos.map((crypto) => (
-            <SwiperSlide className="!w-full lg:!w-2/6">
+            <SwiperSlide className="!w-full !bg-transparent lg:!w-2/6">
               <Card key={crypto.id} {...crypto} />
             </SwiperSlide>
           ))}

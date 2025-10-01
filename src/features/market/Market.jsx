@@ -35,14 +35,14 @@ export default function Market() {
           </div>
           <Table />
         </Layout>
+        <div
+          draggable={false}
+          className="absolute -left-20 -top-20 z-10 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"
+        ></div>
       </div>
       <div className="absolute right-0 top-0 z-10 h-full w-full">
         <img src={object} alt="object png" draggable={false} />
       </div>
-      <div
-        draggable={false}
-        className="absolute -left-20 -top-20 z-10 h-[326px] w-[322px] rounded-full bg-primary/40 blur-[100px]"
-      ></div>
     </div>
   );
 }
